@@ -7,541 +7,290 @@
 <meta name="description" content="Listing subsale terkini di Johor Bahru — Skudai, Tebrau, Masai, Pasir Gudang dan lebih. Hubungi Razi: 011-5406 5243.">
 <meta property="og:title" content="Subsales JB | Razi Property JB">
 <meta property="og:description" content="Listing subsale terkini di Johor Bahru. Flat, apartment, rumah teres. Tanya Razi sekarang.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ── TOKENS ──────────────────────────────────────────────────────────────── */
 :root {
-  --navy:      #0D1F35;
-  --navy-mid:  #1A3A5C;
-  --navy-soft: #243F60;
-  --gold:      #D4A843;
-  --gold-dim:  rgba(212,168,67,0.18);
-  --gold-line: rgba(212,168,67,0.35);
-  --white:     #FFFFFF;
-  --off-white: #F4F1EB;
-  --gray-100:  #F0EDE6;
-  --gray-200:  #DDD9D1;
-  --gray-400:  #9A9080;
-  --gray-600:  #6B6560;
-  --gray-800:  #2A2520;
-  --green:     #16A34A;
-  --green-bg:  #DCFCE7;
-  --card-bg:   #0F2035;
-  --card-border: rgba(212,168,67,0.2);
-  --font-display: 'Cormorant Garamond', serif;
-  --font-body:    'DM Sans', sans-serif;
-  --r:  8px;
-  --sh: 0 4px 24px rgba(0,0,0,0.35);
+  --blue:#1A3A5C; --blue-mid:#2B5C8A; --blue-light:#EBF2FA;
+  --yellow:#D4A843;
+  --ivory:#F8F5EF; --white:#FFFFFF;
+  --gray-50:#FAFAF9; --gray-100:#F2F2F0; --gray-200:#E8E6E3;
+  --gray-400:#9A9895; --gray-500:#8A8882; --gray-700:#4A4846; --gray-800:#2A2826;
+  --green:#16A34A; --green-bg:#DCFCE7;
+  --font-display:'Cormorant Garamond',serif; --font-body:'DM Sans',sans-serif;
 }
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);background:var(--gray-50);color:var(--gray-800);-webkit-font-smoothing:antialiased;}
 
-/* ── RESET ───────────────────────────────────────────────────────────────── */
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: var(--font-body);
-  background: var(--navy);
-  color: var(--white);
-  -webkit-font-smoothing: antialiased;
-  min-height: 100vh;
-}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:14px 6vw;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--gray-200);box-shadow:0 1px 12px rgba(0,0,0,0.05);}
+.nav-back{display:flex;align-items:center;gap:7px;font-size:0.78rem;color:var(--gray-500);text-decoration:none;transition:color 0.2s;}
+.nav-back:hover{color:var(--blue);}
+.nav-back svg{width:15px;height:15px;fill:currentColor;}
+.nav-logo img{height:34px;width:auto;display:block;}
+.btn-wa-nav{display:inline-flex;align-items:center;gap:7px;background:var(--blue);color:#fff;font-family:var(--font-body);font-size:0.76rem;font-weight:500;padding:8px 16px;border-radius:4px;text-decoration:none;transition:all 0.2s;}
+.btn-wa-nav:hover{background:var(--blue-mid);}
+.btn-wa-nav svg{width:13px;height:13px;fill:#fff;}
 
-/* ── NAV ─────────────────────────────────────────────────────────────────── */
-nav {
-  position: fixed; top:0; left:0; right:0; z-index:200;
-  display: flex; align-items:center; justify-content:space-between;
-  padding: 14px 6vw;
-  background: rgba(13,31,53,0.95);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(212,168,67,0.15);
-}
-.nav-left { display:flex; align-items:center; gap:16px; }
-.nav-back {
-  display: flex; align-items:center; gap:6px;
-  font-size: 0.76rem; color: var(--gray-400);
-  text-decoration: none; transition: color 0.2s;
-}
-.nav-back:hover { color: var(--gold); }
-.nav-back svg { width:14px; height:14px; fill:currentColor; }
-.nav-logo { font-family: var(--font-display); font-size:1.05rem; font-weight:600; color:var(--white); letter-spacing:0.03em; }
-.nav-logo span { color: var(--gold); }
-.btn-wa-nav {
-  display: inline-flex; align-items:center; gap:7px;
-  background: var(--gold); color: var(--navy);
-  font-family: var(--font-body); font-size:0.75rem; font-weight:600;
-  padding: 8px 18px; border-radius: 4px;
-  text-decoration: none; letter-spacing:0.03em;
-  transition: all 0.2s;
-}
-.btn-wa-nav:hover { background:#e8bb50; transform:translateY(-1px); }
-.btn-wa-nav svg { width:13px; height:13px; fill:currentColor; }
+/* PAGE HEADER */
+.page-header{background:var(--blue);padding:80px 6vw 44px;margin-top:60px;}
+.ph-bread{display:flex;align-items:center;gap:8px;font-size:0.68rem;color:rgba(255,255,255,0.4);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:18px;}
+.ph-bread a{color:rgba(255,255,255,0.4);text-decoration:none;}.ph-bread a:hover{color:var(--yellow);}
+.ph-bread span{color:var(--yellow);}
+.ph-bread svg{width:10px;height:10px;fill:currentColor;opacity:0.4;}
+.ph-title{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:500;color:#fff;margin-bottom:8px;}
+.ph-sub{font-size:0.86rem;color:rgba(255,255,255,0.5);margin-bottom:24px;}
+.ph-stats{display:flex;gap:20px;flex-wrap:wrap;}
+.ph-stat{font-size:0.72rem;color:rgba(255,255,255,0.4);display:flex;align-items:center;gap:5px;}
+.ph-stat strong{color:var(--yellow);font-family:var(--font-display);font-size:1rem;}
 
-/* ── HERO HEADER ─────────────────────────────────────────────────────────── */
-.page-hero {
-  background: linear-gradient(160deg, #0D1F35 0%, #1A3A5C 60%, #0D1F35 100%);
-  padding: 100px 6vw 52px;
-  border-bottom: 1px solid var(--gold-line);
-  position: relative; overflow: hidden;
-}
-.page-hero::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(212,168,67,0.06) 0%, transparent 70%);
-  pointer-events: none;
-}
-.hero-inner { max-width: 1180px; margin: 0 auto; position:relative; }
-.hero-bread {
-  display: flex; align-items:center; gap:8px;
-  font-size: 0.68rem; color: rgba(255,255,255,0.3);
-  letter-spacing: 0.1em; text-transform: uppercase; margin-bottom:20px;
-}
-.hero-bread a { color: rgba(255,255,255,0.3); text-decoration:none; }
-.hero-bread a:hover { color: var(--gold); }
-.hero-bread svg { width:10px; height:10px; fill:currentColor; opacity:0.4; }
-.hero-bread span { color: var(--gold); }
-.hero-eyebrow {
-  font-size: 0.7rem; letter-spacing:0.16em; text-transform:uppercase;
-  color: var(--gold); margin-bottom:12px;
-}
-.hero-title {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3.4rem);
-  font-weight: 600; line-height: 1.15;
-  color: var(--white); margin-bottom: 12px;
-}
-.hero-title em { font-style:normal; color: var(--gold); }
-.hero-sub { font-size: 0.88rem; color: rgba(255,255,255,0.45); margin-bottom:28px; line-height:1.7; max-width:520px; }
-.hero-stats { display:flex; gap:28px; flex-wrap:wrap; }
-.hero-stat { display:flex; flex-direction:column; gap:2px; }
-.hero-stat-val { font-family: var(--font-display); font-size:1.6rem; font-weight:600; color:var(--gold); line-height:1; }
-.hero-stat-lbl { font-size: 0.65rem; color: rgba(255,255,255,0.3); letter-spacing:0.08em; text-transform:uppercase; }
+/* AREA FILTER BAR */
+.filter-strip{background:var(--white);border-bottom:1px solid var(--gray-200);position:sticky;top:60px;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,0.04);}
+.filter-strip-inner{max-width:1180px;margin:0 auto;padding:0 6vw;display:flex;align-items:center;gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.filter-strip-inner::-webkit-scrollbar{display:none;}
+.flt-btn{flex-shrink:0;background:none;border:none;padding:13px 18px;font-family:var(--font-body);font-size:0.77rem;font-weight:500;color:var(--gray-500);cursor:pointer;transition:all 0.2s;white-space:nowrap;position:relative;}
+.flt-btn::after{content:'';position:absolute;bottom:0;left:50%;right:50%;height:2px;background:var(--blue);transition:all 0.22s;}
+.flt-btn:hover{color:var(--blue);}
+.flt-btn:hover::after{left:18px;right:18px;}
+.flt-btn.active{color:var(--blue);font-weight:600;}
+.flt-btn.active::after{left:18px;right:18px;}
 
-/* ── FILTER BAR ──────────────────────────────────────────────────────────── */
-.filter-wrap {
-  position: sticky; top: 60px; z-index:100;
-  background: rgba(13,31,53,0.97);
-  border-bottom: 1px solid rgba(212,168,67,0.12);
-  backdrop-filter: blur(12px);
-}
-.filter-inner {
-  max-width: 1180px; margin: 0 auto;
-  padding: 0 6vw;
-  display: flex; align-items:center; gap:0;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-}
-.filter-inner::-webkit-scrollbar { display:none; }
-.filter-btn {
-  flex-shrink: 0;
-  background: none; border: none;
-  padding: 14px 20px;
-  font-family: var(--font-body); font-size:0.78rem; font-weight:500;
-  color: rgba(255,255,255,0.45);
-  cursor: pointer; transition: all 0.2s;
-  position: relative; white-space: nowrap;
-  letter-spacing: 0.02em;
-}
-.filter-btn::after {
-  content: ''; position:absolute; bottom:0; left:50%; right:50%;
-  height: 2px; background: var(--gold);
-  transition: all 0.25s;
-}
-.filter-btn:hover { color: var(--white); }
-.filter-btn:hover::after { left:20px; right:20px; }
-.filter-btn.active { color: var(--gold); }
-.filter-btn.active::after { left:20px; right:20px; }
+/* LAYOUT */
+.page-body{max-width:1180px;margin:0 auto;padding:36px 6vw 80px;display:grid;grid-template-columns:1fr 288px;gap:28px;align-items:start;}
+@media(max-width:880px){.page-body{grid-template-columns:1fr;}}
 
-/* ── MAIN CONTENT ────────────────────────────────────────────────────────── */
-.page-content { max-width: 1180px; margin: 0 auto; padding: 36px 6vw 80px; }
+/* FILTER BAR (count + sort) */
+.filter-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:10px;}
+.listing-count{font-size:0.8rem;color:var(--gray-500);}
+.listing-count strong{color:var(--gray-800);}
+.sort-sel{font-family:var(--font-body);font-size:0.78rem;border:1px solid var(--gray-200);border-radius:5px;padding:6px 10px;background:var(--white);color:var(--gray-700);outline:none;cursor:pointer;}
 
-.results-bar {
-  display: flex; align-items:center; justify-content:space-between;
-  margin-bottom: 24px; flex-wrap:wrap; gap:12px;
-}
-.results-count {
-  font-size: 0.8rem; color: rgba(255,255,255,0.35);
-  letter-spacing: 0.04em;
-}
-.results-count strong { color: var(--gold); font-size: 1rem; font-family: var(--font-display); }
-.sort-sel {
-  font-family: var(--font-body); font-size: 0.76rem;
-  background: var(--card-bg); color: var(--white);
-  border: 1px solid rgba(212,168,67,0.2); border-radius:5px;
-  padding: 7px 12px; outline:none; cursor:pointer;
-}
-.sort-sel option { background: var(--navy-mid); }
+/* LISTING CARD — horizontal layout */
+.listing-card{background:var(--white);border-radius:10px;overflow:hidden;border:1px solid var(--gray-200);transition:all 0.25s;margin-bottom:18px;display:grid;grid-template-columns:250px 1fr;}
+.listing-card:hover{box-shadow:0 8px 28px rgba(26,58,92,0.1);border-color:rgba(26,58,92,0.2);transform:translateY(-2px);}
+@media(max-width:640px){.listing-card{grid-template-columns:1fr;}}
 
-/* ── CARDS GRID ──────────────────────────────────────────────────────────── */
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 20px;
-}
-@media(max-width:680px) { .cards-grid { grid-template-columns: 1fr; } }
-
-/* ── PROPERTY CARD ───────────────────────────────────────────────────────── */
-.prop-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--r);
-  overflow: hidden;
-  display: flex; flex-direction: column;
-  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
-}
-.prop-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.5);
-  border-color: rgba(212,168,67,0.5);
-}
-
-/* Card image */
-.card-img-wrap {
-  position: relative; height: 200px; overflow: hidden;
-  background: var(--navy-soft); cursor: pointer;
-}
-.card-img-wrap img {
-  width:100%; height:100%; object-fit:cover; display:block;
-  transition: transform 0.5s;
-}
-.prop-card:hover .card-img-wrap img { transform: scale(1.05); }
-.card-badge-type {
-  position:absolute; top:10px; left:10px;
-  background: rgba(13,31,53,0.85); color: var(--gold);
-  font-size: 0.58rem; font-weight:600; letter-spacing:0.1em;
-  text-transform:uppercase; padding: 3px 9px; border-radius:3px;
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(212,168,67,0.3);
-}
-.card-badge-new {
-  position:absolute; top:10px; right:10px;
-  background: var(--green); color:#fff;
-  font-size: 0.58rem; font-weight:600; letter-spacing:0.08em;
-  padding: 3px 8px; border-radius:3px;
-}
-.card-gallery-dots {
-  position:absolute; bottom:8px; right:10px;
-  display:flex; gap:4px; align-items:center;
-}
-.card-gallery-dots span {
-  width:5px; height:5px; border-radius:50%;
-  background: rgba(255,255,255,0.4);
-  cursor:pointer; transition:background 0.2s;
-}
-.card-gallery-dots span.active { background: var(--gold); }
-
-/* Thumb row */
-.card-thumbs {
-  display:grid; grid-template-columns:repeat(4,1fr); gap:2px;
-  background: rgba(0,0,0,0.4);
-}
-.card-thumb {
-  height:48px; overflow:hidden; cursor:pointer;
-  background: var(--navy-soft);
-}
-.card-thumb img {
-  width:100%; height:100%; object-fit:cover; display:block;
-  transition: opacity 0.2s;
-}
-.card-thumb:hover img { opacity:0.7; }
+/* Gallery panel */
+.lc-gallery{width:250px;background:var(--gray-100);flex-shrink:0;position:relative;}
+@media(max-width:640px){.lc-gallery{width:100%;}}
+.lc-main-img{height:188px;overflow:hidden;cursor:pointer;position:relative;}
+.lc-main-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s;}
+.lc-main-img:hover img{transform:scale(1.05);}
+.lc-main-img .zoom-hint{position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,0.45);color:#fff;font-size:0.6rem;padding:3px 7px;border-radius:3px;letter-spacing:0.05em;opacity:0;transition:opacity 0.2s;}
+.lc-main-img:hover .zoom-hint{opacity:1;}
+.lc-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--gray-200);}
+.lc-thumb{height:54px;overflow:hidden;cursor:pointer;background:var(--gray-100);}
+.lc-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity 0.2s;}
+.lc-thumb:hover img{opacity:0.75;}
+.lc-badge{position:absolute;top:9px;left:9px;font-size:0.58rem;font-weight:600;padding:3px 8px;border-radius:3px;letter-spacing:0.07em;text-transform:uppercase;}
+.badge-type{background:var(--blue);color:#fff;}
+.badge-new{position:absolute;top:9px;right:9px;background:var(--green);color:#fff;font-size:0.58rem;font-weight:600;padding:3px 8px;border-radius:3px;letter-spacing:0.06em;}
 
 /* Card body */
-.card-body { padding:16px 18px; flex:1; display:flex; flex-direction:column; }
-.card-top {
-  display:flex; justify-content:space-between; align-items:flex-start;
-  gap:10px; margin-bottom:6px;
-}
-.card-title {
-  font-family: var(--font-display); font-size:1.1rem; font-weight:600;
-  color: var(--white); line-height:1.3;
-}
-.card-sub {
-  font-size:0.7rem; color: rgba(255,255,255,0.35); margin-top:2px;
-}
-.card-price {
-  font-family: var(--font-display); font-size:1.35rem; font-weight:700;
-  color: var(--gold); white-space:nowrap;
-}
-.card-psf { font-size:0.62rem; color:rgba(255,255,255,0.25); text-align:right; margin-top:1px; }
+.lc-body{padding:18px 20px;display:flex;flex-direction:column;}
+.lc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:6px;}
+.lc-title{font-family:var(--font-display);font-size:1.12rem;font-weight:600;color:var(--blue);line-height:1.3;}
+.lc-title small{display:block;font-family:var(--font-body);font-size:0.72rem;font-weight:300;color:var(--gray-500);margin-top:2px;}
+.lc-price-wrap{text-align:right;flex-shrink:0;}
+.lc-price{font-family:var(--font-display);font-size:1.45rem;font-weight:600;color:var(--blue);line-height:1;}
+.lc-psf{font-size:0.62rem;color:var(--gray-400);margin-top:2px;}
+.lc-addr{font-size:0.7rem;color:var(--gray-400);margin-bottom:12px;display:flex;align-items:flex-start;gap:4px;line-height:1.5;}
+.lc-addr svg{width:11px;height:11px;fill:var(--yellow);flex-shrink:0;margin-top:2px;}
+.lc-kawasan{display:inline-flex;align-items:center;gap:4px;font-size:0.68rem;color:var(--blue);background:var(--blue-light);padding:2px 8px;border-radius:3px;margin-bottom:8px;align-self:flex-start;}
+.lc-specs{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:11px;}
+.lc-spec{display:flex;align-items:center;gap:4px;font-size:0.73rem;color:var(--gray-700);}
+.lc-spec svg{width:13px;height:13px;fill:var(--gray-400);}
+.lc-tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px;}
+.lc-tag{font-size:0.6rem;padding:3px 9px;border-radius:100px;letter-spacing:0.04em;}
+.tag-blue{background:var(--blue-light);color:var(--blue);font-weight:500;}
+.tag-gold{background:rgba(212,168,67,0.12);color:#8a6a0a;border:1px solid rgba(212,168,67,0.3);}
+.tag-gray{background:var(--gray-100);color:var(--gray-500);}
+.tag-green{background:var(--green-bg);color:var(--green);font-weight:500;}
+.lc-pts{list-style:none;margin-bottom:14px;flex:1;}
+.lc-pts li{font-size:0.72rem;color:var(--gray-500);display:flex;align-items:flex-start;gap:5px;margin-bottom:3px;line-height:1.5;}
+.lc-pts li::before{content:'✓';color:var(--yellow);font-weight:700;flex-shrink:0;font-size:0.75rem;}
+.lc-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:auto;}
+.btn-interest{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:9px 0;border-radius:5px;font-size:0.73rem;font-weight:500;font-family:var(--font-body);text-decoration:none;transition:all 0.2s;background:var(--blue-light);color:var(--blue);}
+.btn-interest:hover{background:var(--blue);color:#fff;}
+.btn-interest svg{width:12px;height:12px;fill:currentColor;}
+.btn-wha{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:9px 0;border-radius:5px;font-size:0.73rem;font-weight:500;font-family:var(--font-body);text-decoration:none;transition:all 0.2s;background:#25D366;color:#fff;}
+.btn-wha:hover{background:#1ebe5a;}
+.btn-wha svg{width:12px;height:12px;fill:currentColor;}
 
-/* Location row */
-.card-location {
-  display:flex; align-items:center; gap:5px;
-  font-size:0.7rem; color: rgba(255,255,255,0.35);
-  margin-bottom:10px;
-}
-.card-location svg { width:10px; height:10px; fill:var(--gold); flex-shrink:0; }
+/* Empty / coming */
+.coming-card{background:var(--white);border-radius:10px;border:1.5px dashed var(--gray-200);padding:28px;text-align:center;}
+.coming-icon{font-size:1.8rem;margin-bottom:10px;}
+.coming-title{font-family:var(--font-display);font-size:1.1rem;color:var(--blue);margin-bottom:8px;}
+.coming-sub{font-size:0.78rem;color:var(--gray-400);margin-bottom:18px;line-height:1.6;}
+.btn-coming{display:inline-flex;align-items:center;gap:6px;background:var(--blue);color:#fff;padding:10px 22px;border-radius:5px;font-size:0.78rem;font-weight:500;font-family:var(--font-body);text-decoration:none;transition:all 0.2s;}
+.btn-coming:hover{background:var(--blue-mid);}
 
-/* Specs row */
-.card-specs {
-  display:flex; gap:12px; flex-wrap:wrap;
-  margin-bottom:10px; padding-bottom:10px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-.card-spec {
-  display:flex; align-items:center; gap:4px;
-  font-size:0.72rem; color: rgba(255,255,255,0.55);
-}
-.card-spec svg { width:12px; height:12px; fill:rgba(212,168,67,0.6); }
-.card-spec strong { color: var(--white); }
+/* SIDEBAR */
+.sidebar{display:flex;flex-direction:column;gap:16px;}
+.sb-card{background:var(--white);border-radius:10px;border:1px solid var(--gray-200);padding:20px;}
+.sb-title{font-family:var(--font-display);font-size:1rem;font-weight:600;color:var(--blue);margin-bottom:14px;}
+.area-grid{display:grid;gap:7px;}
+.area-chip{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;border-radius:6px;font-size:0.73rem;cursor:pointer;transition:all 0.2s;text-decoration:none;border:1px solid var(--gray-200);color:var(--gray-700);}
+.area-chip:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-light);}
+.area-chip.active{background:var(--blue);color:#fff;border-color:var(--blue);}
+.area-chip-count{font-size:0.65rem;opacity:0.65;}
+.sb-form{display:flex;flex-direction:column;gap:9px;}
+.sb-input{width:100%;font-family:var(--font-body);font-size:0.78rem;padding:9px 12px;border:1px solid var(--gray-200);border-radius:5px;background:var(--gray-50);outline:none;transition:border 0.2s;}
+.sb-input:focus{border-color:var(--blue);}
+.sb-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z' fill='%239A9895'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;padding-right:28px;}
+.sb-wa{display:flex;align-items:center;justify-content:center;gap:7px;background:#25D366;color:#fff;padding:11px;border-radius:5px;font-size:0.78rem;font-weight:500;font-family:var(--font-body);text-decoration:none;transition:all 0.2s;margin-top:4px;}
+.sb-wa:hover{background:#1ebe5a;}
+.sb-wa svg{width:14px;height:14px;fill:#fff;}
+#s-success{display:none;text-align:center;font-size:0.76rem;color:var(--green);padding:10px;background:var(--green-bg);border-radius:5px;}
 
-/* Tags */
-.card-tags { display:flex; gap:5px; flex-wrap:wrap; margin-bottom:12px; }
-.tag {
-  font-size:0.58rem; padding:3px 8px; border-radius:3px;
-  letter-spacing:0.05em; font-weight:500;
-}
-.tag-gold { background: var(--gold-dim); color: var(--gold); border:1px solid var(--gold-line); }
-.tag-blue { background: rgba(42,92,138,0.4); color:rgba(180,210,255,0.8); }
-.tag-gray { background: rgba(255,255,255,0.06); color:rgba(255,255,255,0.4); }
-.tag-green { background: rgba(22,163,74,0.15); color:#4ade80; }
+/* Loading */
+.listings-loading{text-align:center;padding:40px 20px;color:var(--gray-400);font-size:0.82rem;}
+.listings-loading .spinner{width:28px;height:28px;border:3px solid var(--gray-200);border-top-color:var(--blue);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 12px;}
+@keyframes spin{to{transform:rotate(360deg);}}
 
-/* Highlights */
-.card-highlights { list-style:none; margin-bottom:14px; flex:1; }
-.card-highlights li {
-  font-size:0.71rem; color:rgba(255,255,255,0.4);
-  display:flex; align-items:flex-start; gap:6px;
-  margin-bottom:3px; line-height:1.5;
-}
-.card-highlights li::before {
-  content:'—'; color:var(--gold); font-weight:700; flex-shrink:0; opacity:0.7;
-}
+/* LIGHTBOX */
+.lightbox{display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.92);align-items:center;justify-content:center;}
+.lightbox.open{display:flex;}
+.lb-inner{position:relative;max-width:90vw;max-height:90vh;}
+.lb-inner img{max-width:90vw;max-height:82vh;object-fit:contain;display:block;border-radius:4px;}
+.lb-close{position:fixed;top:18px;right:22px;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;z-index:1000;opacity:0.7;transition:opacity 0.2s;}
+.lb-close:hover{opacity:1;}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.1);border:none;color:#fff;font-size:1.4rem;padding:10px 14px;cursor:pointer;border-radius:4px;transition:background 0.2s;z-index:1000;}
+.lb-nav:hover{background:rgba(255,255,255,0.2);}
+.lb-prev{left:-50px;}.lb-next{right:-50px;}
+@media(max-width:640px){.lb-prev{left:4px;}.lb-next{right:4px;}}
+.lb-cap{color:rgba(255,255,255,0.5);font-size:0.75rem;text-align:center;margin-top:10px;letter-spacing:0.05em;}
 
-/* Action buttons */
-.card-actions { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:auto; }
-.btn-interest {
-  display:inline-flex; align-items:center; justify-content:center; gap:5px;
-  padding:9px 0; border-radius:5px; font-size:0.73rem; font-weight:500;
-  font-family:var(--font-body); text-decoration:none; transition:all 0.2s;
-  background: rgba(212,168,67,0.12); color:var(--gold);
-  border: 1px solid var(--gold-line);
-}
-.btn-interest:hover { background: var(--gold); color: var(--navy); }
-.btn-interest svg { width:11px; height:11px; fill:currentColor; }
-.btn-wa {
-  display:inline-flex; align-items:center; justify-content:center; gap:5px;
-  padding:9px 0; border-radius:5px; font-size:0.73rem; font-weight:600;
-  font-family:var(--font-body); text-decoration:none; transition:all 0.2s;
-  background: #25D366; color:#fff;
-}
-.btn-wa:hover { background:#1ebe5a; transform:translateY(-1px); }
-.btn-wa svg { width:12px; height:12px; fill:currentColor; }
+/* FOOTER */
+footer{background:var(--blue);padding:28px 6vw;text-align:center;}
+footer p{font-size:0.72rem;color:rgba(255,255,255,0.3);line-height:1.8;}
+footer a{color:rgba(255,255,255,0.4);text-decoration:none;}
+footer a:hover{color:var(--yellow);}
 
-/* ── EMPTY STATE ─────────────────────────────────────────────────────────── */
-#empty-state {
-  display:none; text-align:center;
-  padding:60px 20px;
-  background: var(--card-bg); border:1px solid var(--card-border);
-  border-radius: var(--r);
-}
-#empty-state .empty-icon { font-size:2.4rem; margin-bottom:14px; }
-#empty-state h3 {
-  font-family: var(--font-display); font-size:1.4rem;
-  color:var(--white); margin-bottom:8px;
-}
-#empty-state p { font-size:0.82rem; color:rgba(255,255,255,0.35); line-height:1.7; margin-bottom:22px; }
-#empty-state a {
-  display:inline-flex; align-items:center; gap:7px;
-  background:#25D366; color:#fff;
-  padding:11px 24px; border-radius:5px; font-size:0.78rem; font-weight:600;
-  text-decoration:none; transition:all 0.2s;
-}
-#empty-state a:hover { background:#1ebe5a; }
-
-/* ── LOADING STATE ───────────────────────────────────────────────────────── */
-#loading-state {
-  text-align:center; padding:60px 20px;
-  color:rgba(255,255,255,0.3); font-size:0.82rem;
-}
-.spinner {
-  width:30px; height:30px;
-  border:3px solid rgba(212,168,67,0.15);
-  border-top-color: var(--gold);
-  border-radius:50%;
-  animation: spin 0.8s linear infinite;
-  margin: 0 auto 14px;
-}
-@keyframes spin { to { transform:rotate(360deg); } }
-
-/* ── LIGHTBOX ────────────────────────────────────────────────────────────── */
-.lightbox {
-  display:none; position:fixed; inset:0; z-index:999;
-  background:rgba(0,0,0,0.94);
-  align-items:center; justify-content:center;
-  flex-direction:column;
-}
-.lightbox.open { display:flex; }
-.lb-inner { position:relative; max-width:92vw; }
-.lb-inner img {
-  max-width:92vw; max-height:80vh;
-  object-fit:contain; display:block; border-radius:4px;
-}
-.lb-close {
-  position:fixed; top:16px; right:20px;
-  background:none; border:none; color:#fff;
-  font-size:1.8rem; cursor:pointer; opacity:0.6; transition:opacity 0.2s; z-index:1001;
-}
-.lb-close:hover { opacity:1; }
-.lb-nav {
-  position:absolute; top:50%; transform:translateY(-50%);
-  background:rgba(255,255,255,0.08); border:none;
-  color:#fff; font-size:1.5rem;
-  padding:10px 15px; cursor:pointer; border-radius:4px;
-  transition:background 0.2s; z-index:1001;
-}
-.lb-nav:hover { background:rgba(255,255,255,0.15); }
-.lb-prev { left:-52px; }
-.lb-next { right:-52px; }
-.lb-cap {
-  color:rgba(255,255,255,0.4); font-size:0.75rem; text-align:center;
-  margin-top:12px; letter-spacing:0.05em;
-}
-.lb-counter {
-  color:rgba(255,255,255,0.25); font-size:0.68rem; text-align:center; margin-top:4px;
-}
-@media(max-width:640px) {
-  .lb-prev { left:4px; }
-  .lb-next { right:4px; }
-}
-
-/* ── FOOTER ──────────────────────────────────────────────────────────────── */
-footer {
-  background: #080F1A;
-  border-top: 1px solid rgba(212,168,67,0.12);
-  padding: 30px 6vw;
-  text-align:center;
-}
-footer p { font-size:0.72rem; color:rgba(255,255,255,0.2); line-height:1.9; }
-footer a { color:rgba(255,255,255,0.25); text-decoration:none; }
-footer a:hover { color:var(--gold); }
-.footer-divider { margin:0 8px; opacity:0.3; }
-
-/* ── FADE ANIMATION ──────────────────────────────────────────────────────── */
-.fade-up {
-  opacity:0; transform:translateY(16px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-.fade-up.visible { opacity:1; transform:none; }
-
-/* ── RESPONSIVE ──────────────────────────────────────────────────────────── */
-@media(max-width:600px) {
-  .page-hero { padding: 90px 4vw 40px; }
-  .page-content { padding: 24px 4vw 60px; }
-  .hero-stats { gap:20px; }
-  .card-actions { grid-template-columns:1fr; }
-}
+/* FADE */
+.fade-in{opacity:0;transform:translateY(14px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.fade-in.visible{opacity:1;transform:none;}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <div class="nav-left">
-    <a href="index.html" class="nav-back">
-      <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
-      Home
-    </a>
-    <div class="nav-logo">Razi <span>Property</span> JB</div>
-  </div>
+  <a href="index.html" class="nav-back">
+    <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+    Kembali
+  </a>
+  <div class="nav-logo"><img src="logo-razi.png" alt="Razi Property JB"></div>
   <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20listing%20subsale." target="_blank" class="btn-wa-nav">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     Hubungi Razi
   </a>
 </nav>
 
-<!-- HERO -->
-<div class="page-hero">
-  <div class="hero-inner">
-    <div class="hero-bread">
-      <a href="index.html">Home</a>
-      <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-      <span>Subsales</span>
-    </div>
-    <p class="hero-eyebrow">Hartanah Subsale Johor Bahru</p>
-    <h1 class="hero-title">Cari Rumah <em>Idaman</em> Anda<br>di Johor Bahru</h1>
-    <p class="hero-sub">Listing terkini dari Razi — REN bertauliah. Flat, apartment, teres dan kondominium merentas kawasan pilihan JB.</p>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-val" id="stat-total">—</span>
-        <span class="hero-stat-lbl">Listing Aktif</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-val" id="stat-areas">—</span>
-        <span class="hero-stat-lbl">Kawasan</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-val" id="stat-updated">—</span>
-        <span class="hero-stat-lbl">Dikemas Kini</span>
-      </div>
-    </div>
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="ph-bread">
+    <a href="index.html">Home</a>
+    <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+    <span>Subsales</span>
+  </div>
+  <h1 class="ph-title">Subsales Johor Bahru</h1>
+  <p class="ph-sub">Flat, apartment, rumah teres & berkembar merentas kawasan pilihan JB</p>
+  <div class="ph-stats">
+    <div class="ph-stat"><strong id="stat-total">—</strong>&nbsp;listing aktif</div>
+    <div class="ph-stat"><strong id="stat-areas">—</strong>&nbsp;kawasan</div>
+    <div class="ph-stat">Dikemas kini: <strong id="stat-date">—</strong></div>
   </div>
 </div>
 
-<!-- FILTER BAR -->
-<div class="filter-wrap">
-  <div class="filter-inner" id="filter-bar">
-    <button class="filter-btn active" data-filter="all">Semua</button>
-    <button class="filter-btn" data-filter="skudai">Skudai</button>
-    <button class="filter-btn" data-filter="tebrau">Tebrau</button>
-    <button class="filter-btn" data-filter="masai">Masai</button>
-    <button class="filter-btn" data-filter="pasir-gudang">Pasir Gudang</button>
-    <button class="filter-btn" data-filter="permas-jaya">Permas Jaya</button>
-    <button class="filter-btn" data-filter="iskandar-puteri">Iskandar Puteri</button>
-    <button class="filter-btn" data-filter="jb-city">JB City</button>
-    <button class="filter-btn" data-filter="kulai">Kulai</button>
+<!-- AREA FILTER STRIP -->
+<div class="filter-strip">
+  <div class="filter-strip-inner" id="filter-strip">
+    <button class="flt-btn active" data-filter="all">Semua</button>
+    <button class="flt-btn" data-filter="skudai">Skudai</button>
+    <button class="flt-btn" data-filter="tebrau">Tebrau</button>
+    <button class="flt-btn" data-filter="masai">Masai</button>
+    <button class="flt-btn" data-filter="pasir-gudang">Pasir Gudang</button>
+    <button class="flt-btn" data-filter="permas-jaya">Permas Jaya</button>
+    <button class="flt-btn" data-filter="iskandar-puteri">Iskandar Puteri</button>
+    <button class="flt-btn" data-filter="jb-city">JB City</button>
+    <button class="flt-btn" data-filter="kulai">Kulai</button>
   </div>
 </div>
 
-<!-- MAIN -->
-<div class="page-content">
-  <div class="results-bar fade-up">
-    <div class="results-count">
-      Menunjukkan <strong id="count-shown">—</strong> listing
-      <span id="filter-label" style="color:var(--gold);"></span>
+<!-- BODY -->
+<div class="page-body">
+
+  <!-- MAIN LISTINGS COLUMN -->
+  <div>
+    <div class="filter-bar fade-in">
+      <div class="listing-count">
+        Menunjukkan <strong id="count-label">—</strong> listing
+        <span id="filter-active-label" style="color:var(--blue);"></span>
+      </div>
+      <select class="sort-sel" id="sort-sel" onchange="sortListings()">
+        <option value="terbaru" selected>Terbaru</option>
+        <option value="harga-asc">Harga: Rendah ke Tinggi</option>
+        <option value="harga-desc">Harga: Tinggi ke Rendah</option>
+      </select>
     </div>
-    <select class="sort-sel" id="sort-sel" onchange="applySort()">
-      <option value="terbaru" selected>Terbaru</option>
-      <option value="harga-asc">Harga ↑ Rendah–Tinggi</option>
-      <option value="harga-desc">Harga ↓ Tinggi–Rendah</option>
-    </select>
+
+    <div id="listings-container">
+      <div class="listings-loading"><div class="spinner"></div>Memuatkan listing...</div>
+    </div>
+
+    <div class="coming-card fade-in" id="coming-more">
+      <div class="coming-icon">🏠</div>
+      <div class="coming-title">Ada Listing Lagi?</div>
+      <p class="coming-sub">Listing baru ditambah dari semasa ke semasa. WhatsApp Razi untuk listing terkini yang belum dipublish.</p>
+      <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20nak%20tahu%20listing%20subsale%20terkini." target="_blank" class="btn-coming">Tanya Listing Terkini →</a>
+    </div>
   </div>
 
-  <!-- Loading -->
-  <div id="loading-state">
-    <div class="spinner"></div>
-    Memuatkan listing…
-  </div>
+  <!-- SIDEBAR -->
+  <div class="sidebar">
 
-  <!-- Cards -->
-  <div class="cards-grid" id="cards-grid" style="display:none;"></div>
+    <!-- Kawasan chips -->
+    <div class="sb-card fade-in" id="area-sidebar">
+      <div class="sb-title">🗺 Tapis Kawasan</div>
+      <div class="area-grid" id="area-chips">
+        <!-- Populated by JS -->
+      </div>
+    </div>
 
-  <!-- Empty -->
-  <div id="empty-state">
-    <div class="empty-icon">🔍</div>
-    <h3>Tiada Listing Untuk Kawasan Ini</h3>
-    <p>Listing baru ditambah dari semasa ke semasa.<br>WhatsApp Razi untuk listing terkini yang belum dipublish.</p>
-    <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20ada%20listing%20subsale%20terkini%3F" target="_blank">
-      <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Tanya Razi
-    </a>
+    <!-- Inquiry form -->
+    <div class="sb-card fade-in" id="inquiry">
+      <div class="sb-title">📋 Hantar Pertanyaan</div>
+      <div class="sb-form">
+        <input type="text" id="s-name" class="sb-input" placeholder="Nama anda">
+        <input type="tel" id="s-phone" class="sb-input" placeholder="No. WhatsApp">
+        <select id="s-listing" class="sb-input sb-select"><option value="">Listing yang diminati</option></select>
+        <textarea id="s-msg" class="sb-input" rows="3" placeholder="Mesej / soalan (optional)"></textarea>
+        <div id="s-success">✅ Terima kasih! Kami akan hubungi anda dalam masa terdekat.</div>
+        <a href="#" onclick="submitForm(); return false;" class="sb-wa">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Hantar via WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Agent card -->
+    <div class="sb-card fade-in" style="overflow:hidden;">
+      <img src="razi-profile.jpg" alt="Razi" style="width:100%;height:120px;object-fit:cover;border-radius:6px;margin-bottom:14px;">
+      <div style="font-family:var(--font-display);font-size:1.05rem;font-weight:600;color:var(--blue);margin-bottom:3px;">Razi — REN</div>
+      <div style="font-size:0.7rem;color:var(--gray-400);margin-bottom:12px;">OD Legacy Realty · E(1)2004</div>
+      <a href="https://wa.me/601154065243" target="_blank" class="sb-wa" style="font-size:0.76rem;margin-top:0;">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        011-5406 5243
+      </a>
+    </div>
   </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <p>
-    © <span id="yr"></span> Razi Property JB
-    <span class="footer-divider">·</span>
-    OD Legacy Realty Sdn Bhd (E(1)2004)
-    <span class="footer-divider">·</span>
-    REN: <a href="https://wa.me/601154065243">011-5406 5243</a>
-    <br>
-    <a href="index.html">Home</a>
-    <span class="footer-divider">·</span>
-    <a href="index.html#projects">Projek Baru</a>
-    <span class="footer-divider">·</span>
-    <a href="subsales.html">Subsales</a>
-  </p>
+  <p>© <span id="yr"></span> Razi Property JB · OD Legacy Realty Sdn Bhd (E(1)2004)<br>
+  <a href="index.html">Home</a> · <a href="index.html#projects">Projek Baru</a> · <a href="subsales.html">Subsales</a></p>
 </footer>
 
 <!-- LIGHTBOX -->
@@ -549,255 +298,341 @@ footer a:hover { color:var(--gold); }
   <button class="lb-close" onclick="closeLb()">✕</button>
   <div class="lb-inner" onclick="event.stopPropagation()">
     <button class="lb-nav lb-prev" onclick="lbNav(-1)">‹</button>
-    <img id="lb-img" src="" alt="">
+    <img id="lbImg" src="" alt="">
     <button class="lb-nav lb-next" onclick="lbNav(1)">›</button>
   </div>
-  <div class="lb-cap" id="lb-cap"></div>
-  <div class="lb-counter" id="lb-counter"></div>
+  <div class="lb-cap" id="lbCap"></div>
 </div>
 
-<!-- ── SCRIPT ──────────────────────────────────────────────────────────────── -->
 <script>
 'use strict';
+document.getElementById('yr').textContent = new Date().getFullYear();
 
-// ── Constants ─────────────────────────────────────────────────────────────
-const WA  = '601154065243';
-const PIN = `<svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>`;
-const BED = `<svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>`;
-const BATH= `<svg viewBox="0 0 24 24"><path d="M21 10H7V7c0-1.1-.9-2-2-2S3 5.9 3 7v13h2v-3h16v3h2V12c0-1.1-.9-2-2-2zm-9 5H5v-3h7v3zm9 0h-7v-3h7v3z"/></svg>`;
-const SQF = `<svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>`;
-const MSG = `<svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>`;
-const WASV= `<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`;
+const obs = new IntersectionObserver(e => e.forEach(x => {
+  if (x.isIntersecting) x.target.classList.add('visible');
+}), {threshold:0.06});
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
-// ── State ─────────────────────────────────────────────────────────────────
+// ── CONSTANTS ────────────────────────────────────────────────────────────────
+const WA_NUM = '601154065243';
+
+const KAWASAN_LABELS = {
+  'skudai':          'Skudai / Bukit Indah',
+  'tebrau':          'Tebrau / Setia Indah',
+  'masai':           'Masai / Seri Alam',
+  'pasir-gudang':    'Pasir Gudang',
+  'permas-jaya':     'Permas Jaya',
+  'iskandar-puteri': 'Iskandar Puteri',
+  'jb-city':         'JB City',
+  'kulai':           'Kulai / Senai',
+  'lain-lain':       'Lain-lain',
+};
+
+const PIN_SVG  = '<svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>';
+const BED_SVG  = '<svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>';
+const BATH_SVG = '<svg viewBox="0 0 24 24"><path d="M21 10H7V7c0-1.1-.9-2-2-2S3 5.9 3 7v13h2v-3h16v3h2V12c0-1.1-.9-2-2-2zm-9 5H5v-3h7v3zm9 0h-7v-3h7v3z"/></svg>';
+const SQF_SVG  = '<svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>';
+const CAL_SVG  = '<svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>';
+const WA_SVG   = '<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
+const MSG_SVG  = '<svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>';
+
+// ── STATE ────────────────────────────────────────────────────────────────────
 let ALL_LISTINGS = [];
 let activeFilter = 'all';
-let lbImages = [];
-let lbIdx    = 0;
+let lbImgs = [], lbIdx = 0;
 
-// ── Helpers ───────────────────────────────────────────────────────────────
-const fmtRM  = n  => 'RM ' + Number(n).toLocaleString('ms-MY');
-const dayAgo = d  => d ? Math.floor((Date.now() - new Date(d)) / 86400000) : 999;
-const $ = id => document.getElementById(id);
+// ── HELPERS ──────────────────────────────────────────────────────────────────
+function fmtRM(n)      { return 'RM ' + Number(n).toLocaleString('ms-MY'); }
+function calcPsf(h, s) { return s > 0 ? 'RM ' + Math.round(h / s) + ' psf' : ''; }
+function daysSince(d)  { return d ? Math.floor((Date.now() - new Date(d)) / 86400000) : 999; }
+const $  = id => document.getElementById(id);
 
-// ── Card renderer ─────────────────────────────────────────────────────────
-function buildCard(l, cardIdx) {
+// ── CARD RENDERER ────────────────────────────────────────────────────────────
+function renderCard(l, globalIdx) {
   const imgs   = [l.gambar_hero, ...(l.galeri || [])].filter(Boolean);
-  const isNew  = dayAgo(l.tarikh) <= 14;
-  const waText = encodeURIComponent(
-    `Hi Razi! Saya berminat ${l.wa_msg || l.title}. Boleh info lanjut?`
-  );
-
-  const thumbsHtml = imgs.slice(0, 4).map((src, ti) =>
-    `<div class="card-thumb" onclick="setCardImg(${cardIdx},'${src}',${ti})">
-       <img src="${src}" alt="" loading="lazy">
-     </div>`
+  const thumbs = imgs.slice(0, 3).map((s, i) =>
+    `<div class="lc-thumb" onclick="swapImg(${globalIdx},'${s}')"><img src="${s}" alt="" loading="lazy"></div>`
   ).join('');
+  const isNew  = daysSince(l.tarikh) <= 14;
+  const waMsg  = l.wa_msg
+    ? encodeURIComponent('Hi Razi! Saya berminat ' + l.wa_msg + '. Boleh info?')
+    : encodeURIComponent('Hi Razi! Saya berminat listing ' + l.title + '. Boleh info?');
+  const psf    = calcPsf(l.harga, l.saiz_sqft);
+  const sub    = [l.nama_taman, l.tingkat ? 'Tingkat ' + l.tingkat : ''].filter(Boolean).join(' · ');
+  const kawasanLabel = l.kawasan_label || KAWASAN_LABELS[l.kawasan] || l.kawasan;
 
-  const dotsHtml = imgs.length > 1
-    ? `<div class="card-gallery-dots">
-        ${imgs.map((_,i) => `<span class="${i===0?'active':''}" id="dot-${cardIdx}-${i}" onclick="setCardImg(${cardIdx},'${imgs[i]}',${i})"></span>`).join('')}
-       </div>`
-    : '';
-
-  const hlHtml = (l.highlights || []).slice(0, 3).map(h => `<li>${h}</li>`).join('');
-
-  return `
-<div class="prop-card fade-up" data-kawasan="${l.kawasan}">
-  <div class="card-img-wrap" onclick="openLb(${cardIdx},0)">
-    <img src="${imgs[0] || ''}" alt="${l.title}" id="ci-${cardIdx}" loading="lazy">
-    ${l.jenis ? `<div class="card-badge-type">${l.jenis}</div>` : ''}
-    ${isNew    ? `<div class="card-badge-new">Baru</div>` : ''}
-    ${dotsHtml}
-  </div>
-  ${imgs.length > 1 ? `<div class="card-thumbs">${thumbsHtml}</div>` : ''}
-  <div class="card-body">
-    <div class="card-top">
-      <div>
-        <div class="card-title">${l.title}</div>
-        <div class="card-sub">${[l.nama_taman, l.tingkat ? 'Tingkat ' + l.tingkat : ''].filter(Boolean).join(' · ')}</div>
+  return `<div class="listing-card fade-in" id="card-${globalIdx}">
+    <div class="lc-gallery">
+      <div class="lc-main-img" onclick="openLb(${globalIdx},0)">
+        <img src="${imgs[0]||''}" alt="${l.title}" id="mi-${globalIdx}" loading="lazy">
+        <div class="zoom-hint">🔍 Zoom</div>
       </div>
-      <div>
-        <div class="card-price">${fmtRM(l.harga)}</div>
-        ${l.psf ? `<div class="card-psf">RM ${l.psf} psf</div>` : ''}
+      <div class="lc-thumbs">${thumbs}</div>
+      <div class="lc-badge badge-type">${l.jenis||'Hartanah'}</div>
+      ${isNew ? '<div class="badge-new">Baru</div>' : ''}
+    </div>
+    <div class="lc-body">
+      <div class="lc-top">
+        <div class="lc-title">${l.title}<small>${sub}</small></div>
+        <div class="lc-price-wrap">
+          <div class="lc-price">${fmtRM(l.harga)}</div>
+          ${psf ? `<div class="lc-psf">${psf}</div>` : ''}
+        </div>
+      </div>
+      <div class="lc-kawasan">${PIN_SVG}&nbsp;${kawasanLabel}</div>
+      <div class="lc-addr">${l.alamat||''}</div>
+      <div class="lc-specs">
+        <div class="lc-spec">${BED_SVG} <strong>${l.bilik_tidur||0}</strong>&nbsp;Bilik</div>
+        ${l.bilik_air > 0 ? `<div class="lc-spec">${BATH_SVG} <strong>${l.bilik_air}</strong>&nbsp;Bilik Air</div>` : ''}
+        ${l.saiz_sqft ? `<div class="lc-spec">${SQF_SVG} <strong>${l.saiz_sqft}</strong>&nbsp;sqft</div>` : ''}
+        ${l.tingkat ? `<div class="lc-spec">${CAL_SVG} Tingkat&nbsp;<strong>${l.tingkat}</strong></div>` : ''}
+      </div>
+      <div class="lc-tags">
+        ${l.tenure  ? `<span class="lc-tag tag-gold">${l.tenure}</span>` : ''}
+        ${l.bumilot ? `<span class="lc-tag tag-blue">${l.bumilot}</span>` : ''}
+        ${l.keadaan ? `<span class="lc-tag tag-gray">${l.keadaan}</span>` : ''}
+      </div>
+      ${(l.highlights||[]).length ? `<ul class="lc-pts">${(l.highlights||[]).slice(0,4).map(h=>`<li>${h}</li>`).join('')}</ul>` : ''}
+      <div class="lc-actions">
+        <a href="#inquiry" class="btn-interest">${MSG_SVG} Saya Berminat</a>
+        <a href="https://wa.me/${WA_NUM}?text=${waMsg}" target="_blank" class="btn-wha">${WA_SVG} WhatsApp Razi</a>
       </div>
     </div>
-    <div class="card-location">${PIN} ${l.kawasan_label}${l.alamat ? ' · ' + l.alamat : ''}</div>
-    <div class="card-specs">
-      ${l.bilik_tidur ? `<div class="card-spec">${BED}<strong>${l.bilik_tidur}</strong>&nbsp;Bilik</div>` : ''}
-      ${l.bilik_air   ? `<div class="card-spec">${BATH}<strong>${l.bilik_air}</strong>&nbsp;Bilik Air</div>` : ''}
-      ${l.saiz_sqft   ? `<div class="card-spec">${SQF}<strong>${l.saiz_sqft}</strong>&nbsp;sqft</div>` : ''}
-    </div>
-    <div class="card-tags">
-      ${l.tenure  ? `<span class="tag tag-gold">${l.tenure}</span>` : ''}
-      ${l.bumilot ? `<span class="tag tag-blue">${l.bumilot}</span>` : ''}
-      ${l.keadaan ? `<span class="tag tag-gray">${l.keadaan}</span>` : ''}
-    </div>
-    ${hlHtml ? `<ul class="card-highlights">${hlHtml}</ul>` : ''}
-    <div class="card-actions">
-      <a href="#" onclick="scrollToWA(event,'${waText}')" class="btn-interest">${MSG} Saya Berminat</a>
-      <a href="https://wa.me/${WA}?text=${waText}" target="_blank" rel="noopener" class="btn-wa">${WASV} WhatsApp</a>
-    </div>
-  </div>
-</div>`;
+  </div>`;
 }
 
-// Gallery helpers
-function setCardImg(cardIdx, src, dotIdx) {
-  const img = $('ci-' + cardIdx);
-  if (img) img.src = src;
-  // update dots
-  const l = ALL_LISTINGS[cardIdx];
-  if (!l) return;
-  const imgs = [l.gambar_hero, ...(l.galeri || [])].filter(Boolean);
-  imgs.forEach((_,i) => {
-    const d = $('dot-' + cardIdx + '-' + i);
-    if (d) d.classList.toggle('active', i === dotIdx);
-  });
+function swapImg(idx, src) {
+  const el = $('mi-' + idx);
+  if (el) el.src = src;
 }
 
-// ── Filter + sort logic ───────────────────────────────────────────────────
+// ── FILTER + RENDER ──────────────────────────────────────────────────────────
 function getFiltered() {
-  let list = ALL_LISTINGS.filter(l => l.status === 'aktif');
-  if (activeFilter !== 'all') list = list.filter(l => l.kawasan === activeFilter);
-  return list;
+  const aktif = ALL_LISTINGS.filter(l => l.status === 'aktif');
+  return activeFilter === 'all' ? aktif : aktif.filter(l => l.kawasan === activeFilter);
 }
 
-function applySort() {
-  const val = $('sort-sel').value;
-  let list  = getFiltered();
-  if (val === 'harga-asc')  list.sort((a,b) => a.harga - b.harga);
-  if (val === 'harga-desc') list.sort((a,b) => b.harga - a.harga);
-  if (val === 'terbaru')    list.sort((a,b) => (b.tarikh||'').localeCompare(a.tarikh||''));
-  renderCards(list);
+function sortListings() {
+  const v    = $('sort-sel').value;
+  let list   = getFiltered();
+  if (v === 'harga-asc')  list.sort((a,b) => a.harga - b.harga);
+  if (v === 'harga-desc') list.sort((a,b) => b.harga - a.harga);
+  if (v === 'terbaru')    list.sort((a,b) => (b.tarikh||'').localeCompare(a.tarikh||''));
+  renderListings(list);
 }
 
-function renderCards(list) {
-  const grid   = $('cards-grid');
-  const empty  = $('empty-state');
-  const loading= $('loading-state');
-  const countEl= $('count-shown');
-  const labelEl= $('filter-label');
-
-  loading.style.display = 'none';
-
-  if (list.length === 0) {
-    grid.style.display  = 'none';
-    empty.style.display = 'block';
-    countEl.textContent = '0';
+function renderListings(list) {
+  const c = $('listings-container');
+  if (!list.length) {
+    c.innerHTML = `<div class="coming-card fade-in">
+      <div class="coming-icon">🔍</div>
+      <div class="coming-title">Tiada Listing Untuk Kawasan Ini</div>
+      <p class="coming-sub">WhatsApp Razi untuk listing terkini yang belum dipublish.</p>
+      <a href="https://wa.me/${WA_NUM}?text=Hi%20Razi%2C%20ada%20listing%20subsale%20terkini%3F" target="_blank" class="btn-coming">Tanya Razi →</a>
+    </div>`;
+    c.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+    $('count-label').textContent = '0';
     return;
   }
-  empty.style.display = 'none';
-  grid.style.display  = 'grid';
-  countEl.textContent = list.length;
+  c.innerHTML = list.map(l => renderCard(l, ALL_LISTINGS.indexOf(l))).join('');
+  c.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
-  const activeName = activeFilter === 'all'
-    ? ''
-    : ` — ${list[0]?.kawasan_label || activeFilter}`;
-  labelEl.textContent = activeName;
-
-  grid.innerHTML = list.map((l, i) => buildCard(l, ALL_LISTINGS.indexOf(l))).join('');
-
-  // Fade-in
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.06 });
-  grid.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+  const n = list.length;
+  $('count-label').textContent = n;
+  const lbl = $('filter-active-label');
+  if (activeFilter !== 'all') {
+    const name = KAWASAN_LABELS[activeFilter] || activeFilter;
+    lbl.textContent = ' — ' + name;
+  } else {
+    lbl.textContent = '';
+  }
 }
 
-// ── Filter button click ───────────────────────────────────────────────────
-document.getElementById('filter-bar').addEventListener('click', e => {
-  const btn = e.target.closest('.filter-btn');
+// ── FILTER BUTTON EVENTS ─────────────────────────────────────────────────────
+// Top strip
+$('filter-strip').addEventListener('click', e => {
+  const btn = e.target.closest('.flt-btn');
   if (!btn) return;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.flt-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   activeFilter = btn.dataset.filter;
-  applySort();
+  // Sync sidebar chips
+  document.querySelectorAll('.area-chip[data-filter]').forEach(c => {
+    c.classList.toggle('active', c.dataset.filter === activeFilter ||
+      (activeFilter === 'all' && c.dataset.filter === 'all'));
+  });
+  sortListings();
 });
 
-// ── WA scroll (mobile: open WA directly; desktop: focus nav WA) ──────────
-function scrollToWA(e, waText) {
-  e.preventDefault();
-  window.open(`https://wa.me/${WA}?text=${waText}`, '_blank');
+// Sidebar chips (delegated)
+$('area-chips').addEventListener('click', e => {
+  const chip = e.target.closest('.area-chip[data-filter]');
+  if (!chip) return;
+  const f = chip.dataset.filter;
+  activeFilter = f;
+  // Sync strip buttons
+  document.querySelectorAll('.flt-btn').forEach(b => b.classList.toggle('active', b.dataset.filter === f));
+  // Sync chips
+  document.querySelectorAll('.area-chip[data-filter]').forEach(c => c.classList.toggle('active', c.dataset.filter === f));
+  sortListings();
+  // Scroll to listings on mobile
+  if (window.innerWidth < 880) {
+    $('listings-container').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+});
+
+// ── BUILD SIDEBAR CHIPS ──────────────────────────────────────────────────────
+function buildSidebarChips(listings) {
+  const aktif = listings.filter(l => l.status === 'aktif');
+  const counts = {};
+  aktif.forEach(l => { counts[l.kawasan] = (counts[l.kawasan] || 0) + 1; });
+
+  const chipsEl = $('area-chips');
+  const allCount = aktif.length;
+
+  let html = `<div class="area-chip active" data-filter="all">
+    <span>Semua Kawasan</span>
+    <span class="area-chip-count">${allCount} listing</span>
+  </div>`;
+
+  // Known kawasan order
+  const order = ['skudai','tebrau','masai','pasir-gudang','permas-jaya','iskandar-puteri','jb-city','kulai','lain-lain'];
+  order.forEach(k => {
+    const n = counts[k] || 0;
+    const label = KAWASAN_LABELS[k] || k;
+    if (n > 0) {
+      html += `<div class="area-chip" data-filter="${k}">
+        <span>${label}</span>
+        <span class="area-chip-count">${n} listing</span>
+      </div>`;
+    } else {
+      html += `<div class="area-chip" data-filter="${k}" style="opacity:0.4;cursor:default;" onclick="goWA('${label}')">
+        <span>${label}</span>
+        <span class="area-chip-count">Tanya →</span>
+      </div>`;
+    }
+  });
+
+  chipsEl.innerHTML = html;
 }
 
-// ── Lightbox ──────────────────────────────────────────────────────────────
+// ── FETCH ────────────────────────────────────────────────────────────────────
+fetch('listings.json?t=' + Date.now())
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(data => {
+    ALL_LISTINGS = data.listings || [];
+    const aktif  = ALL_LISTINGS.filter(l => l.status === 'aktif');
+    const areas  = new Set(aktif.map(l => l.kawasan)).size;
+
+    $('stat-total').textContent = aktif.length;
+    $('stat-areas').textContent = areas;
+    $('stat-date').textContent  = data.generated
+      ? new Date(data.generated).toLocaleDateString('ms-MY', {day:'numeric', month:'short', year:'numeric'})
+      : new Date().toLocaleDateString('ms-MY', {day:'numeric', month:'short', year:'numeric'});
+
+    // Populate inquiry dropdown
+    const sel = $('s-listing');
+    sel.innerHTML = '<option value="">Listing yang diminati</option>' +
+      aktif.sort((a,b)=>(b.tarikh||'').localeCompare(a.tarikh||''))
+           .map(l => `<option>${l.title} — ${fmtRM(l.harga)}</option>`).join('');
+
+    // Grey out filter strip buttons with no listings
+    const kawasanSet = new Set(aktif.map(l => l.kawasan));
+    document.querySelectorAll('.flt-btn[data-filter]').forEach(btn => {
+      const f = btn.dataset.filter;
+      if (f !== 'all' && !kawasanSet.has(f)) btn.style.opacity = '0.35';
+    });
+
+    buildSidebarChips(ALL_LISTINGS);
+    sortListings();
+  })
+  .catch(() => {
+    // Static fallback
+    $('listings-container').innerHTML = `
+    <div class="listing-card fade-in">
+      <div class="lc-gallery">
+        <div class="lc-main-img">
+          <img src="subsales-selesa-jaya-ext.jpg" alt="Flat Bandar Selesa Jaya" id="mi-static">
+          <div class="zoom-hint">🔍 Zoom</div>
+        </div>
+        <div class="lc-thumbs">
+          <div class="lc-thumb" onclick="document.getElementById('mi-static').src='subsales-selesa-jaya-ext.jpg'"><img src="subsales-selesa-jaya-ext.jpg" alt=""></div>
+          <div class="lc-thumb" onclick="document.getElementById('mi-static').src='subsales-selesa-jaya-living.jpg'"><img src="subsales-selesa-jaya-living.jpg" alt=""></div>
+          <div class="lc-thumb" onclick="document.getElementById('mi-static').src='subsales-selesa-jaya-kitchen.jpg'"><img src="subsales-selesa-jaya-kitchen.jpg" alt=""></div>
+        </div>
+        <div class="lc-badge badge-type">Flat</div>
+      </div>
+      <div class="lc-body">
+        <div class="lc-top">
+          <div class="lc-title">Flat Bandar Selesa Jaya<small>Tingkat 3 · Blok 2</small></div>
+          <div class="lc-price-wrap"><div class="lc-price">RM 135,000</div><div class="lc-psf">RM 262 psf</div></div>
+        </div>
+        <div class="lc-kawasan">${PIN_SVG}&nbsp;Skudai / Bukit Indah</div>
+        <div class="lc-addr">Jalan Silat Lincah 1, Bandar Selesa Jaya, 81300 Skudai</div>
+        <div class="lc-specs">
+          <div class="lc-spec">${BED_SVG} <strong>2</strong>&nbsp;Bilik</div>
+          <div class="lc-spec">${BATH_SVG} <strong>1</strong>&nbsp;Bilik Air</div>
+          <div class="lc-spec">${SQF_SVG} <strong>516</strong>&nbsp;sqft</div>
+        </div>
+        <div class="lc-tags"><span class="lc-tag tag-gold">Freehold</span><span class="lc-tag tag-blue">Non-Bumilot</span></div>
+        <ul class="lc-pts">
+          <li>Tingkat tertinggi — lebih angin, tiada jiran atas</li>
+          <li>Menghadap Kemas & kawasan playground</li>
+          <li>Berdekatan Bukit Indah, Perling & Tuas 2nd Link</li>
+        </ul>
+        <div class="lc-actions">
+          <a href="#inquiry" class="btn-interest">${MSG_SVG} Saya Berminat</a>
+          <a href="https://wa.me/${WA_NUM}?text=Hi%20Razi%2C%20saya%20berminat%20Flat%20Bandar%20Selesa%20Jaya%20RM135K." target="_blank" class="btn-wha">${WA_SVG} WhatsApp Razi</a>
+        </div>
+      </div>
+    </div>`;
+    document.querySelectorAll('#listings-container .fade-in').forEach(el => obs.observe(el));
+    $('count-label').textContent = '1';
+    $('stat-total').textContent  = '1';
+    $('stat-areas').textContent  = '1';
+    $('area-chips').innerHTML = `<div class="area-chip active" data-filter="all"><span>Semua Kawasan</span><span class="area-chip-count">1 listing</span></div>`;
+  });
+
+// ── LIGHTBOX ─────────────────────────────────────────────────────────────────
 function openLb(cardIdx, imgIdx) {
   const l = ALL_LISTINGS[cardIdx];
   if (!l) return;
-  lbImages = [l.gambar_hero, ...(l.galeri || [])].filter(Boolean);
-  if (!lbImages.length) return;
+  lbImgs = [l.gambar_hero, ...(l.galeri||[])].filter(Boolean);
+  if (!lbImgs.length) return;
   lbIdx = imgIdx || 0;
-  showLbImg();
+  $('lbImg').src = lbImgs[lbIdx];
+  $('lbCap').textContent = '';
   $('lightbox').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
-function showLbImg() {
-  $('lb-img').src = lbImages[lbIdx];
-  $('lb-cap').textContent = '';
-  $('lb-counter').textContent = lbImages.length > 1
-    ? `${lbIdx + 1} / ${lbImages.length}` : '';
-}
 function lbNav(dir) {
-  if (!lbImages.length) return;
-  lbIdx = ((lbIdx + dir) + lbImages.length) % lbImages.length;
-  showLbImg();
+  if (!lbImgs.length) return;
+  lbIdx = ((lbIdx + dir) + lbImgs.length) % lbImgs.length;
+  $('lbImg').src = lbImgs[lbIdx];
 }
 function closeLb() {
   $('lightbox').classList.remove('open');
   document.body.style.overflow = '';
 }
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape')      closeLb();
-  if (e.key === 'ArrowLeft')   lbNav(-1);
-  if (e.key === 'ArrowRight')  lbNav(1);
+  if (e.key === 'Escape')     closeLb();
+  if (e.key === 'ArrowLeft')  lbNav(-1);
+  if (e.key === 'ArrowRight') lbNav(1);
 });
 
-// ── Init ──────────────────────────────────────────────────────────────────
-document.getElementById('yr').textContent = new Date().getFullYear();
-
-// Fade in static elements
-const staticObs = new IntersectionObserver(es => {
-  es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.05 });
-document.querySelectorAll('.fade-up').forEach(el => staticObs.observe(el));
-
-// Fetch listings.json
-fetch('listings.json?t=' + Date.now())
-  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-  .then(data => {
-    ALL_LISTINGS = data.listings || [];
-
-    // Stats
-    const aktif   = ALL_LISTINGS.filter(l => l.status === 'aktif');
-    const kawasan = new Set(aktif.map(l => l.kawasan)).size;
-    $('stat-total').textContent   = aktif.length;
-    $('stat-areas').textContent   = kawasan;
-    $('stat-updated').textContent = data.generated
-      ? new Date(data.generated).toLocaleDateString('ms-MY', { day:'numeric', month:'short' })
-      : new Date().toLocaleDateString('ms-MY', { day:'numeric', month:'short' });
-
-    // Remove filter buttons that have zero listings
-    document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
-      const f = btn.dataset.filter;
-      if (f === 'all') return;
-      if (!aktif.some(l => l.kawasan === f)) {
-        btn.style.opacity = '0.3';
-        btn.title = 'Tiada listing buat masa ini';
-      }
-    });
-
-    applySort();
-  })
-  .catch(err => {
-    console.warn('listings.json not found or error:', err);
-    $('loading-state').style.display = 'none';
-    $('empty-state').style.display   = 'block';
-    $('count-shown').textContent = '0';
-    $('stat-total').textContent  = '0';
-    $('stat-areas').textContent  = '—';
-    $('stat-updated').textContent= '—';
-  });
+function goWA(area) {
+  window.open('https://wa.me/' + WA_NUM + '?text=Hi%20Razi%2C%20ada%20listing%20subsale%20di%20' + encodeURIComponent(area) + '%3F', '_blank');
+}
+function submitForm() {
+  const name    = $('s-name').value.trim();
+  const phone   = $('s-phone').value.trim();
+  const listing = $('s-listing').value;
+  const msg     = $('s-msg').value.trim();
+  if (!name || !phone) { alert('Sila isi nama dan no. WhatsApp.'); return; }
+  const wa = encodeURIComponent('Hi Razi! Saya berminat listing subsale.\n\nNama: ' + name + '\nNo. WA: ' + phone + '\nListing: ' + (listing||'-') + '\nMesej: ' + (msg||'-'));
+  $('s-success').style.display = 'block';
+  setTimeout(() => window.open('https://wa.me/' + WA_NUM + '?text=' + wa, '_blank'), 800);
+}
 </script>
 </body>
 </html>

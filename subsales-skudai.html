@@ -169,7 +169,7 @@ footer a:hover{color:var(--yellow);}
 <div class="page-body">
   <div>
     <div class="filter-bar fade-in">
-      <div class="listing-count"><strong id="count-label">—</strong> listing di Skudai</div>
+      <div class="listing-count"><strong id="count-label">—</strong> listing aktif</div>
       <select class="sort-sel" id="sort-sel" onchange="sortListings()">
         <option value="terbaru" selected>Terbaru</option>
         <option value="harga-asc">Harga: Rendah ke Tinggi</option>
@@ -199,7 +199,7 @@ footer a:hover{color:var(--yellow);}
         <div class="area-chip" onclick="goWA('Permas%20Jaya')"><span>Permas Jaya</span><span class="area-chip-count">Tanya →</span></div>
         <div class="area-chip" onclick="goWA('Iskandar%20Puteri')"><span>Iskandar Puteri</span><span class="area-chip-count">Tanya →</span></div>
         <div class="area-chip" onclick="goWA('JB%20City')"><span>JB City</span><span class="area-chip-count">Tanya →</span></div>
-        <div class="area-chip" onclick="goWA('Tebrau')"><span>Tebrau / Setia Indah</span><span class="area-chip-count">Tanya →</span></div>
+        <a href="subsales-skudai.html" class="area-chip active"><span>Tebrau / Setia Indah</span><span class="area-chip-count" id="chip-tebrau">—</span></a>
       </div>
     </div>
     <div class="sb-card fade-in" id="inquiry">
@@ -249,8 +249,8 @@ const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) 
 document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
 // ── CONFIG ──────────────────────────────────────────────────────────────────
-// To add Tebrau listings to this page, add 'tebrau' to this array:
-const KAWASAN_FILTER = ['skudai'];
+// To show more areas, add kawasan values to this array:
+const KAWASAN_FILTER = ['skudai', 'tebrau'];
 const WA_NUM = '601154065243';
 
 let allListings = [];
@@ -351,7 +351,8 @@ fetch('listings.json?t=' + Date.now())
     document.getElementById('count-label').textContent = n;
     document.getElementById('stat-count').textContent = n;
     document.getElementById('stat-date').textContent = new Date().toLocaleDateString('ms-MY',{day:'numeric',month:'short',year:'numeric'});
-    document.getElementById('chip-skudai').textContent = n + ' listing';
+    document.getElementById('chip-skudai').textContent = allListings.filter(l=>l.kawasan==='skudai').length + ' listing';
+    document.getElementById('chip-tebrau').textContent = allListings.filter(l=>l.kawasan==='tebrau').length + ' listing';
 
     const sel = document.getElementById('s-listing');
     sel.innerHTML = '<option value="">Listing yang diminati</option>' +

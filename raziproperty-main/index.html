@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Razi Property JB</title>
+<meta name="description" content="Razi — Ejen Hartanah Berdaftar JB. Projek baru freehold, subsale, dan pelaburan di Johor Bahru. Hubungi 011-5406 5243.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Razi Property JB — Fast & Easy JB Property">
+<meta property="og:description" content="Projek Baru Freehold, Subsale & Pelaburan di Johor Bahru. Ejen berdaftar OD Legacy Realty. Hubungi Razi sekarang.">
+<meta property="og:image" content="razi-profile.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Razi Property JB">
+<meta name="twitter:description" content="Projek Baru Freehold, Subsale & Pelaburan di Johor Bahru.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0d1821;
+    --white: #ffffff;
+    --ivory: #F8F5EF;
+    --ivory-dark: #f0ece3;
+    --gray-100: #ebebeb;
+    --gray-400: #a0a0a0;
+    --gray-600: #666;
+    --blue: #1A3A5C;
+    --blue-mid: #2B5C8A;
+    --blue-light: #d6e6f5;
+    --yellow: #D4A843;
+    --yellow-light: #e8c97a;
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Outfit', sans-serif;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body {
+    font-family: var(--font-body);
+    background: var(--white);
+    color: var(--black);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 0 5vw;
+    height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(26,58,92,0.88);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    transition: background 0.4s;
+  }
+  nav.light {
+    background: rgba(255,255,255,0.82);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  .nav-brand {
+    display: flex; align-items: center;
+    text-decoration: none; transition: opacity 0.2s;
+  }
+  .nav-brand:hover { opacity: 0.85; }
+  nav.light .nav-brand { opacity: 1; }
+  .nav-links {
+    display: flex; align-items: center; gap: 28px;
+  }
+  .nav-links a {
+    font-size: 0.72rem; font-weight: 400;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none; letter-spacing: 0.08em;
+    text-transform: uppercase; transition: color 0.2s;
+  }
+  nav.light .nav-links a { color: var(--gray-600); }
+  .nav-links a:hover { color: var(--white); }
+  nav.light .nav-links a:hover { color: var(--blue); }
+  .nav-cta {
+    font-size: 0.72rem; font-weight: 500;
+    color: var(--white); background: var(--yellow);
+    padding: 8px 18px; border-radius: 100px;
+    text-decoration: none; letter-spacing: 0.06em;
+    transition: all 0.2s;
+  }
+  .nav-cta:hover { background: var(--yellow-light); color: var(--blue); transform: scale(1.03); }
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; z-index: 200; position: relative; background: none; border: none; -webkit-tap-highlight-color: transparent; }
+  .nav-hamburger span { width: 22px; height: 2px; background: var(--white); display: block; transition: all 0.3s; border-radius: 2px; }
+  nav.light .nav-hamburger span { background: var(--blue); }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative; width: 100%; height: 100vh;
+    min-height: 640px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    overflow: hidden; background: var(--blue);
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.1) 0%,
+      rgba(0,0,0,0.05) 40%,
+      rgba(0,0,0,0.55) 100%
+    );
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    text-align: center; padding: 0 5vw;
+    max-width: 900px;
+  }
+  .hero-eyebrow {
+    font-size: 0.68rem; font-weight: 500;
+    color: var(--yellow); letter-spacing: 0.22em;
+    text-transform: uppercase; margin-bottom: 20px;
+    opacity: 0; animation: fadeUp 0.8s 0.3s ease forwards;
+  }
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 7vw, 7rem);
+    font-weight: 400; line-height: 1.05;
+    color: var(--white); margin-bottom: 24px;
+    letter-spacing: -0.01em;
+    opacity: 0; animation: fadeUp 0.9s 0.5s ease forwards;
+  }
+  .hero-title em { font-style: italic; color: var(--yellow-light); }
+  .hero-sub {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    font-weight: 300; color: rgba(255,255,255,0.65);
+    line-height: 1.7; max-width: 520px; margin: 0 auto 40px;
+    opacity: 0; animation: fadeUp 0.9s 0.7s ease forwards;
+  }
+  .hero-actions {
+    display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+    opacity: 0; animation: fadeUp 0.9s 0.9s ease forwards;
+  }
+  .btn-pill-gold {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--yellow); color: var(--blue);
+    font-family: var(--font-body); font-size: 0.82rem; font-weight: 600;
+    padding: 14px 28px; border-radius: 100px;
+    text-decoration: none; letter-spacing: 0.04em;
+    transition: all 0.25s;
+  }
+  .btn-pill-gold:hover { background: var(--blue); color: var(--white); transform: scale(1.04); box-shadow: 0 8px 32px rgba(201,168,76,0.35); }
+  .btn-pill-outline {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1.5px solid rgba(255,255,255,0.35); color: var(--white);
+    font-family: var(--font-body); font-size: 0.82rem; font-weight: 400;
+    padding: 14px 28px; border-radius: 100px;
+    text-decoration: none; letter-spacing: 0.04em;
+    transition: all 0.25s; backdrop-filter: blur(8px);
+  }
+  .btn-pill-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); transform: scale(1.04); }
+  .hero-scroll {
+    position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+    z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px;
+    opacity: 0; animation: fadeIn 1s 1.4s ease forwards;
+  }
+  .hero-scroll span {
+    font-size: 0.6rem; color: rgba(255,255,255,0.4);
+    letter-spacing: 0.14em; text-transform: uppercase;
+  }
+  .scroll-line {
+    width: 1px; height: 40px; background: rgba(255,255,255,0.2);
+    position: relative; overflow: hidden;
+  }
+  .scroll-line::after {
+    content: ''; position: absolute; top: -100%;
+    width: 100%; height: 100%; background: var(--yellow);
+    animation: scrollDrop 2s 1.6s ease-in-out infinite;
+  }
+  @keyframes scrollDrop { 0%{top:-100%} 100%{top:200%} }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:none} }
+  @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+
+  /* ── STATS STRIP ── */
+  .stats-strip {
+    background: var(--blue); padding: 40px 5vw;
+    display: flex; justify-content: center; gap: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .stat-item {
+    flex: 1; max-width: 200px; text-align: center;
+    padding: 0 24px; border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 2.4rem; font-weight: 400; color: var(--white);
+    line-height: 1; margin-bottom: 6px;
+  }
+  .stat-num span { color: var(--yellow); }
+  .stat-label {
+    font-size: 0.65rem; font-weight: 400;
+    color: rgba(255,255,255,0.35); letter-spacing: 0.12em; text-transform: uppercase;
+  }
+
+  /* ── SECTION COMMONS ── */
+  .s { padding: 120px 5vw; }
+  .s-center { text-align: center; }
+  .s-eyebrow {
+    font-size: 0.65rem; font-weight: 500;
+    color: var(--yellow); letter-spacing: 0.2em; text-transform: uppercase;
+    margin-bottom: 16px; display: block;
+  }
+  .s-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.8rem);
+    font-weight: 400; line-height: 1.12;
+    letter-spacing: -0.01em; color: var(--blue);
+    margin-bottom: 20px;
+  }
+  .s-title em { font-style: italic; color: var(--yellow); }
+  .s-title.white { color: var(--white); }
+  .s-body {
+    font-size: 1rem; font-weight: 300; line-height: 1.8;
+    color: var(--gray-600); max-width: 600px;
+  }
+  .s-body.center { margin: 0 auto; text-align: center; }
+  .s-body.white { color: rgba(255,255,255,0.5); }
+
+  /* ── SERVICES ── */
+  .services-section { background: var(--ivory); }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(2,1fr); gap: 1px;
+    background: var(--gray-100); margin-top: 64px;
+    border-radius: 16px; overflow: hidden;
+  }
+  .svc-card { min-height: 140px; }
+  .svc-card {
+    background: var(--white); padding: 40px 32px;
+    transition: background 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .svc-card::before {
+    content: ''; position: absolute; inset: 0;
+    background: var(--blue);
+    transform: scaleY(0); transform-origin: bottom;
+    transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+  }
+  .svc-card:hover::before { transform: scaleY(1); }
+  .svc-card:hover .svc-icon,
+  .svc-card:hover .svc-name,
+  .svc-card:hover .svc-desc,
+  .svc-card:hover .svc-tag { color: var(--white); }
+  .svc-card:hover .svc-icon-bg { background: rgba(255,255,255,0.1); }
+  .svc-icon-bg {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: var(--ivory); display: flex; align-items: center; justify-content: center;
+    margin-bottom: 28px; position: relative; z-index: 1;
+    transition: background 0.3s;
+  }
+  .svc-icon { font-size: 1.2rem; position: relative; z-index: 1; transition: color 0.3s; }
+  .svc-name {
+    font-family: var(--font-display); font-size: 1.1rem; font-weight: 500;
+    color: var(--black); margin-bottom: 10px;
+    position: relative; z-index: 1; transition: color 0.3s;
+  }
+  .svc-desc {
+    font-size: 0.8rem; line-height: 1.7; color: var(--gray-600);
+    position: relative; z-index: 1; transition: color 0.3s;
+    margin-bottom: 20px;
+  }
+  .svc-tag {
+    font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--yellow); position: relative; z-index: 1; transition: color 0.3s;
+  }
+
+  /* ── LISTINGS ── */
+  .listings-section { background: var(--blue); }
+  .listings-tabs {
+    display: flex; gap: 4px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 100px; padding: 4px;
+    width: fit-content; margin: 40px 0 48px;
+  }
+  .l-tab {
+    padding: 10px 28px; border-radius: 100px; border: none;
+    font-family: var(--font-body); font-size: 0.78rem; font-weight: 500;
+    cursor: pointer; transition: all 0.3s; letter-spacing: 0.04em;
+    color: rgba(255,255,255,0.4); background: transparent;
+  }
+  .l-tab.active { background: var(--white); color: var(--black); }
+
+  .listings-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
+  }
+  .listing-card {
+    border-radius: 16px; overflow: hidden;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.35s cubic-bezier(0.16,1,0.3,1);
+  }
+  .listing-card:hover { transform: translateY(-6px); border-color: rgba(255,255,255,0.16); box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
+  .lc-img {
+    height: 220px; overflow: hidden; position: relative;
+    background: var(--blue);
+  }
+  .lc-img img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.5s ease;
+    opacity: 0.8;
+  }
+  .listing-card:hover .lc-img img { transform: scale(1.04); }
+  .lc-img-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%);
+  }
+  .lc-img-placeholder {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .lc-img-placeholder svg { width: 36px; height: 36px; fill: rgba(255,255,255,0.08); }
+  .lc-status {
+    position: absolute; top: 16px; right: 16px;
+    font-size: 0.6rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 5px 12px; border-radius: 100px;
+    background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3); color: #22C55E;
+  }
+  .lc-location {
+    position: absolute; bottom: 14px; left: 16px;
+    font-size: 0.6rem; color: rgba(255,255,255,0.5); letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .lc-body { padding: 24px 24px 20px; }
+  .lc-title {
+    font-family: var(--font-display); font-size: 1.4rem; font-weight: 400;
+    color: var(--white); line-height: 1.2; margin-bottom: 6px;
+  }
+  .lc-title em { font-style: italic; color: var(--yellow-light); }
+  .lc-dev { font-size: 0.7rem; color: rgba(255,255,255,0.3); margin-bottom: 20px; }
+  .lc-specs {
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-bottom: 20px;
+  }
+  .lc-spec {
+    background: rgba(255,255,255,0.04); border-radius: 8px;
+    padding: 10px 8px; text-align: center;
+  }
+  .lc-spec-val { font-size: 0.9rem; font-weight: 500; color: var(--white); line-height: 1; }
+  .lc-spec-val.gold { color: var(--yellow-light); font-family: var(--font-display); font-size: 1rem; }
+  .lc-spec-label { font-size: 0.58rem; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 3px; }
+  .lc-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; }
+  .lc-tag {
+    font-size: 0.6rem; padding: 4px 10px; border-radius: 100px;
+    letter-spacing: 0.06em;
+  }
+  .lc-tag-gold { border: 1px solid var(--yellow); color: var(--yellow); }
+  .lc-tag-muted { border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.4); }
+  .lc-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .lc-btn-primary {
+    display: block; text-align: center; padding: 12px;
+    background: var(--yellow); color: var(--blue);
+    font-family: var(--font-body); font-size: 0.75rem; font-weight: 600;
+    border-radius: 8px; text-decoration: none; letter-spacing: 0.04em;
+    transition: all 0.2s;
+  }
+  .lc-btn-primary:hover { background: var(--blue-mid); color: var(--white); transform: scale(1.02); }
+  .lc-btn-ghost {
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    padding: 12px; background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.7); font-family: var(--font-body);
+    font-size: 0.75rem; font-weight: 400; border-radius: 8px;
+    text-decoration: none; border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.2s;
+  }
+  .lc-btn-ghost:hover { background: rgba(255,255,255,0.1); color: var(--white); }
+  .lc-btn-ghost svg { width: 13px; height: 13px; fill: currentColor; }
+  .lc-placeholder {
+    border-radius: 16px; overflow: hidden;
+    border: 1.5px dashed rgba(255,255,255,0.08);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 12px; padding: 60px 32px; text-align: center;
+    min-height: 400px;
+  }
+  .lc-placeholder-icon {
+    width: 48px; height: 48px; border-radius: 50%;
+    border: 1px dashed rgba(255,255,255,0.12);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .lc-placeholder-icon svg { width: 18px; height: 18px; fill: rgba(255,255,255,0.15); }
+  .lc-placeholder p { font-size: 0.72rem; color: rgba(255,255,255,0.18); line-height: 1.7; }
+
+  /* ── INQUIRY ── */
+  .inquiry-section { background: var(--ivory); }
+  .inquiry-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+    max-width: 1100px; margin: 0 auto;
+  }
+  .inq-left {}
+  .inq-contact { margin-top: 40px; display: flex; flex-direction: column; gap: 16px; }
+  .inq-contact-item {
+    display: flex; align-items: center; gap: 14px;
+    font-size: 0.85rem; color: var(--gray-600);
+  }
+  .inq-contact-item svg { width: 18px; height: 18px; fill: var(--yellow); flex-shrink: 0; }
+  .inq-contact-item a { color: var(--gray-600); text-decoration: none; }
+  .inq-contact-item a:hover { color: var(--black); }
+
+  .inq-form {
+    background: var(--ivory); border-radius: 20px;
+    padding: 44px; display: flex; flex-direction: column; gap: 16px;
+  }
+  .inq-form-title {
+    font-family: var(--font-display); font-size: 1.5rem; font-weight: 400;
+    color: var(--black); margin-bottom: 4px;
+  }
+  .inq-form-sub { font-size: 0.78rem; color: var(--gray-400); margin-bottom: 8px; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label {
+    font-size: 0.65rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--gray-600);
+  }
+  .field input, .field select, .field textarea {
+    font-family: var(--font-body); font-size: 0.85rem; font-weight: 300;
+    background: var(--ivory); border: 1px solid var(--gray-100);
+    border-radius: 10px; padding: 12px 16px;
+    color: var(--blue-mid); outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    -webkit-appearance: none;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    border-color: var(--blue); box-shadow: 0 0 0 3px rgba(26,58,92,0.1);
+  }
+  .field textarea { resize: vertical; min-height: 80px; }
+  .field.full { grid-column: 1 / -1; }
+  .btn-submit-pill {
+    width: 100%; padding: 15px;
+    background: var(--blue); color: var(--white);
+    font-family: var(--font-body); font-size: 0.85rem; font-weight: 500;
+    letter-spacing: 0.06em; border: none; border-radius: 100px;
+    cursor: pointer; transition: all 0.25s; margin-top: 4px;
+  }
+  .btn-submit-pill:hover { background: #0d2137; transform: scale(1.02); box-shadow: 0 8px 24px rgba(0,0,0,0.18); }
+  .submit-note { font-size: 0.68rem; color: var(--gray-400); text-align: center; line-height: 1.6; }
+  .submit-note a { color: var(--yellow); text-decoration: none; }
+  .success-toast {
+    display: none; background: #ECFDF5; border: 1px solid #6EE7B7;
+    border-radius: 10px; padding: 14px 18px;
+    font-size: 0.82rem; color: #065F46; text-align: center;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--blue); padding: 48px 5vw 36px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-top {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    flex-wrap: wrap; gap: 32px; margin-bottom: 40px;
+  }
+  .footer-brand-name {
+    font-family: var(--font-display); font-size: 1.3rem; font-weight: 400;
+    color: var(--white); margin-bottom: 6px;
+  }
+  .footer-brand-sub { font-size: 0.65rem; color: rgba(255,255,255,0.25); letter-spacing: 0.12em; text-transform: uppercase; }
+  .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+  .footer-links a { font-size: 0.72rem; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; letter-spacing: 0.04em; }
+  .footer-links a:hover { color: var(--white); }
+  .footer-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+    padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-copy { font-size: 0.68rem; color: rgba(255,255,255,0.2); }
+  .footer-wa {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.6); font-size: 0.72rem;
+    padding: 8px 16px; border-radius: 100px; text-decoration: none;
+    transition: all 0.2s;
+  }
+  .footer-wa:hover { background: var(--yellow); border-color: var(--yellow); color: var(--blue); }
+  .footer-wa svg { width: 13px; height: 13px; fill: currentColor; }
+
+  /* ── ABOUT RAZI ── */
+  .about-section { background: var(--ivory); }
+  .about-grid { display: grid; grid-template-columns: 220px 1fr; gap: 56px; align-items: center; max-width: 960px; margin: 0 auto; }
+  .about-img-wrap { position: relative; width: 220px; }
+  .about-img-box {
+    aspect-ratio: 2/3; border-radius: 14px; overflow: hidden;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 100%);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .about-img-box img { width: 100%; height: 100%; object-fit: cover; }
+  .about-img-placeholder {
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+  }
+  .about-img-placeholder svg { width: 52px; height: 52px; fill: rgba(255,255,255,0.15); }
+  .about-img-placeholder p { font-size: 0.68rem; color: rgba(255,255,255,0.2); letter-spacing: 0.1em; text-align: center; }
+  .about-accent {
+    position: absolute; bottom: -10px; right: -10px;
+    width: 50%; height: 50%;
+    border: 2px solid var(--yellow); border-radius: 10px; z-index: -1;
+  }
+  .about-right {}
+  .about-name { font-family: var(--font-display); font-size: 2.2rem; font-weight: 400; color: var(--blue); margin-bottom: 4px; }
+  .about-role { font-size: 0.7rem; color: var(--yellow); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 28px; }
+  .about-body { font-size: 0.92rem; font-weight: 300; line-height: 1.8; color: var(--gray-600); margin-bottom: 32px; }
+  .about-list { list-style: none; margin-bottom: 36px; }
+  .about-list li {
+    font-size: 0.84rem; color: var(--gray-600);
+    padding: 10px 0; border-bottom: 1px solid var(--gray-100);
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .about-list li::before { content: '✓'; color: var(--yellow); font-weight: 600; flex-shrink: 0; }
+  .social-icons { display: flex; gap: 10px; flex-wrap: wrap; }
+  .social-btn {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 9px 16px; border-radius: 100px;
+    font-family: var(--font-body); font-size: 0.72rem; font-weight: 500;
+    text-decoration: none; letter-spacing: 0.04em;
+    transition: all 0.2s; border: 1.5px solid;
+  }
+  .social-btn svg, .social-btn img { width: 14px; height: 14px; flex-shrink: 0; }
+  .social-btn-wa { background: #25D366; border-color: #25D366; color: #fff; }
+  .social-btn-wa:hover { background: #1db854; border-color: #1db854; transform: scale(1.04); }
+  .social-btn-fb { background: #1877F2; border-color: #1877F2; color: #fff; }
+  .social-btn-fb:hover { background: #1565d8; transform: scale(1.04); }
+  .social-btn-ig { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); border-color: #dc2743; color: #fff; }
+  .social-btn-ig:hover { opacity: 0.88; transform: scale(1.04); }
+  .social-btn-tt { background: var(--black); border-color: var(--black); color: #fff; }
+  .social-btn-tt:hover { background: #111; transform: scale(1.04); }
+  .social-btn-yt { background: #FF0000; border-color: #FF0000; color: #fff; }
+  .social-btn-yt:hover { background: #cc0000; transform: scale(1.04); }
+
+  /* ── VIDEO TOUR ── */
+  .video-section { background: var(--black); }
+  .video-section .s-eyebrow { color: var(--yellow); }
+  .video-section .s-title { color: var(--white); }
+  .video-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    margin-top: 48px;
+  }
+  .video-card {
+    border-radius: 12px; overflow: hidden;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.3s;
+    text-decoration: none;
+  }
+  .video-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.2); box-shadow: 0 16px 40px rgba(0,0,0,0.4); }
+  .video-thumb {
+    position: relative; aspect-ratio: 16/9;
+    background: var(--blue); overflow: hidden;
+  }
+  .video-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+  .video-card:hover .video-thumb img { transform: scale(1.04); }
+  .video-play-btn {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(0,0,0,0.3); transition: background 0.2s;
+  }
+  .video-card:hover .video-play-btn { background: rgba(0,0,0,0.15); }
+  .video-play-circle {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: rgba(255,255,255,0.9);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .video-card:hover .video-play-circle { transform: scale(1.1); background: var(--white); }
+  .video-play-circle svg { width: 20px; height: 20px; fill: var(--blue); margin-left: 3px; }
+  .video-yt-badge {
+    position: absolute; top: 12px; left: 12px;
+    background: #FF0000; color: #fff;
+    font-size: 0.6rem; font-weight: 600; letter-spacing: 0.08em;
+    padding: 3px 8px; border-radius: 3px;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .video-yt-badge svg { width: 11px; height: 11px; fill: #fff; }
+  .video-body { padding: 16px 18px 18px; }
+  .video-num { font-size: 0.6rem; color: rgba(255,255,255,0.25); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+  .video-title { font-family: var(--font-display); font-size: 1rem; font-weight: 400; color: var(--white); line-height: 1.3; margin-bottom: 10px; }
+  .video-cta {
+    font-size: 0.7rem; color: var(--yellow);
+    letter-spacing: 0.08em; display: flex; align-items: center; gap: 5px;
+  }
+  .video-cta svg { width: 12px; height: 12px; fill: var(--yellow); }
+  .video-channel-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    margin-top: 40px;
+    background: #FF0000; color: #fff;
+    font-family: var(--font-body); font-size: 0.82rem; font-weight: 500;
+    padding: 13px 24px; border-radius: 100px;
+    text-decoration: none; letter-spacing: 0.04em;
+    transition: all 0.2s;
+  }
+  .video-channel-btn:hover { background: #cc0000; transform: scale(1.03); box-shadow: 0 8px 24px rgba(255,0,0,0.3); }
+  .video-channel-btn svg { width: 18px; height: 18px; fill: #fff; }
+  @media (max-width: 700px) {
+    .video-grid { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; gap: 32px; }
+    .about-img-wrap { width: 180px; margin: 0 auto; }
+  }
+
+  /* ── MOBILE NAV DRAWER ── */
+  .mobile-nav {
+    display: none;
+    position: fixed; top: 56px; left: 0; right: 0; z-index: 1001;
+    background: var(--blue);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    flex-direction: column; padding: 8px 0 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a {
+    padding: 16px 6vw; font-size: 0.95rem; font-weight: 400;
+    color: rgba(255,255,255,0.85); text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    letter-spacing: 0.04em; transition: all 0.15s;
+  }
+  .mobile-nav a:last-child { border-bottom: none; }
+  .mobile-nav a:active { background: rgba(255,255,255,0.1); color: var(--white); }
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.r2 { transition-delay: 0.1s; }
+  .reveal.r3 { transition-delay: 0.2s; }
+  .reveal.r4 { transition-delay: 0.3s; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    .services-grid { grid-template-columns: repeat(2,1fr); }
+    .inquiry-grid { grid-template-columns: 1fr; gap: 48px; }
+  }
+  @media (max-width: 700px) {
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+    .s { padding: 80px 6vw; }
+    .services-grid { grid-template-columns: repeat(2,1fr); gap: 1px; }
+    .stats-strip { gap: 0; flex-wrap: wrap; }
+    .stat-item { min-width: 50%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 20px; }
+    .stat-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.08); }
+    .field-row { grid-template-columns: 1fr; }
+    .inq-form { padding: 28px 22px; }
+    .footer-top { flex-direction: column; gap: 24px; }
+    .listings-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 700px) { .services-grid { grid-template-columns: repeat(2,1fr) !important; } .svc-card { padding: 24px 16px; min-height: 120px; } .svc-name { font-size: 0.88rem; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#" class="nav-brand"><img src="logo-razi.png" alt="Razi Property" style="height:40px;width:auto;display:block;filter:drop-shadow(0 1px 3px rgba(0,0,0,0.3));"></a>
+  <div class="nav-links">
+    <a href="#listings">Listing</a>
+    <a href="#video-tour">Video Tour</a>
+    <a href="#inquiry">Inquiry</a>
+    <a href="https://wa.me/601154065243" target="_blank">WhatsApp</a>
+  </div>
+  <a href="#inquiry" class="nav-cta">Hubungi Saya</a>
+  <div class="nav-hamburger" onclick="toggleMenu()" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE NAV DRAWER -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#listings" onclick="toggleMenu()">Listing</a>
+  <a href="#video-tour" onclick="toggleMenu()">Video Tour</a>
+  <a href="#inquiry" onclick="toggleMenu()">Inquiry</a>
+  <a href="https://wa.me/601154065243" target="_blank" onclick="toggleMenu()">WhatsApp</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" style="background:linear-gradient(160deg, #0d2137 0%, #1A3A5C 60%, #1e4a70 100%);">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Property Agent · Johor Bahru · One Dream Legacy</p>
+    <h1 class="hero-title">Rumah Impian<br>Anda <em>Bermula</em><br>Di Sini.</h1>
+    <p class="hero-sub">Dari projek baru freehold hingga subsale ready-move-in — saya Razi, dan saya akan pastikan anda dapat yang terbaik.</p>
+    <div class="hero-actions">
+      <a href="#listings" class="btn-pill-gold">Lihat Listing</a>
+      <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20dengan%20hartanah%20di%20JB" class="btn-pill-outline" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp Saya
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stat-item reveal">
+    <div class="stat-num">200<span>+</span></div>
+    <div class="stat-label">Deals Closed</div>
+  </div>
+  <div class="stat-item reveal r2">
+    <div class="stat-num">4</div>
+    <div class="stat-label">Kawasan JB</div>
+  </div>
+  <div class="stat-item reveal r3">
+    <div class="stat-num">5<span>★</span></div>
+    <div class="stat-label">Client Rating</div>
+  </div>
+  <div class="stat-item reveal r4">
+    <div class="stat-num">1</div>
+    <div class="stat-label">Misi — Rumah Anda</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="s services-section">
+  <div class="reveal"><span class="s-eyebrow">Perkhidmatan · Services</span></div>
+  <h2 class="s-title reveal r2">Semua Yang Anda<br>Perlukan, <em>Di Satu Tempat.</em></h2>
+  <div class="services-grid" style="margin-top:56px;">
+    <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20ingin%20jual%20rumah%20saya.%20Boleh%20bantu%20saya?" target="_blank" class="svc-card reveal" style="text-decoration:none;display:flex;flex-direction:column;align-items:flex-start;">
+      <div class="svc-icon-bg"><div class="svc-icon">🏠</div></div>
+      <div class="svc-name">Jual Rumah</div>
+    </a>
+    <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20ingin%20beli%20rumah.%20Boleh%20bantu%20saya?" target="_blank" class="svc-card reveal r2" style="text-decoration:none;display:flex;flex-direction:column;align-items:flex-start;">
+      <div class="svc-icon-bg"><div class="svc-icon">🔑</div></div>
+      <div class="svc-name">Beli Rumah</div>
+    </a>
+    <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20ingin%20beli%20rumah%20new%20project.%20Boleh%20bantu%20saya?" target="_blank" class="svc-card reveal r3" style="text-decoration:none;display:flex;flex-direction:column;align-items:flex-start;">
+      <div class="svc-icon-bg"><div class="svc-icon">🏗</div></div>
+      <div class="svc-name">Projek Baru</div>
+    </a>
+    <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20nak%20buat%20pelaburan%20sewa.%20Boleh%20recommend%20rumah%20yang%20sesuai?" target="_blank" class="svc-card reveal r4" style="text-decoration:none;display:flex;flex-direction:column;align-items:flex-start;">
+      <div class="svc-icon-bg"><div class="svc-icon">📈</div></div>
+      <div class="svc-name">Pelaburan</div>
+    </a>
+  </div>
+</section>
+
+<!-- LISTINGS -->
+<section class="s listings-section" id="listings">
+  <div class="reveal"><span class="s-eyebrow" style="color:var(--yellow);">Senarai Hartanah · Our Listings</span></div>
+  <h2 class="s-title white reveal r2">Projek Baru &<br><em>Subsales Pilihan.</em></h2>
+
+  <!-- Tabs -->
+  <div class="listings-tabs reveal r3">
+    <button class="l-tab active" id="lt-new" onclick="lSwitch('new')">🏗 Projek Baru</button>
+    <button class="l-tab" id="lt-sub" onclick="lSwitch('sub')">🏠 Subsales</button>
+  </div>
+
+  <!-- NEW PROJECTS -->
+  <div id="lp-new" class="listings-grid">
+
+    <!-- The Straits View DUO -->
+    <div class="listing-card reveal">
+      <div class="lc-img">
+        <img src="The_Straits_View_Duo.jpg" alt="The Straits View DUO">
+        <div class="lc-img-overlay"></div>
+        <div class="lc-status">● Tower B Dibuka</div>
+        <div class="lc-location">Permas Jaya, Johor Bahru</div>
+      </div>
+      <div class="lc-body">
+        <div class="lc-title">The Straits View <em>DUO</em></div>
+        <div class="lc-dev">by BRDB Developments · Freehold · 33 Tingkat · 715 Unit</div>
+        <div class="lc-specs">
+          <div class="lc-spec"><div class="lc-spec-val gold">RM398K</div><div class="lc-spec-label">Harga Dari</div></div>
+          <div class="lc-spec"><div class="lc-spec-val">645–1,529</div><div class="lc-spec-label">sq.ft</div></div>
+          <div class="lc-spec"><div class="lc-spec-val">8 min</div><div class="lc-spec-label">ke CIQ/RTS</div></div>
+        </div>
+        <div class="lc-tags">
+          <span class="lc-tag lc-tag-gold">Freehold</span>
+          <span class="lc-tag lc-tag-muted">1BR+S · 3BR · 4BR DK</span>
+          <span class="lc-tag lc-tag-muted">GreenRE</span>
+        </div>
+        <div class="lc-actions">
+          <a href="project-straits-view-duo.html" class="lc-btn-primary">Full Details →</a>
+          <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20The%20Straits%20View%20DUO" target="_blank" class="lc-btn-ghost">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Tanya Razi
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Allamanda Phase 6 -->
+    <div class="listing-card reveal r2">
+      <div class="lc-img">
+        <img src="allamanda-hero.jpg" alt="Allamanda Phase 6">
+        <div class="lc-img-overlay"></div>
+        <div class="lc-status">● Kini Dijual</div>
+        <div class="lc-location">Meridin East, Pasir Gudang</div>
+      </div>
+      <div class="lc-body">
+        <div class="lc-title">Allamanda <em>Phase 6</em></div>
+        <div class="lc-dev">by Mah Sing Group · Freehold · Double Storey Terrace · 18'×65'</div>
+        <div class="lc-specs">
+          <div class="lc-spec"><div class="lc-spec-val gold">RM491K</div><div class="lc-spec-label">Harga Dari</div></div>
+          <div class="lc-spec"><div class="lc-spec-val">1,676</div><div class="lc-spec-label">sq.ft</div></div>
+          <div class="lc-spec"><div class="lc-spec-val">4+3</div><div class="lc-spec-label">BR+Bath</div></div>
+        </div>
+        <div class="lc-tags">
+          <span class="lc-tag lc-tag-gold">Freehold</span>
+          <span class="lc-tag lc-tag-muted">Gated & Guarded</span>
+          <span class="lc-tag lc-tag-muted">1,313 Ekar Township</span>
+        </div>
+        <div class="lc-actions">
+          <a href="project-allamanda.html" class="lc-btn-primary">Full Details →</a>
+          <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20Allamanda%20Phase%206.%20Boleh%20info?" target="_blank" class="lc-btn-ghost">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Tanya Razi
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Redhill -->
+    <div class="listing-card reveal r4">
+      <div class="lc-img">
+        <img src="redhill-hero.jpg" alt="Redhill Seri Alam">
+        <div class="lc-img-overlay"></div>
+        <div class="lc-status">● Move-in Bonus!</div>
+        <div class="lc-location">Seri Alam, Masai, JB</div>
+      </div>
+      <div class="lc-body">
+        <div class="lc-title">Red<em>hill</em></div>
+        <div class="lc-dev">by Alam Height · Freehold · Double Storey · 20'×70' · 231 Unit</div>
+        <div class="lc-specs">
+          <div class="lc-spec"><div class="lc-spec-val gold">RM619K</div><div class="lc-spec-label">Nett (Bumi)</div></div>
+          <div class="lc-spec"><div class="lc-spec-val">1,951</div><div class="lc-spec-label">sq.ft</div></div>
+          <div class="lc-spec"><div class="lc-spec-val">4+3</div><div class="lc-spec-label">BR+Bath</div></div>
+        </div>
+        <div class="lc-tags">
+          <span class="lc-tag lc-tag-gold">Freehold</span>
+          <span class="lc-tag lc-tag-muted">Move-in Bonus RM20K</span>
+          <span class="lc-tag lc-tag-muted">FREE Aircond+Fridge</span>
+        </div>
+        <div class="lc-actions">
+          <a href="project-redhill.html" class="lc-btn-primary">Full Details →</a>
+          <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20Redhill%2C%20Seri%20Alam.%20Boleh%20info?" target="_blank" class="lc-btn-ghost"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Tanya Razi</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Premium Height Dato Onn -->
+    <div class="listing-card reveal r2">
+      <div class="lc-img">
+        <img src="premium-height-hero.jpg" alt="Premium Height Residence">
+        <div class="lc-img-overlay"></div>
+        <div class="lc-status">● Tower A — 93 Unit Berbaki</div>
+        <div class="lc-location">Bandar Dato Onn, Johor Bahru</div>
+      </div>
+      <div class="lc-body">
+        <div class="lc-title">Premium <em>Height</em></div>
+        <div class="lc-dev">by MJK Group · Freehold · Kondominium · 3 Tower · 1,300 Unit</div>
+        <div class="lc-specs">
+          <div class="lc-spec"><div class="lc-spec-val gold">484–947</div><div class="lc-spec-label">sq.ft</div></div>
+          <div class="lc-spec"><div class="lc-spec-val">1–3</div><div class="lc-spec-label">Bilik</div></div>
+          <div class="lc-spec"><div class="lc-spec-val">45</div><div class="lc-spec-label">Kemudahan</div></div>
+        </div>
+        <div class="lc-tags">
+          <span class="lc-tag lc-tag-gold">Freehold</span>
+          <span class="lc-tag lc-tag-muted">Bandar Dato Onn</span>
+          <span class="lc-tag lc-tag-muted">Free Legal Fee</span>
+        </div>
+        <div class="lc-actions">
+          <a href="project-premium-height.html" class="lc-btn-primary">Full Details →</a>
+          <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20Premium%20Height%20Dato%20Onn.%20Boleh%20info?" target="_blank" class="lc-btn-ghost">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Tanya Razi
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA: Tanya projek lain -->
+  <div id="lp-new-cta" style="margin-top:32px;text-align:center;">
+    <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20nak%20tahu%20projek-projek%20lain%20yang%20ada.%20Boleh%20share?" target="_blank" style="display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:100px;border:1.5px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);font-family:var(--font-body);font-size:0.82rem;font-weight:400;text-decoration:none;transition:all 0.2s;letter-spacing:0.04em;" onmouseover="this.style.borderColor='var(--yellow)';this.style.color='var(--yellow)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.2)';this.style.color='rgba(255,255,255,0.7)'">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+      Ada projek lain yang Razi cadangkan? Tanya saya terus →
+    </a>
+  </div>
+
+  <!-- SUBSALES -->
+  <div id="lp-sub" style="display:none;">
+
+    <!-- Subsales — by Daerah -->
+    <div style="margin-bottom:20px;">
+      <p style="font-size:0.78rem;color:rgba(255,255,255,0.4);line-height:1.7;">Listing subsale terkini dikategorikan by daerah. Klik kawasan untuk lihat semua listing.</p>
+    </div>
+
+    <!-- DAERAH: SKUDAI -->
+    <div style="margin-bottom:32px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <div style="font-size:0.65rem;color:var(--yellow);letter-spacing:0.16em;text-transform:uppercase;font-weight:500;">📍 Skudai / Bukit Indah / Perling</div>
+        <div style="flex:1;height:1px;background:rgba(255,255,255,0.08);"></div>
+        <a href="subsales-skudai.html" style="font-size:0.7rem;color:rgba(255,255,255,0.4);text-decoration:none;letter-spacing:0.06em;transition:color 0.2s;white-space:nowrap;" onmouseover="this.style.color='var(--yellow)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Lihat Semua →</a>
+      </div>
+      <div class="listings-grid">
+        <!-- Flat Selesa Jaya -->
+        <div class="listing-card reveal">
+          <div class="lc-img">
+            <img src="subsales-selesa-jaya-ext.jpg" alt="Flat Taman Selesa Jaya">
+            <div class="lc-img-overlay"></div>
+            <div class="lc-status" style="background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.3);color:#22C55E;">● Dijual</div>
+            <div class="lc-location">Bandar Selesa Jaya, Skudai</div>
+          </div>
+          <div class="lc-body">
+            <div class="lc-title">Flat Taman <em>Selesa Jaya</em></div>
+            <div class="lc-dev">Flat Mampu Milik · Freehold · Non-Bumi · Tingkat 3</div>
+            <div class="lc-specs">
+              <div class="lc-spec"><div class="lc-spec-val gold">RM135K</div><div class="lc-spec-label">Harga</div></div>
+              <div class="lc-spec"><div class="lc-spec-val">516</div><div class="lc-spec-label">sq.ft</div></div>
+              <div class="lc-spec"><div class="lc-spec-val">2+1</div><div class="lc-spec-label">BR+Bath</div></div>
+            </div>
+            <div class="lc-tags">
+              <span class="lc-tag lc-tag-gold">Freehold</span>
+              <span class="lc-tag lc-tag-muted">Tingkat Tertinggi</span>
+              <span class="lc-tag lc-tag-muted">Dekat Tuas 2nd Link</span>
+            </div>
+            <div class="lc-actions">
+              <a href="subsales-skudai.html" class="lc-btn-primary">Full Details →</a>
+              <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20Flat%20Selesa%20Jaya%20RM135K.%20Boleh%20info?" target="_blank" class="lc-btn-ghost">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Tanya Razi
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAERAH LAIN — placeholders (akan ditambah bila ada listings) -->
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:8px;">
+      <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20ada%20listing%20subsale%20di%20Masai%20ke?" target="_blank" style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border:1.5px dashed rgba(255,255,255,0.1);border-radius:8px;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--yellow)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div>
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.6);font-weight:500;">📍 Masai / Seri Alam</div>
+          <div style="font-size:0.65rem;color:rgba(255,255,255,0.25);margin-top:2px;">Tanya listing terkini</div>
+        </div>
+        <div style="font-size:0.65rem;color:var(--yellow);">Tanya →</div>
+      </a>
+      <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20ada%20listing%20subsale%20di%20Pasir%20Gudang%20ke?" target="_blank" style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border:1.5px dashed rgba(255,255,255,0.1);border-radius:8px;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--yellow)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div>
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.6);font-weight:500;">📍 Pasir Gudang / Permas Jaya</div>
+          <div style="font-size:0.65rem;color:rgba(255,255,255,0.25);margin-top:2px;">Tanya listing terkini</div>
+        </div>
+        <div style="font-size:0.65rem;color:var(--yellow);">Tanya →</div>
+      </a>
+      <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20ada%20listing%20subsale%20di%20Iskandar%20Puteri%20ke?" target="_blank" style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border:1.5px dashed rgba(255,255,255,0.1);border-radius:8px;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--yellow)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div>
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.6);font-weight:500;">📍 Iskandar Puteri / Nusajaya</div>
+          <div style="font-size:0.65rem;color:rgba(255,255,255,0.25);margin-top:2px;">Tanya listing terkini</div>
+        </div>
+        <div style="font-size:0.65rem;color:var(--yellow);">Tanya →</div>
+      </a>
+      <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20ada%20listing%20subsale%20di%20Plentong%20ke?" target="_blank" style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border:1.5px dashed rgba(255,255,255,0.1);border-radius:8px;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--yellow)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div>
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.6);font-weight:500;">📍 Plentong / Johor Bahru City</div>
+          <div style="font-size:0.65rem;color:rgba(255,255,255,0.25);margin-top:2px;">Tanya listing terkini</div>
+        </div>
+        <div style="font-size:0.65rem;color:var(--yellow);">Tanya →</div>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT RAZI -->
+<section class="s about-section">
+  <div class="about-grid">
+    <div class="about-img-wrap reveal">
+      <div class="about-img-box">
+        <img src="razi-profile.jpg" alt="Razi — Property Agent JB" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+      </div>
+      <div class="about-accent"></div>
+    </div>
+    <div class="about-right">
+      <span class="s-eyebrow reveal">Tentang Saya · About Me</span>
+      <div class="about-name reveal r2">Razi</div>
+      <div class="about-role reveal r2">Team Leader · One Dream Legacy</div>
+      <p class="about-body reveal r3">
+        Saya Razi — ejen hartanah berdaftar di bawah One Dream Legacy, Johor Bahru. Dengan pengalaman luas dalam pasaran JB, saya bantu seller jual cepat dan buyer beli dengan yakin.
+        <br><br>
+        Approach saya simple: <strong>transparent, fast, dan result-oriented.</strong> Dari listing sampai kunci diserahkan — saya ada untuk anda setiap langkah.
+      </p>
+      <ul class="about-list reveal r3">
+        <li>Proses jual-beli yang cepat dan efisien</li>
+        <li>Pembeli serius sahaja — tiada buang masa</li>
+        <li>Coverage seluruh kawasan Johor Bahru</li>
+        <li>Berpengalaman dalam subsale & projek baru</li>
+      </ul>
+      <div class="social-icons reveal r4">
+        <a href="https://wa.me/601154065243" target="_blank" class="social-btn social-btn-wa">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <a href="https://www.facebook.com/razipropertyjb" target="_blank" class="social-btn social-btn-fb">
+          <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
+        </a>
+        <a href="https://www.instagram.com/razipropertyjb" target="_blank" class="social-btn social-btn-ig">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          Instagram
+        </a>
+        <a href="https://www.tiktok.com/@razipropertyjb" target="_blank" class="social-btn social-btn-tt">
+          <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.19 8.19 0 004.79 1.52V6.76a4.85 4.85 0 01-1.02-.07z"/></svg>
+          TikTok
+        </a>
+        <a href="https://www.youtube.com/@RaziPropertyJB" target="_blank" class="social-btn social-btn-yt">
+          <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          YouTube
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO TOUR -->
+<section class="s video-section" id="video-tour">
+  <span class="s-eyebrow reveal">Video Tour · Tonton Review</span>
+  <h2 class="s-title reveal r2">Tonton Review<br><em>Rumah Saya.</em></h2>
+  <p style="font-size:0.92rem;font-weight:300;color:rgba(255,255,255,0.45);max-width:520px;line-height:1.7;margin-top:-8px;" class="reveal r3">Video tour & review hartanah terkini di YouTube saya. Tonton sebelum buat keputusan!</p>
+
+  <div class="video-grid">
+
+    <!-- VIDEO 1 -->
+    <a href="https://youtu.be/4ZOpKUlTPfI?si=RS8MDKlGF5RFeVzF" target="_blank" class="video-card reveal">
+      <div class="video-thumb">
+        <img src="https://img.youtube.com/vi/4ZOpKUlTPfI/maxresdefault.jpg" alt="Video Tour 1" onerror="this.src='https://img.youtube.com/vi/4ZOpKUlTPfI/hqdefault.jpg'">
+        <div class="video-play-btn">
+          <div class="video-play-circle">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <div class="video-yt-badge">
+          <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          YouTube
+        </div>
+      </div>
+      <div class="video-body">
+        <div class="video-num">Video Tour 01</div>
+        <div class="video-title">M Tiara, Skudai</div>
+        <div class="video-cta">
+          Tonton di YouTube
+          <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+        </div>
+      </div>
+    </a>
+
+    <!-- VIDEO 2 -->
+    <a href="https://youtu.be/8yjImyWcDHk?si=5OgruNVu24_PrudY" target="_blank" class="video-card reveal r2">
+      <div class="video-thumb">
+        <img src="https://img.youtube.com/vi/8yjImyWcDHk/maxresdefault.jpg" alt="Video Tour 2" onerror="this.src='https://img.youtube.com/vi/8yjImyWcDHk/hqdefault.jpg'">
+        <div class="video-play-btn">
+          <div class="video-play-circle">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <div class="video-yt-badge">
+          <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          YouTube
+        </div>
+      </div>
+      <div class="video-body">
+        <div class="video-num">Video Tour 02</div>
+        <div class="video-title">Premium Heights, Bandar Dato Onn</div>
+        <div class="video-cta">
+          Tonton di YouTube
+          <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+        </div>
+      </div>
+    </a>
+
+    <!-- VIDEO 3 -->
+    <a href="https://youtu.be/ylje83Iw634?si=8lRWnPyM1hhTu4d_" target="_blank" class="video-card reveal r3">
+      <div class="video-thumb">
+        <img src="https://img.youtube.com/vi/ylje83Iw634/maxresdefault.jpg" alt="Video Tour 3" onerror="this.src='https://img.youtube.com/vi/ylje83Iw634/hqdefault.jpg'">
+        <div class="video-play-btn">
+          <div class="video-play-circle">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <div class="video-yt-badge">
+          <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          YouTube
+        </div>
+      </div>
+      <div class="video-body">
+        <div class="video-num">Video Tour 03</div>
+        <div class="video-title">Allamanda Meridin East, Pasir Gudang</div>
+        <div class="video-cta">
+          Tonton di YouTube
+          <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="reveal" style="margin-top:8px;">
+    <a href="https://www.youtube.com/@RaziPropertyJB" target="_blank" class="video-channel-btn">
+      <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+      Subscribe Channel YouTube Razi
+    </a>
+  </div>
+</section>
+
+<!-- INQUIRY -->
+<section class="s inquiry-section" id="inquiry">
+  <div class="inquiry-grid">
+    <div class="inq-left">
+      <span class="s-eyebrow reveal">Hubungi Saya · Get In Touch</span>
+      <h2 class="s-title reveal r2">Hantar Inquiry.<br>Saya Reply <em>Segera.</em></h2>
+      <p class="s-body reveal r3">Tinggalkan details anda — saya akan balas dalam 24 jam. Atau terus WhatsApp untuk respon lebih pantas.</p>
+      <div class="inq-contact reveal r3">
+        <div class="inq-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <a href="https://wa.me/601154065243" target="_blank">+601154065243</a>
+        </div>
+        <div class="inq-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Johor Bahru, Johor, Malaysia
+        </div>
+        <div class="inq-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          One Dream Legacy · REN Berdaftar
+        </div>
+      </div>
+    </div>
+    <div class="reveal r2">
+      <div class="inq-form">
+        <div class="inq-form-title">Borang Inquiry</div>
+        <div class="inq-form-sub">Semua field wajib diisi · All fields required</div>
+        <div class="field-row">
+          <div class="field">
+            <label>Nama</label>
+            <input type="text" id="i-name" placeholder="Nama penuh anda">
+          </div>
+          <div class="field">
+            <label>No. WhatsApp</label>
+            <input type="tel" id="i-phone" placeholder="01X-XXXXXXXX">
+          </div>
+        </div>
+        <div class="field full">
+          <label>Jenis Urusan</label>
+          <select id="i-type">
+            <option value="">-- Pilih --</option>
+            <option>Nak Jual Rumah · Sell Property</option>
+            <option>Nak Beli Rumah · Buy Property</option>
+            <option>Projek Baru · New Project</option>
+            <option>Pelaburan · Investment</option>
+            <option>Lain-lain · Others</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label>Kawasan Minat</label>
+          <select id="i-area">
+            <option value="">-- Pilih --</option>
+            <option>JB City</option>
+            <option>Skudai / Nusajaya</option>
+            <option>Iskandar Puteri</option>
+            <option>Kulai / Senai</option>
+            <option>Lain-lain</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label>Mesej (Optional)</label>
+          <textarea id="i-msg" placeholder="Cerita sikit apa yang anda cari..."></textarea>
+        </div>
+        <button class="btn-submit-pill" onclick="submitInquiry()">Hantar Inquiry →</button>
+        <div class="success-toast" id="i-success">✓ Terima kasih! Razi akan hubungi anda dalam masa 24 jam.</div>
+        <div class="submit-note">Atau terus WhatsApp: <a href="https://wa.me/601154065243" target="_blank">+601154065243</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">Razi Property JB</div>
+      <div class="footer-brand-sub">One Dream Legacy · REN Berdaftar · Johor Bahru</div>
+      <div style="display:flex;gap:10px;margin-top:16px;">
+        <a href="https://wa.me/601154065243" target="_blank" title="WhatsApp" style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='#25D366';this.style.borderColor='#25D366'" onmouseout="this.style.background='rgba(255,255,255,0.08)';this.style.borderColor='rgba(255,255,255,0.1)'">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/razipropertyjb" target="_blank" title="Facebook" style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='#1877F2';this.style.borderColor='#1877F2'" onmouseout="this.style.background='rgba(255,255,255,0.08)';this.style.borderColor='rgba(255,255,255,0.1)'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/razipropertyjb" target="_blank" title="Instagram" style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='#dc2743';this.style.borderColor='#dc2743'" onmouseout="this.style.background='rgba(255,255,255,0.08)';this.style.borderColor='rgba(255,255,255,0.1)'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@razipropertyjb" target="_blank" title="TikTok" style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='#010101';this.style.borderColor='#010101'" onmouseout="this.style.background='rgba(255,255,255,0.08)';this.style.borderColor='rgba(255,255,255,0.1)'">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.19 8.19 0 004.79 1.52V6.76a4.85 4.85 0 01-1.02-.07z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@RaziPropertyJB" target="_blank" title="YouTube" style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='#FF0000';this.style.borderColor='#FF0000'" onmouseout="this.style.background='rgba(255,255,255,0.08)';this.style.borderColor='rgba(255,255,255,0.1)'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#listings">Listing</a>
+      <a href="#video-tour">Video Tour</a>
+      <a href="#inquiry">Inquiry</a>
+      <a href="project-straits-view-duo.html">The Straits View DUO</a>
+      <a href="project-allamanda.html">Allamanda Phase 6</a>
+      <a href="project-redhill.html">Redhill Seri Alam</a>
+      <a href="project-premium-height.html">Premium Height</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© <span id="copy-year"></span> Razi Property JB. All rights reserved.</div>
+    <a href="https://wa.me/601154065243" target="_blank" class="footer-wa">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp Razi
+    </a>
+  </div>
+</footer>
+
+<script>
+  // Dynamic copyright year
+  document.getElementById('copy-year').textContent = new Date().getFullYear();
+
+  // Nav style on scroll
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('light', window.scrollY > window.innerHeight * 0.85);
+  });
+
+  // Scroll reveal
+  const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+  // Listings tab
+  function lSwitch(tab) {
+    const isNew = tab === 'new';
+    document.getElementById('lp-new').style.display = isNew ? 'grid' : 'none';
+    document.getElementById('lp-sub').style.display = isNew ? 'none' : 'block';
+    document.getElementById('lp-new-cta').style.display = isNew ? 'block' : 'none';
+    document.getElementById('lt-new').classList.toggle('active', isNew);
+    // (subsales tab restored)
+    document.getElementById('lt-sub').classList.toggle('active', !isNew);
+  }
+
+  // Inquiry submit
+  function submitInquiry() {
+    const name  = document.getElementById('i-name').value.trim();
+    const phone = document.getElementById('i-phone').value.trim();
+    const type  = document.getElementById('i-type').value;
+    const area  = document.getElementById('i-area').value;
+    const msg   = document.getElementById('i-msg').value.trim();
+    if (!name || !phone || !type || !area) {
+      alert('Sila isi semua field sebelum hantar.');
+      return;
+    }
+    const waMsg = encodeURIComponent(
+      `Hi Razi! Saya isi borang inquiry.\n\nNama: ${name}\nNo. WA: ${phone}\nJenis: ${type}\nKawasan: ${area}\nMesej: ${msg || '-'}`
+    );
+    document.getElementById('i-success').style.display = 'block';
+    setTimeout(() => window.open(`https://wa.me/601154065243?text=${waMsg}`, '_blank'), 800);
+  }
+
+  // Mobile menu
+  function toggleMenu() {
+    const nav = document.getElementById('mobileNav');
+    const ham = document.getElementById('hamburger');
+    nav.classList.toggle('open');
+    const isOpen = nav.classList.contains('open');
+    const spans = ham.querySelectorAll('span');
+    if (isOpen) {
+      spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+    } else {
+      spans[0].style.transform = '';
+      spans[1].style.opacity = '';
+      spans[2].style.transform = '';
+    }
+  }
+</script>
+</body>
+</html>

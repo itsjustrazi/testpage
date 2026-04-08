@@ -1,0 +1,241 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: ms
+
+collections:
+
+  # ── SUBSALES LISTINGS ──────────────────────────────────────
+  - name: "subsales"
+    label: "🏠 Subsales Listings"
+    label_singular: "Listing Subsale"
+    folder: "_data/subsales"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "title"
+    summary: "{{title}} — RM{{harga}} | {{kawasan}}"
+    sortable_fields: ["kawasan", "harga", "tarikh"]
+    fields:
+
+      - label: "Tajuk Listing"
+        name: "title"
+        widget: "string"
+        hint: "Contoh: Flat Bandar Selesa Jaya — Tingkat 3"
+
+      - label: "Status Listing"
+        name: "status"
+        widget: "select"
+        options:
+          - { label: "✅ Aktif (Published)", value: "aktif" }
+          - { label: "⏸ Draft (Belum Publish)", value: "draft" }
+          - { label: "❌ Terjual / Tidak Aktif", value: "terjual" }
+        default: "aktif"
+
+      - label: "Jenis Hartanah"
+        name: "jenis"
+        widget: "select"
+        options:
+          - { label: "Flat / Apartment", value: "Flat" }
+          - { label: "Rumah Teres 1 Tingkat", value: "Teres 1 Tingkat" }
+          - { label: "Rumah Teres 2 Tingkat", value: "Teres 2 Tingkat" }
+          - { label: "Rumah Berkembar", value: "Berkembar" }
+          - { label: "Kondominium", value: "Kondominium" }
+          - { label: "Rumah Banglo", value: "Banglo" }
+          - { label: "Rumah Kedai", value: "Kedai" }
+          - { label: "Lain-lain", value: "Lain-lain" }
+
+      - label: "Kawasan / Daerah"
+        name: "kawasan"
+        widget: "select"
+        options:
+          - { label: "Skudai / Bukit Indah / Perling", value: "skudai" }
+          - { label: "Masai / Seri Alam", value: "masai" }
+          - { label: "Pasir Gudang / Meridin East", value: "pasir-gudang" }
+          - { label: "Permas Jaya / Plentong", value: "permas-jaya" }
+          - { label: "Iskandar Puteri / Nusajaya", value: "iskandar-puteri" }
+          - { label: "JB City / Johor Bahru Town", value: "jb-city" }
+          - { label: "Kulai / Senai", value: "kulai" }
+          - { label: "Tebrau / Setia Indah", value: "tebrau" }
+          - { label: "Lain-lain", value: "lain-lain" }
+
+      - label: "Nama Taman / Projek"
+        name: "nama_taman"
+        widget: "string"
+        hint: "Contoh: Taman Selesa Jaya, Sri Putri, Desa Jaya"
+
+      - label: "Alamat Penuh"
+        name: "alamat"
+        widget: "string"
+        hint: "Contoh: No 12, Jalan Selesa 1, Bandar Selesa Jaya, 81300 Skudai"
+
+      - label: "Harga Jual (RM)"
+        name: "harga"
+        widget: "number"
+        value_type: "int"
+        hint: "Masukkan nombor sahaja. Contoh: 135000"
+
+      - label: "Saiz Unit (sqft)"
+        name: "saiz_sqft"
+        widget: "number"
+        value_type: "int"
+        hint: "Contoh: 516"
+
+      - label: "Bilangan Bilik Tidur"
+        name: "bilik_tidur"
+        widget: "number"
+        value_type: "int"
+        min: 0
+        max: 10
+
+      - label: "Bilangan Bilik Air"
+        name: "bilik_air"
+        widget: "number"
+        value_type: "int"
+        min: 0
+        max: 10
+
+      - label: "Tingkat"
+        name: "tingkat"
+        widget: "string"
+        required: false
+        hint: "Jika berkenaan. Contoh: Tingkat 3, Tingkat 2/3, Ground Floor"
+
+      - label: "Hak Milik (Tenure)"
+        name: "tenure"
+        widget: "select"
+        options:
+          - { label: "Freehold", value: "Freehold" }
+          - { label: "Leasehold", value: "Leasehold" }
+          - { label: "Bumi Lot", value: "Bumi Lot" }
+
+      - label: "Status Bumilot"
+        name: "bumilot"
+        widget: "select"
+        options:
+          - { label: "Non-Bumilot (Terbuka)", value: "Non-Bumilot" }
+          - { label: "Bumi Lot", value: "Bumi Lot" }
+
+      - label: "Keadaan Unit"
+        name: "keadaan"
+        widget: "select"
+        options:
+          - { label: "Bare (Kosong)", value: "Bare" }
+          - { label: "Partially Furnished", value: "Partial Furnished" }
+          - { label: "Fully Furnished", value: "Fully Furnished" }
+          - { label: "Renovated", value: "Renovated" }
+          - { label: "Perlu Ubahsuai", value: "Perlu Ubahsuai" }
+        required: false
+
+      - label: "Highlights / Kelebihan Unit"
+        name: "highlights"
+        widget: "list"
+        hint: "Senarai kelebihan — satu per baris. Contoh: Tingkat tertinggi, Menghadap playground"
+        field:
+          label: "Kelebihan"
+          name: "item"
+          widget: "string"
+
+      - label: "Deskripsi Tambahan"
+        name: "deskripsi"
+        widget: "text"
+        required: false
+        hint: "Maklumat tambahan untuk buyer. Akan dipaparkan dalam listing."
+
+      - label: "Gambar Utama (Hero)"
+        name: "gambar_hero"
+        widget: "image"
+        hint: "Gambar pertama yang akan dipaparkan — luaran bangunan atau ruang tamu"
+
+      - label: "Galeri Gambar Tambahan"
+        name: "galeri"
+        widget: "list"
+        required: false
+        hint: "Tambah sehingga 10 gambar"
+        field:
+          label: "Gambar"
+          name: "gambar"
+          widget: "image"
+
+      - label: "Tarikh Listing Ditambah"
+        name: "tarikh"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "DD/MM/YYYY"
+        time_format: false
+        default: ""
+
+      - label: "WhatsApp Message (Pre-filled)"
+        name: "wa_msg"
+        widget: "string"
+        required: false
+        hint: "Mesej WhatsApp bila buyer klik. Biarkan kosong untuk guna default."
+
+  # ── NEW PROJECTS (untuk update listing project) ─────────────
+  - name: "projects"
+    label: "🏗 Projek Baru"
+    label_singular: "Projek"
+    folder: "_data/projects"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "nama_projek"
+    summary: "{{nama_projek}} — {{pemaju}} | {{kawasan}}"
+    fields:
+
+      - label: "Nama Projek"
+        name: "nama_projek"
+        widget: "string"
+        hint: "Contoh: Premium Height Residence"
+
+      - label: "Pemaju"
+        name: "pemaju"
+        widget: "string"
+        hint: "Contoh: MJK Group Sdn Bhd"
+
+      - label: "Status"
+        name: "status"
+        widget: "select"
+        options:
+          - { label: "✅ Aktif", value: "aktif" }
+          - { label: "⏸ Coming Soon", value: "coming-soon" }
+          - { label: "❌ Sold Out", value: "sold-out" }
+        default: "aktif"
+
+      - label: "Kawasan"
+        name: "kawasan"
+        widget: "string"
+
+      - label: "Harga Dari (RM)"
+        name: "harga_dari"
+        widget: "string"
+        hint: "Contoh: 211,508"
+
+      - label: "URL Page Projek"
+        name: "url"
+        widget: "string"
+        hint: "Contoh: project-premium-height.html"
+
+      - label: "Gambar Hero"
+        name: "gambar"
+        widget: "image"
+        required: false
+
+  # ── SITE SETTINGS ───────────────────────────────────────────
+  - name: "settings"
+    label: "⚙️ Tetapan Website"
+    files:
+
+      - label: "Maklumat Ejen"
+        name: "ejen"
+        file: "_data/settings/ejen.json"
+        fields:
+          - { label: "Nama Ejen", name: "nama", widget: "string", default: "Razi" }
+          - { label: "No. WhatsApp", name: "whatsapp", widget: "string", default: "601154065243" }
+          - { label: "Tagline", name: "tagline", widget: "string", default: "The Fast & Easy JB Property Guy" }
+          - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
+          - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+          - { label: "TikTok URL", name: "tiktok", widget: "string", required: false }
+          - { label: "YouTube URL", name: "youtube", widget: "string", required: false }

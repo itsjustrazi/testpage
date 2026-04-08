@@ -1,21 +1,25 @@
 [build]
+  # Install PyYAML then generate listings.json from _data/subsales/*.md
+  command = "pip install PyYAML && python3 generate-listings.py"
   publish = "."
-  command = "python3 generate-listings.py"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-
-[[headers]]
-  for = "/admin/*"
-  [headers.values]
-    X-Robots-Tag = "noindex"
-
-# Allow listings.json to be fetched from JS
+# Cache-busting for listings.json so browsers always get fresh data
 [[headers]]
   for = "/listings.json"
   [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
     Access-Control-Allow-Origin = "*"
-    Cache-Control = "no-cache"
+
+# Security headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# No-index admin panel
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

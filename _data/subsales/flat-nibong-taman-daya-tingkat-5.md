@@ -5,7 +5,7 @@ jenis: Flat
 kawasan: tebrau
 nama_taman: Taman Daya
 alamat: "Jalan Nibong Taman Daya 81100 Johor Bahru "
-harga: 159997
+harga: 160000
 saiz_sqft: 570
 bilik_tidur: 3
 bilik_air: 2
@@ -14,5 +14,11 @@ tenure: Freehold
 bumilot: Non-Bumilot
 keadaan: Partial Furnished
 gambar_hero: /images/uploads/whatsapp-image-2026-04-08-at-15.42.16.jpeg
+galeri:
+  - /images/uploads/whatsapp-image-2026-04-08-at-15.42.16-1-.jpeg
+  - /images/uploads/whatsapp-image-2026-04-08-at-15.42.17.jpeg
+  - /images/uploads/whatsapp-image-2026-04-08-at-15.42.17-1-.jpeg
+  - /images/uploads/whatsapp-image-2026-04-08-at-15.42.18-1-.jpeg
+  - /images/uploads/whatsapp-image-2026-04-08-at-15.42.18.jpeg
 tarikh: 2026-04-08
 ---

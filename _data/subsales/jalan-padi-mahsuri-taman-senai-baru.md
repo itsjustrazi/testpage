@@ -1,8 +1,8 @@
 ---
 title: "Jalan Padi Mahsuri, Taman Senai Baru "
 status: aktif
-jenis: Berkembar
-kawasan: kulai
+jenis: Semi D
+kawasan: senai
 nama_taman: Taman Senai Baru
 alamat: "Jalan Padi Mahsuri 6, Taman Senai Baru "
 harga: 519000

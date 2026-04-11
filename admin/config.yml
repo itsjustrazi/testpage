@@ -42,7 +42,7 @@ collections:
           - { label: "Flat / Apartment", value: "Flat" }
           - { label: "Rumah Teres 1 Tingkat", value: "Teres 1 Tingkat" }
           - { label: "Rumah Teres 2 Tingkat", value: "Teres 2 Tingkat" }
-          - { label: "Rumah Berkembar", value: "Berkembar" }
+          - { label: "Semi D", value: "Semi D" }
           - { label: "Kondominium", value: "Kondominium" }
           - { label: "Rumah Banglo", value: "Banglo" }
           - { label: "Rumah Kedai", value: "Kedai" }
@@ -52,14 +52,19 @@ collections:
         name: "kawasan"
         widget: "select"
         options:
-          - { label: "Skudai / Bukit Indah / Perling", value: "skudai" }
-          - { label: "Masai / Seri Alam", value: "masai" }
-          - { label: "Pasir Gudang / Meridin East", value: "pasir-gudang" }
-          - { label: "Permas Jaya / Plentong", value: "permas-jaya" }
-          - { label: "Iskandar Puteri / Nusajaya", value: "iskandar-puteri" }
-          - { label: "JB City / Johor Bahru Town", value: "jb-city" }
-          - { label: "Kulai / Senai", value: "kulai" }
-          - { label: "Tebrau / Setia Indah", value: "tebrau" }
+          - { label: "Skudai", value: "Skudai" }
+          - { label: "Bukit Indah", value: "Bukit-Indah" }
+          - { label: "Perling", value: "Perling" }
+          - { label: "Seri Alam", value: "Seri-Alam" }
+          - { label: "Masai", value: "Masai" }
+          - { label: "Pasir Gudang", value: "Pasir-Gudang" }
+          - { label: "Permas Jaya / Plentong", value: "Permas-Jaya" }
+          - { label: "Plentong", value: "Plentong" }
+          - { label: "Iskandar Puteri", value: "iskandar-puteri" }
+          - { label: "JB City", value: "jb-city" }
+          - { label: "Kulai", value: "kulai" }
+          - { label: "Senai", value: "senai" }
+          - { label: "Tebrau", value: "tebrau" }
           - { label: "Lain-lain", value: "lain-lain" }
 
       - label: "Nama Taman / Projek"

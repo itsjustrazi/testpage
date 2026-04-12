@@ -222,6 +222,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .sb-wa{display:flex;align-items:center;justify-content:center;gap:7px;background:#25D366;color:#fff;padding:11px;border-radius:5px;font-size:0.78rem;font-weight:500;font-family:var(--font-body);text-decoration:none;transition:all 0.2s;margin-top:4px;}
 .sb-wa:hover{background:#1ebe5a;}
 .sb-wa svg{width:14px;height:14px;fill:#fff;}
+.sb-wa.blue{background:var(--blue);}
+.sb-wa.blue:hover{background:var(--blue-mid);}
 #s-success{display:none;text-align:center;font-size:0.76rem;color:var(--green);padding:10px;background:var(--green-bg);border-radius:5px;}
 .lightbox{display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.92);align-items:center;justify-content:center;}
 .lightbox.open{display:flex;}
@@ -326,22 +328,75 @@ footer a:hover{color:var(--yellow);}
   </div>
 
   <div class="sidebar">
+
+    <!-- CARD 1: Berminat Listing Ini? -->
     <div class="sb-card fade-in" id="inquiry">
       <div class="sb-title">📋 Berminat Listing Ini?</div>
+      <p style="font-size:0.73rem;color:var(--gray-500);margin-bottom:12px;line-height:1.6;">Pilih listing yang anda minat, isi nama dan no. WA — Razi akan hubungi anda terus.</p>
       <div class="sb-form">
         <input type="text" id="s-name" class="sb-input" placeholder="Nama anda">
         <input type="tel" id="s-phone" class="sb-input" placeholder="No. WhatsApp">
         <select id="s-listing" class="sb-input sb-select"><option value="">Pilih Hartanah</option></select>
         <textarea id="s-msg" class="sb-input" rows="2" placeholder="Soalan (optional)"></textarea>
-        <div id="s-success">✅ Terima kasih! Kami akan hubungi anda.</div>
+        <div id="s-success">✅ Terima kasih! Razi akan hubungi anda segera.</div>
         <a href="#" onclick="submitForm(); return false;" class="sb-wa">
           <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Hantar via WhatsApp
         </a>
       </div>
     </div>
+
+    <!-- CARD 2: Mencari Rumah Lain? -->
+    <div class="sb-card fade-in" id="cari-rumah">
+      <div class="sb-title">🏡 Mencari Rumah Lain?</div>
+      <p style="font-size:0.73rem;color:var(--gray-500);margin-bottom:12px;line-height:1.6;">Tak jumpa yang sesuai? Beritahu Razi — kawasan dan bajet anda — kami carikan.</p>
+      <div class="sb-form">
+        <input type="text" id="c-name" class="sb-input" placeholder="Nama anda">
+        <input type="tel" id="c-phone" class="sb-input" placeholder="No. WhatsApp">
+        <select id="c-location" class="sb-input sb-select">
+          <option value="">Pilih Kawasan</option>
+          <option value="Skudai">Skudai</option>
+          <option value="Bukit Indah">Bukit Indah</option>
+          <option value="Tebrau">Tebrau / Setia Indah</option>
+          <option value="Masai">Masai / Seri Alam</option>
+          <option value="Pasir Gudang">Pasir Gudang</option>
+          <option value="Permas Jaya">Permas Jaya</option>
+          <option value="Plentong">Plentong</option>
+          <option value="Iskandar Puteri">Iskandar Puteri</option>
+          <option value="JB City">JB City</option>
+          <option value="Kulai">Kulai</option>
+          <option value="Senai">Senai</option>
+          <option value="Lain-lain">Lain-lain</option>
+        </select>
+        <select id="c-jenis" class="sb-input sb-select">
+          <option value="">Jenis Hartanah</option>
+          <option value="Flat / Apartment">Flat / Apartment</option>
+          <option value="Rumah Teres 1 Tingkat">Rumah Teres 1 Tingkat</option>
+          <option value="Rumah Teres 2 Tingkat">Rumah Teres 2 Tingkat</option>
+          <option value="Semi D">Semi D</option>
+          <option value="Kondominium">Kondominium</option>
+          <option value="Banglo">Rumah Banglo</option>
+          <option value="Lain-lain">Lain-lain</option>
+        </select>
+        <select id="c-bajet" class="sb-input sb-select">
+          <option value="">Bajet Anggaran</option>
+          <option value="Bawah RM200K">Bawah RM200K</option>
+          <option value="RM200K - RM350K">RM200K – RM350K</option>
+          <option value="RM350K - RM500K">RM350K – RM500K</option>
+          <option value="RM500K - RM700K">RM500K – RM700K</option>
+          <option value="RM700K ke atas">RM700K ke atas</option>
+        </select>
+        <div id="c-success" style="display:none;text-align:center;font-size:0.76rem;color:var(--green);padding:10px;background:var(--green-bg);border-radius:5px;">✅ Terima kasih! Razi akan carikan untuk anda.</div>
+        <a href="#" onclick="submitCari(); return false;" class="sb-wa" style="background:var(--blue);">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Hantar Keperluan Saya
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD 3: Profil Razi -->
     <div class="sb-card fade-in" style="overflow:hidden;">
-      <img src="razi-profile.jpg" alt="Razi" style="width:100%;height:120px;object-fit:cover;object-position: center 10%;border-radius:6px;margin-bottom:14px;">
+      <img src="razi-profile.jpg" alt="Razi" style="width:100%;height:120px;object-fit:cover;object-position:center 10%;border-radius:6px;margin-bottom:14px;">
       <div style="font-family:var(--font-display);font-size:1.05rem;font-weight:600;color:var(--blue);margin-bottom:3px;">Razi — REN</div>
       <div style="font-size:0.7rem;color:var(--gray-400);margin-bottom:12px;">OD Legacy Realty · E(1)2004</div>
       <a href="https://wa.me/601154065243" target="_blank" class="sb-wa" style="background:var(--blue);margin-top:0;">
@@ -349,6 +404,7 @@ footer a:hover{color:var(--yellow);}
         011-5406 5243
       </a>
     </div>
+
   </div>
 </div>
 
@@ -382,6 +438,7 @@ const MSG_SVG  = '<svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4
 const KAWASAN_LABELS = {
   'skudai':           'Skudai',
   'bukit-indah':      'Bukit Indah',
+  'perling':          'Perling',
   'tebrau':           'Tebrau / Setia Indah',
   'masai':            'Masai / Seri Alam',
   'seri-alam':        'Seri Alam',
@@ -563,8 +620,25 @@ function submitForm() {
   const listing = $('s-listing').value;
   const msg     = $('s-msg').value.trim();
   if (!name || !phone) { alert('Sila isi nama dan no. WhatsApp.'); return; }
-  const wa = encodeURIComponent('Hi Razi! Saya berminat listing subsale.\n\nNama: '+name+'\nNo. WA: '+phone+'\nListing: '+(listing||'-')+'\nMesej: '+(msg||'-'));
+  const wa = encodeURIComponent('Hi Razi! Saya berminat listing subsale.\n\nNama: '+name+'\nNo. WA: '+phone+'\nListing: '+(listing||'-')+'\nSoalan: '+(msg||'-'));
   $('s-success').style.display = 'block';
+  setTimeout(() => window.open('https://wa.me/601154065243?text='+wa, '_blank'), 800);
+}
+function submitCari() {
+  const name   = $('c-name').value.trim();
+  const phone  = $('c-phone').value.trim();
+  const loc    = $('c-location').value;
+  const jenis  = $('c-jenis').value;
+  const bajet  = $('c-bajet').value;
+  if (!name || !phone) { alert('Sila isi nama dan no. WhatsApp.'); return; }
+  const wa = encodeURIComponent(
+    'Hi Razi! Saya sedang mencari rumah.\n\n' +
+    'Nama: '+name+'\nNo. WA: '+phone+'\n' +
+    'Kawasan: '+(loc||'-')+'\n' +
+    'Jenis: '+(jenis||'-')+'\n' +
+    'Bajet: '+(bajet||'-')
+  );
+  $('c-success').style.display = 'block';
   setTimeout(() => window.open('https://wa.me/601154065243?text='+wa, '_blank'), 800);
 }
 </script>

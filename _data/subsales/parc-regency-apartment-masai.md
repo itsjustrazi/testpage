@@ -1,7 +1,7 @@
 ---
 title: "PARC REGENCY APARTMENT @ MASAI "
 status: aktif
-jenis: Flat
+jenis: Apartment
 kawasan: Plentong
 nama_taman: Parc Regency Apartment
 alamat: "RESIDENSI PARC REGENCY, #18-xx BLOCK E, JALAN MASAI JAYA, 81750 MASAI

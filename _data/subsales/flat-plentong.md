@@ -2,7 +2,7 @@
 title: Flat Plentong
 status: aktif
 jenis: Flat
-kawasan: Plentong
+kawasan: plentong
 nama_taman: Taman Plentong Utama
 alamat: " Flat Plentong, Jalan Teratai, Taman Plentong Utama"
 harga: 198000

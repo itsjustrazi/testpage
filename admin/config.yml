@@ -39,34 +39,29 @@ collections:
         name: "jenis"
         widget: "select"
         options:
-          - { label: "Flat", value: "Flat" }
-          - { label: "Apartment", value: "Apartment" }
+          - { label: "Flat / Apartment", value: "Flat" }
           - { label: "Rumah Teres 1 Tingkat", value: "Teres 1 Tingkat" }
           - { label: "Rumah Teres 2 Tingkat", value: "Teres 2 Tingkat" }
           - { label: "Semi D", value: "Semi D" }
           - { label: "Kondominium", value: "Kondominium" }
           - { label: "Rumah Banglo", value: "Banglo" }
-          - { label: "Rumah Kedai", value: "Kedai" }
           - { label: "Lain-lain", value: "Lain-lain" }
 
       - label: "Kawasan / Daerah"
         name: "kawasan"
         widget: "select"
         options:
-          - { label: "Skudai", value: "Skudai" }
-          - { label: "Bukit Indah", value: "Bukit-Indah" }
-          - { label: "Perling", value: "Perling" }
-          - { label: "Seri Alam", value: "Seri-Alam" }
-          - { label: "Masai", value: "Masai" }
-          - { label: "Pasir Gudang", value: "Pasir-Gudang" }
-          - { label: "Permas Jaya", value: "Permas-Jaya" }
-          - { label: "Plentong", value: "Plentong" }
+          - { label: "Skudai / Bukit Indah", value: "skudai" }
+          - { label: "Tebrau / Setia Indah", value: "tebrau" }
+          - { label: "Masai / Seri Alam", value: "masai" }
+          - { label: "Pasir Gudang", value: "pasir-gudang" }
+          - { label: "Permas Jaya", value: "permas-jaya" }
+          - { label: "Plentong", value: "plentong" }
           - { label: "Iskandar Puteri", value: "iskandar-puteri" }
           - { label: "JB City", value: "jb-city" }
           - { label: "Kulai", value: "kulai" }
           - { label: "Senai", value: "senai" }
-          - { label: "Tebrau", value: "tebrau" }
-          - { label: "Lain-lain", value: "lain-lain" }
+          - { label: "Lain-lain (Luar JB)", value: "lain-lain" }
 
       - label: "Nama Taman / Projek"
         name: "nama_taman"
@@ -76,7 +71,8 @@ collections:
       - label: "Alamat Penuh"
         name: "alamat"
         widget: "string"
-        hint: "Contoh: No 12, Jalan Selesa 1, Bandar Selesa Jaya, 81300 Skudai"
+        required: false
+        hint: "Contoh: No 12, Jalan Selesa 1, 81300 Skudai"
 
       - label: "Harga Jual (RM)"
         name: "harga"
@@ -88,6 +84,7 @@ collections:
         name: "saiz_sqft"
         widget: "number"
         value_type: "int"
+        required: false
         hint: "Contoh: 516"
 
       - label: "Bilangan Bilik Tidur"
@@ -96,6 +93,7 @@ collections:
         value_type: "int"
         min: 0
         max: 10
+        required: false
 
       - label: "Bilangan Bilik Air"
         name: "bilik_air"
@@ -103,16 +101,18 @@ collections:
         value_type: "int"
         min: 0
         max: 10
+        required: false
 
       - label: "Tingkat"
         name: "tingkat"
         widget: "string"
         required: false
-        hint: "Jika berkenaan. Contoh: Tingkat 3, Tingkat 2/3, Ground Floor"
+        hint: "Jika berkenaan. Contoh: 3, 2/3, Ground"
 
       - label: "Hak Milik (Tenure)"
         name: "tenure"
         widget: "select"
+        required: false
         options:
           - { label: "Freehold", value: "Freehold" }
           - { label: "Leasehold", value: "Leasehold" }
@@ -121,6 +121,7 @@ collections:
       - label: "Status Bumilot"
         name: "bumilot"
         widget: "select"
+        required: false
         options:
           - { label: "Non-Bumilot (Terbuka)", value: "Non-Bumilot" }
           - { label: "Bumi Lot", value: "Bumi Lot" }
@@ -128,33 +129,28 @@ collections:
       - label: "Keadaan Unit"
         name: "keadaan"
         widget: "select"
+        required: false
         options:
           - { label: "Bare (Kosong)", value: "Bare" }
           - { label: "Partially Furnished", value: "Partial Furnished" }
           - { label: "Fully Furnished", value: "Fully Furnished" }
           - { label: "Renovated", value: "Renovated" }
           - { label: "Perlu Ubahsuai", value: "Perlu Ubahsuai" }
-        required: false
 
       - label: "Highlights / Kelebihan Unit"
         name: "highlights"
         widget: "list"
-        hint: "Senarai kelebihan — satu per baris. Contoh: Tingkat tertinggi, Menghadap playground"
+        required: false
+        hint: "Senarai kelebihan — satu per baris"
         field:
           label: "Kelebihan"
           name: "item"
           widget: "string"
 
-      - label: "Deskripsi Tambahan"
-        name: "deskripsi"
-        widget: "text"
-        required: false
-        hint: "Maklumat tambahan untuk buyer. Akan dipaparkan dalam listing."
-
       - label: "Gambar Utama (Hero)"
         name: "gambar_hero"
         widget: "image"
-        hint: "Gambar pertama yang akan dipaparkan — luaran bangunan atau ruang tamu"
+        hint: "Gambar pertama yang akan dipaparkan"
 
       - label: "Galeri Gambar Tambahan"
         name: "galeri"
@@ -179,55 +175,6 @@ collections:
         widget: "string"
         required: false
         hint: "Mesej WhatsApp bila buyer klik. Biarkan kosong untuk guna default."
-
-  # ── NEW PROJECTS (untuk update listing project) ─────────────
-  - name: "projects"
-    label: "🏗 Projek Baru"
-    label_singular: "Projek"
-    folder: "_data/projects"
-    create: true
-    slug: "{{slug}}"
-    identifier_field: "nama_projek"
-    summary: "{{nama_projek}} — {{pemaju}} | {{kawasan}}"
-    fields:
-
-      - label: "Nama Projek"
-        name: "nama_projek"
-        widget: "string"
-        hint: "Contoh: Premium Height Residence"
-
-      - label: "Pemaju"
-        name: "pemaju"
-        widget: "string"
-        hint: "Contoh: MJK Group Sdn Bhd"
-
-      - label: "Status"
-        name: "status"
-        widget: "select"
-        options:
-          - { label: "✅ Aktif", value: "aktif" }
-          - { label: "⏸ Coming Soon", value: "coming-soon" }
-          - { label: "❌ Sold Out", value: "sold-out" }
-        default: "aktif"
-
-      - label: "Kawasan"
-        name: "kawasan"
-        widget: "string"
-
-      - label: "Harga Dari (RM)"
-        name: "harga_dari"
-        widget: "string"
-        hint: "Contoh: 211,508"
-
-      - label: "URL Page Projek"
-        name: "url"
-        widget: "string"
-        hint: "Contoh: project-premium-height.html"
-
-      - label: "Gambar Hero"
-        name: "gambar"
-        widget: "image"
-        required: false
 
   # ── SITE SETTINGS ───────────────────────────────────────────
   - name: "settings"

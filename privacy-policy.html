@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Razi Property JB</title>
+  <meta name="description" content="Privacy Policy for Razi Property JB — OD Legacy Realty Sdn Bhd" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1A3A5C;
+      --navy-light: #24527d;
+      --gold: #D4A843;
+      --gold-light: #e8c06a;
+      --ivory: #F8F5EF;
+      --text: #2c2c2c;
+      --muted: #6b7280;
+      --border: #e5e0d6;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--ivory);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    /* Header */
+    header {
+      background: var(--navy);
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--gold);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      color: #fff;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .logo-sub {
+      font-size: 10px;
+      color: var(--gold);
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .back-link {
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover { color: var(--gold); }
+
+    /* Hero strip */
+    .hero {
+      background: var(--navy);
+      padding: 48px 24px 40px;
+    }
+
+    .hero-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 5vw, 40px);
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .hero-meta {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      font-weight: 300;
+    }
+
+    .hero-meta span {
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* Gold divider */
+    .gold-line {
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* Main content */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 52px 24px 80px;
+    }
+
+    .toc {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 48px;
+    }
+
+    .toc-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .toc ol {
+      padding-left: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+
+    .toc li {
+      font-size: 13px;
+    }
+
+    .toc a {
+      color: var(--navy);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover { color: var(--gold); }
+
+    /* Sections */
+    section {
+      margin-bottom: 44px;
+      scroll-margin-top: 80px;
+    }
+
+    .section-num {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: #3d3d3d;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    li {
+      margin-bottom: 6px;
+      color: #3d3d3d;
+    }
+
+    strong {
+      color: var(--navy);
+      font-weight: 500;
+    }
+
+    .highlight-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+
+    /* Contact card */
+    .contact-card {
+      background: var(--navy);
+      border-radius: 12px;
+      padding: 28px 32px;
+      color: #fff;
+      margin-top: 48px;
+    }
+
+    .contact-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .contact-card p {
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .contact-item {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 13px;
+      color: #fff;
+    }
+
+    .contact-item span {
+      color: var(--gold);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 24px;
+      text-align: center;
+    }
+
+    .footer-text {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .footer-text a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .toc ol { grid-template-columns: 1fr; }
+      .contact-card { padding: 20px; }
+      .hero { padding: 32px 20px 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-mark">R</div>
+      <div class="logo-text">
+        <span class="logo-name">Razi Property JB</span>
+        <span class="logo-sub">OD Legacy Realty</span>
+      </div>
+    </a>
+    <a href="/" class="back-link">← Back to Home</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="hero-meta">Last updated: <span>April 2025</span> &nbsp;·&nbsp; OD Legacy Realty Sdn Bhd (E(1)2004)</p>
+  </div>
+</div>
+<div class="gold-line"></div>
+
+<main>
+
+  <div class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#s1">Information We Collect</a></li>
+      <li><a href="#s2">How We Use Your Information</a></li>
+      <li><a href="#s3">Information Sharing</a></li>
+      <li><a href="#s4">Data Security</a></li>
+      <li><a href="#s5">Your Rights</a></li>
+      <li><a href="#s6">Cookies</a></li>
+      <li><a href="#s7">Third-Party Services</a></li>
+      <li><a href="#s8">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <section>
+    <p>This Privacy Policy describes how <strong>Razi Property JB</strong>, operated under <strong>OD Legacy Realty Sdn Bhd (E(1)2004)</strong>, collects, uses, and protects your personal information when you visit our website, submit enquiries, or interact with our advertisements on platforms such as Meta (Facebook/Instagram) and TikTok.</p>
+    <p>By using our website or submitting your information through our lead forms, you agree to the collection and use of information in accordance with this policy.</p>
+  </section>
+
+  <section id="s1">
+    <div class="section-num">01</div>
+    <h2>Information We Collect</h2>
+    <p>We collect personal information that you voluntarily provide to us, including but not limited to:</p>
+    <ul>
+      <li><strong>Full name</strong></li>
+      <li><strong>Phone number / WhatsApp number</strong></li>
+      <li><strong>Email address</strong> (where provided)</li>
+      <li><strong>Property preferences</strong> (unit type, budget range, purchase timeline)</li>
+      <li><strong>Enquiry details</strong> submitted via contact forms or Meta/TikTok lead forms</li>
+    </ul>
+    <p>We may also automatically collect certain technical data when you visit our website, such as IP address, browser type, device information, and pages visited, through cookies and analytics tools.</p>
+  </section>
+
+  <section id="s2">
+    <div class="section-num">02</div>
+    <h2>How We Use Your Information</h2>
+    <p>The information we collect is used solely for legitimate property consultation and marketing purposes:</p>
+    <ul>
+      <li>To respond to your property enquiries and arrange viewing appointments</li>
+      <li>To provide information about property projects relevant to your interests</li>
+      <li>To contact you via phone, WhatsApp, or email regarding properties you have expressed interest in</li>
+      <li>To send you updates on new property launches, promotions, and relevant market information</li>
+      <li>To improve our website, services, and advertising effectiveness</li>
+      <li>To comply with legal and regulatory requirements</li>
+    </ul>
+    <div class="highlight-box">
+      We will <strong>not</strong> use your information for any purpose other than property-related consultation and marketing without your explicit consent.
+    </div>
+  </section>
+
+  <section id="s3">
+    <div class="section-num">03</div>
+    <h2>Information Sharing</h2>
+    <p>We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following limited circumstances:</p>
+    <ul>
+      <li><strong>Property developers:</strong> Where you have expressed interest in a specific project, we may share your details with the developer solely to facilitate your enquiry or booking</li>
+      <li><strong>Team members:</strong> Within Razi Property JB / Homura team for the purpose of following up on your enquiry</li>
+      <li><strong>Legal compliance:</strong> Where required by Malaysian law or regulatory authority</li>
+      <li><strong>Service providers:</strong> Third-party tools (e.g. CRM, WhatsApp automation) used solely to manage and respond to enquiries</li>
+    </ul>
+  </section>
+
+  <section id="s4">
+    <div class="section-num">04</div>
+    <h2>Data Security</h2>
+    <p>We take reasonable measures to protect your personal information from unauthorised access, disclosure, alteration, or destruction. Your data is stored securely and accessible only to authorised personnel.</p>
+    <p>However, please note that no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee absolute security.</p>
+    <p>We retain your personal data for as long as necessary to fulfil the purposes outlined in this policy, or as required by applicable Malaysian law.</p>
+  </section>
+
+  <section id="s5">
+    <div class="section-num">05</div>
+    <h2>Your Rights</h2>
+    <p>Under Malaysia's <strong>Personal Data Protection Act 2010 (PDPA)</strong>, you have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> the personal data we hold about you</li>
+      <li><strong>Correct</strong> any inaccurate or incomplete data</li>
+      <li><strong>Withdraw consent</strong> for us to process your data at any time</li>
+      <li><strong>Request deletion</strong> of your personal data, subject to legal obligations</li>
+      <li><strong>Opt out</strong> of marketing communications at any time</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us using the details provided in Section 8.</p>
+  </section>
+
+  <section id="s6">
+    <div class="section-num">06</div>
+    <h2>Cookies &amp; Tracking</h2>
+    <p>Our website uses cookies and similar tracking technologies to enhance your browsing experience and to measure the performance of our advertisements.</p>
+    <ul>
+      <li><strong>Meta Pixel:</strong> We use the Meta Pixel to track website visits and measure ad campaign performance on Facebook and Instagram</li>
+      <li><strong>Analytics:</strong> We may use analytics tools to understand how visitors use our website</li>
+    </ul>
+    <p>You can control cookie settings through your browser preferences. Disabling cookies may affect the functionality of our website.</p>
+  </section>
+
+  <section id="s7">
+    <div class="section-num">07</div>
+    <h2>Third-Party Services</h2>
+    <p>Our website and advertisements may contain links to third-party websites or services, including Meta (Facebook/Instagram), TikTok, and property listing platforms. We are not responsible for the privacy practices of these third parties.</p>
+    <p>When you submit a lead form through Meta or TikTok advertising platforms, your information is also subject to their respective privacy policies:</p>
+    <ul>
+      <li>Meta Privacy Policy: <strong>facebook.com/privacy/policy</strong></li>
+      <li>TikTok Privacy Policy: <strong>tiktok.com/legal/page/row/privacy-policy</strong></li>
+    </ul>
+  </section>
+
+  <section id="s8">
+    <div class="section-num">08</div>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date. We encourage you to review this policy periodically.</p>
+    <p>Continued use of our website or submission of your information after any changes constitutes your acceptance of the updated policy.</p>
+  </section>
+
+  <div class="contact-card">
+    <h3>Contact Us</h3>
+    <p>For any privacy-related enquiries, data access requests, or to withdraw your consent, please contact us directly.</p>
+    <div class="contact-details">
+      <div class="contact-item">
+        <span>Agent</span>
+        Razi — Property Consultant
+      </div>
+      <div class="contact-item">
+        <span>Agency</span>
+        OD Legacy Realty Sdn Bhd (E(1)2004)
+      </div>
+      <div class="contact-item">
+        <span>WhatsApp</span>
+        011-5406 5243
+      </div>
+      <div class="contact-item">
+        <span>Website</span>
+        razipropertyjb.com
+      </div>
+      <div class="contact-item">
+        <span>Location</span>
+        Johor Bahru, Malaysia
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p class="footer-text">
+    &copy; 2025 Razi Property JB &nbsp;·&nbsp; OD Legacy Realty Sdn Bhd (E(1)2004) &nbsp;·&nbsp;
+    <a href="/">razipropertyjb.com</a>
+  </p>
+</footer>
+
+</body>
+</html>

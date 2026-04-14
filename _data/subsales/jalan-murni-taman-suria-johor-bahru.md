@@ -5,7 +5,7 @@ jenis: Teres 1 Tingkat
 kawasan: jb-city
 nama_taman: Taman Suria
 alamat: jalan murni 2 taman suria, Johor Bahru
-harga: 619997
+harga: 620000
 saiz_sqft: 2626
 bilik_tidur: 3
 bilik_air: 2

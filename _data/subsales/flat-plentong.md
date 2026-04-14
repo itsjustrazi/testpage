@@ -7,7 +7,7 @@ nama_taman: Taman Plentong Utama
 alamat: " Flat Plentong, Jalan Teratai, Taman Plentong Utama"
 harga: 198000
 saiz_sqft: 550
-bilik_tidur: 0
+bilik_tidur: 2
 bilik_air: 1
 tingkat: "4"
 tenure: Leasehold

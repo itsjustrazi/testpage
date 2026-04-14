@@ -6,7 +6,7 @@ kawasan: skudai
 nama_taman: Taman Pulai Jaya
 harga: 460000
 saiz_sqft: 1169
-bilik_tidur: 0
+bilik_tidur: 3
 bilik_air: 2
 tenure: Freehold
 bumilot: Bumi Lot

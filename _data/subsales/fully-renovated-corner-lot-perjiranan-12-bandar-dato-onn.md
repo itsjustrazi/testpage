@@ -6,7 +6,7 @@ kawasan: tebrau
 nama_taman: Perjiranan 12, Bandar Dato Onn
 harga: 1550000
 saiz_sqft: 3251
-bilik_tidur: 2
+bilik_tidur: 5
 bilik_air: 4
 tenure: Freehold
 bumilot: Bumi Lot

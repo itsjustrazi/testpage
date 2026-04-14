@@ -8,7 +8,7 @@ alamat: "Jalan Padi Mahsuri 6, Taman Senai Baru "
 harga: 519000
 saiz_sqft: 2794
 bilik_tidur: 4
-bilik_air: 0
+bilik_air: 2
 tenure: Freehold
 bumilot: Non-Bumilot
 highlights:

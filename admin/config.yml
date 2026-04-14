@@ -39,7 +39,8 @@ collections:
         name: "jenis"
         widget: "select"
         options:
-          - { label: "Flat / Apartment", value: "Flat" }
+          - { label: "Flat", value: "Flat" }
+          - { label: "Apartment", value: "Apartment" }
           - { label: "Rumah Teres 1 Tingkat", value: "Teres 1 Tingkat" }
           - { label: "Rumah Teres 2 Tingkat", value: "Teres 2 Tingkat" }
           - { label: "Semi D", value: "Semi D" }
@@ -62,6 +63,7 @@ collections:
           - { label: "Iskandar Puteri", value: "iskandar-puteri" }
           - { label: "Johor Bahru", value: "johor-bahru" }
           - { label: "Kulai", value: "kulai" }
+          - { label: "Larkin", value: "larkin" }
           - { label: "Senai", value: "senai" }
           - { label: "Lain-lain (Luar JB)", value: "lain-lain" }
 
@@ -118,7 +120,6 @@ collections:
         options:
           - { label: "Freehold", value: "Freehold" }
           - { label: "Leasehold", value: "Leasehold" }
-          - { label: "Bumi Lot", value: "Bumi Lot" }
 
       - label: "Status Bumilot"
         name: "bumilot"

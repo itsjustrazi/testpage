@@ -2,7 +2,7 @@
 title: Jalan Murni, Taman Suria, Johor Bahru
 status: aktif
 jenis: Teres 1 Tingkat
-kawasan: jb-city
+kawasan: johor-bahru
 nama_taman: Taman Suria
 alamat: jalan murni 2 taman suria, Johor Bahru
 harga: 620000

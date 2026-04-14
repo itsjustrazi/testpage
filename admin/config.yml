@@ -51,14 +51,16 @@ collections:
         name: "kawasan"
         widget: "select"
         options:
-          - { label: "Skudai / Bukit Indah", value: "skudai" }
-          - { label: "Tebrau / Setia Indah", value: "tebrau" }
-          - { label: "Masai / Seri Alam", value: "masai" }
+          - { label: "Skudai", value: "skudai" }
+          - { label: "Bukit Indah", value: "Bukit-Indah" }
+          - { label: "Tebrau", value: "tebrau" }
+          - { label: "Setia Indah", value: "Setia-Indah" }
+          - { label: "Masai", value: "masai" }
           - { label: "Pasir Gudang", value: "pasir-gudang" }
           - { label: "Permas Jaya", value: "permas-jaya" }
           - { label: "Plentong", value: "plentong" }
           - { label: "Iskandar Puteri", value: "iskandar-puteri" }
-          - { label: "JB City", value: "jb-city" }
+          - { label: "Johor Bahru", value: "johor-bahru" }
           - { label: "Kulai", value: "kulai" }
           - { label: "Senai", value: "senai" }
           - { label: "Lain-lain (Luar JB)", value: "lain-lain" }

@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calia Residence – Danga Bay, JB | Razi Property JB</title>
+<meta name="description" content="Calia Residence by PGB – Freehold serviced apartment di Danga Bay, Johor Bahru. 4 layout pilihan, 27 kemudahan, dekat RTS & CIQ. Hubungi Razi sekarang.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #1A3A5C;
+    --blue-mid: #2B5C8A;
+    --blue-light: #EBF2FA;
+    --yellow: #D4A843;
+    --ivory: #F8F5EF;
+    --white: #FFFFFF;
+    --gray-100: #F2F2F0;
+    --gray-300: #D0CECC;
+    --gray-500: #8A8882;
+    --gray-800: #2A2826;
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); background: var(--white); color: var(--gray-800); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 6vw;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--gray-100);
+  }
+  .nav-back {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.78rem; color: var(--gray-500);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--blue); }
+  .nav-back svg { width: 16px; height: 16px; fill: currentColor; }
+  .nav-cta { display: flex; align-items: center; gap: 10px; }
+  .btn-wa-sm {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: var(--blue); color: var(--white);
+    font-size: 0.78rem; font-weight: 500;
+    padding: 9px 18px; border-radius: 4px;
+    text-decoration: none; letter-spacing: 0.04em;
+    transition: all 0.2s;
+  }
+  .btn-wa-sm:hover { background: var(--blue-mid); transform: translateY(-1px); }
+  .btn-wa-sm svg { width: 14px; height: 14px; fill: var(--white); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh; padding-top: 64px;
+    position: relative; overflow: hidden;
+    background: var(--blue);
+    display: flex; align-items: flex-end;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, #0a1f35 0%, #1A3A5C 50%, #1e4a70 100%);
+  }
+  .hero-pattern {
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image: repeating-linear-gradient(45deg, var(--yellow) 0, var(--yellow) 1px, transparent 0, transparent 50%);
+    background-size: 30px 30px;
+  }
+  .hero-img-layer { position: absolute; inset: 0; z-index: 1; overflow: hidden; }
+  .hero-img-layer img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center 60%;
+    opacity: 0.28; filter: saturate(0.7) brightness(0.85);
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    padding: 80px 8vw 64px; width: 100%;
+    display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: end;
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.7rem; font-weight: 500;
+    color: var(--yellow); letter-spacing: 0.16em;
+    text-transform: uppercase; margin-bottom: 20px;
+  }
+  .hero-tag::before { content: ''; display: block; width: 24px; height: 1.5px; background: var(--yellow); }
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    font-weight: 500; line-height: 1.1; color: var(--white); margin-bottom: 6px;
+  }
+  .hero-title em { font-style: italic; color: var(--yellow); }
+  .hero-sub {
+    font-family: var(--font-display);
+    font-size: 1.1rem; font-weight: 300;
+    color: rgba(255,255,255,0.5); margin-bottom: 36px; letter-spacing: 0.06em;
+  }
+  .hero-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
+  .pill {
+    padding: 6px 14px; border-radius: 100px;
+    border: 1px solid rgba(255,255,255,0.2);
+    font-size: 0.72rem; color: rgba(255,255,255,0.7); letter-spacing: 0.06em;
+  }
+  .pill-gold { border-color: var(--yellow); color: var(--yellow); }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-gold {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--yellow); color: var(--blue);
+    font-size: 0.85rem; font-weight: 600;
+    padding: 14px 28px; border-radius: 4px;
+    text-decoration: none; letter-spacing: 0.04em; transition: all 0.2s;
+  }
+  .btn-gold:hover { background: #e8bb55; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,168,67,0.3); }
+  .btn-outline-white {
+    display: inline-flex; align-items: center;
+    border: 1.5px solid rgba(255,255,255,0.3); color: var(--white);
+    font-size: 0.85rem; font-weight: 400;
+    padding: 14px 28px; border-radius: 4px;
+    text-decoration: none; letter-spacing: 0.04em; transition: all 0.2s;
+  }
+  .btn-outline-white:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+  .hero-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px; padding: 32px; backdrop-filter: blur(12px);
+  }
+  .hero-card-title {
+    font-size: 0.68rem; color: var(--yellow);
+    letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 20px;
+  }
+  .fact-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 0.82rem;
+  }
+  .fact-row:last-child { border-bottom: none; }
+  .fact-label { color: rgba(255,255,255,0.45); }
+  .fact-value { color: var(--white); font-weight: 500; text-align: right; max-width: 55%; }
+  .fact-value.gold { color: var(--yellow); font-family: var(--font-display); font-size: 1.1rem; }
+  .hero-badge-new {
+    margin-top: 20px; padding: 12px 16px;
+    background: rgba(212,168,67,0.1); border: 1px solid rgba(212,168,67,0.35);
+    border-radius: 6px; display: flex; align-items: center; gap: 10px;
+  }
+  .badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--yellow); flex-shrink: 0; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.2)} }
+  .badge-new-text { font-size: 0.75rem; color: rgba(255,255,255,0.7); line-height: 1.4; }
+  .badge-new-text strong { color: var(--yellow); }
+
+  /* SECTIONS */
+  .section { padding: 88px 8vw; }
+  .section-label {
+    font-size: 0.7rem; font-weight: 500; color: var(--yellow);
+    letter-spacing: 0.14em; text-transform: uppercase;
+    margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
+  }
+  .section-label::before { content: ''; width: 20px; height: 1.5px; background: var(--yellow); display: block; }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 500; color: var(--blue); line-height: 1.2; margin-bottom: 14px;
+  }
+  .section-desc { font-size: 0.92rem; line-height: 1.8; color: var(--gray-500); max-width: 580px; }
+
+  /* OVERVIEW */
+  .overview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 48px; }
+  .spec-table { width: 100%; border-collapse: collapse; }
+  .spec-table tr { border-bottom: 1px solid var(--gray-100); }
+  .spec-table td { padding: 13px 0; font-size: 0.85rem; vertical-align: top; }
+  .spec-table td:first-child { color: var(--gray-500); width: 45%; }
+  .spec-table td:last-child { color: var(--gray-800); font-weight: 500; }
+  .highlights-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .highlights-list li { display: flex; gap: 14px; align-items: flex-start; font-size: 0.85rem; line-height: 1.6; color: var(--gray-500); }
+  .hl-icon { width: 32px; height: 32px; border-radius: 50%; background: var(--blue-light); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+  .hl-icon svg { width: 16px; height: 16px; fill: var(--blue); }
+  .hl-text strong { display: block; font-size: 0.88rem; color: var(--gray-800); margin-bottom: 2px; }
+
+  /* CAROUSEL */
+  .carousel-section { background: var(--gray-800); padding: 88px 0 0; }
+  .carousel-header { padding: 0 8vw 40px; }
+  .carousel-section .section-label { color: var(--yellow); }
+  .carousel-section .section-label::before { background: var(--yellow); }
+  .carousel-section .section-title { color: var(--white); }
+  .carousel-section .section-desc { color: rgba(255,255,255,0.45); }
+  .carousel-track-wrap { overflow: hidden; padding: 0 8vw; cursor: grab; }
+  .carousel-track-wrap:active { cursor: grabbing; }
+  .carousel-track { display: flex; gap: 12px; transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94); }
+  .carousel-slide {
+    flex: 0 0 calc(33.333% - 8px); aspect-ratio: 4/3;
+    border-radius: 6px; overflow: hidden; position: relative; cursor: pointer;
+    background: rgba(255,255,255,0.05);
+  }
+  .carousel-slide img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+  .carousel-slide:hover img { transform: scale(1.04); }
+  .carousel-overlay {
+    position: absolute; inset: 0; background: rgba(10,25,45,0.4);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.2s;
+  }
+  .carousel-slide:hover .carousel-overlay { opacity: 1; }
+  .carousel-overlay svg { width: 32px; height: 32px; fill: var(--white); opacity: 0.8; }
+  .carousel-label {
+    position: absolute; bottom: 12px; left: 14px;
+    font-size: 0.65rem; color: rgba(255,255,255,0.5);
+    letter-spacing: 0.1em; text-transform: uppercase;
+    background: rgba(0,0,0,0.4); padding: 4px 10px; border-radius: 2px;
+  }
+  .carousel-controls { display: flex; justify-content: space-between; align-items: center; padding: 24px 8vw 40px; }
+  .carousel-dots { display: flex; gap: 8px; }
+  .c-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.2); cursor: pointer; transition: all 0.2s; }
+  .c-dot.active { background: var(--yellow); width: 24px; border-radius: 4px; }
+  .carousel-btns { display: flex; gap: 8px; }
+  .carousel-btn {
+    width: 40px; height: 40px; border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.15); background: transparent;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .carousel-btn:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.3); }
+  .carousel-btn svg { width: 20px; height: 20px; fill: var(--white); }
+
+  /* LAYOUTS */
+  .layouts-section { background: var(--ivory); }
+  .layout-tabs {
+    display: flex; gap: 4px; flex-wrap: wrap;
+    margin: 40px 0 32px; background: var(--gray-100);
+    padding: 4px; border-radius: 6px; width: fit-content;
+  }
+  .tab-btn {
+    padding: 10px 20px; border-radius: 4px; border: none; background: transparent;
+    font-family: var(--font-body); font-size: 0.82rem; font-weight: 500;
+    color: var(--gray-500); cursor: pointer; transition: all 0.2s; white-space: nowrap;
+  }
+  .tab-btn.active { background: var(--blue); color: var(--white); box-shadow: 0 2px 8px rgba(26,58,92,0.2); }
+  .tab-btn:hover:not(.active) { color: var(--blue); background: var(--gray-300); }
+  .layout-panel { display: none; }
+  .layout-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .layout-img-box {
+    background: var(--white); border-radius: 6px; overflow: hidden;
+    border: 1px solid var(--gray-100); aspect-ratio: 4/3;
+    display: flex; align-items: center; justify-content: center; position: relative;
+  }
+  .layout-img-box img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+    padding: 16px;
+  }
+  .layout-img-placeholder { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .layout-img-placeholder svg { width: 48px; height: 48px; fill: var(--gray-300); }
+  .layout-img-placeholder p { font-size: 0.72rem; color: var(--gray-300); letter-spacing: 0.08em; text-transform: uppercase; text-align: center; }
+  .layout-type-badge {
+    position: absolute; top: 14px; left: 14px;
+    background: var(--blue); color: var(--white);
+    font-size: 0.7rem; font-weight: 600;
+    padding: 5px 12px; border-radius: 3px; letter-spacing: 0.08em;
+  }
+  .layout-details { padding: 8px 0; }
+  .layout-name { font-family: var(--font-display); font-size: 1.8rem; font-weight: 600; color: var(--blue); margin-bottom: 4px; }
+  .layout-tagline { font-size: 0.8rem; color: var(--gray-500); margin-bottom: 24px; }
+  .layout-specs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
+  .spec-box { background: var(--white); border-radius: 6px; padding: 16px 14px; border: 1px solid var(--gray-100); text-align: center; }
+  .spec-box-val { font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; color: var(--blue); line-height: 1; margin-bottom: 4px; }
+  .spec-box-label { font-size: 0.65rem; color: var(--gray-500); letter-spacing: 0.08em; text-transform: uppercase; }
+  .layout-price {
+    background: var(--blue); color: var(--white);
+    border-radius: 6px; padding: 18px 20px;
+    display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;
+  }
+  .price-label { font-size: 0.72rem; color: rgba(255,255,255,0.55); letter-spacing: 0.08em; text-transform: uppercase; }
+  .price-val { font-family: var(--font-display); font-size: 1.6rem; font-weight: 600; color: var(--yellow); }
+  .layout-features { list-style: none; margin-bottom: 24px; }
+  .layout-features li { font-size: 0.82rem; color: var(--gray-500); padding: 8px 0; border-bottom: 1px solid var(--gray-100); display: flex; gap: 10px; }
+  .layout-features li::before { content: '✓'; color: var(--yellow); font-weight: 700; flex-shrink: 0; }
+  .btn-inquire-layout {
+    width: 100%; padding: 13px;
+    background: var(--yellow); color: var(--blue);
+    font-family: var(--font-body); font-size: 0.85rem; font-weight: 600;
+    border: none; border-radius: 4px; cursor: pointer;
+    letter-spacing: 0.04em; transition: all 0.2s; text-decoration: none;
+    display: block; text-align: center;
+  }
+  .btn-inquire-layout:hover { background: #e8bb55; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(212,168,67,0.3); }
+
+  /* FACILITIES */
+  .facilities-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
+  .fac-card { padding: 24px 20px; border-radius: 6px; background: var(--gray-100); transition: all 0.2s; }
+  .fac-card:hover { background: var(--blue); transform: translateY(-3px); }
+  .fac-card:hover .fac-name, .fac-card:hover .fac-cat { color: var(--white); }
+  .fac-icon { font-size: 1.5rem; margin-bottom: 12px; }
+  .fac-name { font-size: 0.85rem; font-weight: 500; color: var(--gray-800); margin-bottom: 4px; transition: color 0.2s; }
+  .fac-cat { font-size: 0.68rem; color: var(--gray-500); letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+
+  /* LOCATION */
+  .location-section { background: var(--blue); color: var(--white); }
+  .location-section .section-title { color: var(--white); }
+  .location-section .section-desc { color: rgba(255,255,255,0.5); }
+  .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 48px; align-items: start; }
+  .connectivity-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+  .connectivity-item { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .conn-time { font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; color: var(--yellow); min-width: 70px; line-height: 1; }
+  .conn-label { font-size: 0.82rem; color: rgba(255,255,255,0.65); line-height: 1.4; }
+  .conn-label strong { display: block; color: var(--white); font-size: 0.88rem; margin-bottom: 2px; }
+
+  /* INVESTMENT */
+  .invest-section { background: var(--white); }
+  .invest-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; margin-top: 48px; }
+  .invest-card { background: var(--gray-100); border-radius: 6px; padding: 28px 24px; border-left: 4px solid var(--yellow); transition: all 0.2s; }
+  .invest-card:hover { background: var(--blue-light); transform: translateY(-2px); }
+  .invest-card-num { font-family: var(--font-display); font-size: 2.2rem; font-weight: 600; color: var(--yellow); line-height: 1; margin-bottom: 8px; }
+  .invest-card h4 { font-size: 0.92rem; font-weight: 600; color: var(--gray-800); margin-bottom: 6px; }
+  .invest-card p { font-size: 0.82rem; color: var(--gray-500); line-height: 1.65; }
+  .aurum-box { background: var(--blue); border-radius: 8px; padding: 32px; grid-column: span 2; }
+  .aurum-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; color: var(--yellow); margin-bottom: 12px; }
+  .aurum-box p { font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.8; }
+  .aurum-features { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+  .aurum-pill { padding: 5px 14px; border-radius: 100px; border: 1px solid rgba(255,255,255,0.2); font-size: 0.7rem; color: rgba(255,255,255,0.7); letter-spacing: 0.06em; }
+
+  /* EOI */
+  .eoi-section { background: var(--ivory); }
+  .eoi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .eoi-selling-points { list-style: none; margin-top: 32px; display: flex; flex-direction: column; gap: 12px; }
+  .eoi-selling-points li { display: flex; gap: 12px; font-size: 0.85rem; line-height: 1.6; color: var(--gray-500); }
+  .eoi-selling-points li::before { content: '→'; color: var(--yellow); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .eoi-form { background: var(--white); border-radius: 8px; padding: 36px; box-shadow: 0 4px 32px rgba(0,0,0,0.06); }
+  .eoi-form-title { font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; color: var(--blue); margin-bottom: 4px; }
+  .eoi-form-sub { font-size: 0.78rem; color: var(--gray-500); margin-bottom: 24px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+  .form-group label { font-size: 0.7rem; font-weight: 500; color: var(--gray-800); letter-spacing: 0.06em; text-transform: uppercase; }
+  .form-group input, .form-group select, .form-group textarea {
+    font-family: var(--font-body); font-size: 0.85rem;
+    border: 1.5px solid var(--gray-300); border-radius: 4px;
+    padding: 11px 14px; outline: none; color: var(--gray-800);
+    transition: border-color 0.2s; background: var(--white);
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--blue); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .btn-eoi-submit {
+    width: 100%; padding: 14px; background: var(--blue); color: var(--white);
+    font-family: var(--font-body); font-size: 0.88rem; font-weight: 500;
+    letter-spacing: 0.06em; border: none; border-radius: 4px;
+    cursor: pointer; transition: all 0.2s; margin-top: 4px;
+  }
+  .btn-eoi-submit:hover { background: var(--blue-mid); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(26,58,92,0.25); }
+  .eoi-note { font-size: 0.7rem; color: var(--gray-500); text-align: center; margin-top: 10px; line-height: 1.6; }
+  .success-msg { display: none; background: #ECFDF5; border: 1px solid #6EE7B7; border-radius: 4px; padding: 14px; text-align: center; font-size: 0.82rem; color: #065F46; margin-top: 10px; }
+
+  /* LIGHTBOX */
+  .lightbox { position: fixed; inset: 0; z-index: 999; background: rgba(0,0,0,0.94); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.25s; }
+  .lightbox.open { opacity: 1; pointer-events: all; }
+  .lightbox img { max-width: 90vw; max-height: 88vh; object-fit: contain; border-radius: 4px; }
+  .lightbox-close { position: absolute; top: 20px; right: 24px; font-size: 1.8rem; color: rgba(255,255,255,0.5); cursor: pointer; transition: color 0.2s; background: none; border: none; font-family: var(--font-body); }
+  .lightbox-close:hover { color: var(--white); }
+  .lightbox-caption { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); font-size: 0.78rem; color: rgba(255,255,255,0.4); letter-spacing: 0.1em; text-align: center; }
+
+  /* FOOTER */
+  footer { background: var(--gray-800); padding: 40px 8vw; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+  .footer-brand { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--white); }
+  .footer-agency { font-size: 0.62rem; color: var(--gray-500); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2px; }
+  .footer-project { font-size: 0.78rem; color: var(--yellow); margin-top: 6px; }
+  .footer-copy { font-size: 0.7rem; color: var(--gray-500); }
+
+  /* STICKY CTA */
+  .sticky-cta {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 90;
+    background: var(--blue); padding: 14px 8vw;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    transform: translateY(100%); transition: transform 0.3s;
+    box-shadow: 0 -4px 24px rgba(0,0,0,0.2);
+  }
+  .sticky-cta.show { transform: translateY(0); }
+  .sticky-text { font-size: 0.82rem; color: rgba(255,255,255,0.75); line-height: 1.4; }
+  .sticky-text strong { color: var(--white); display: block; font-size: 0.88rem; }
+  .sticky-btns { display: flex; gap: 10px; flex-shrink: 0; }
+
+  /* FADE IN */
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .section { padding: 64px 6vw; }
+    nav { padding: 14px 5vw; }
+    .hero-content { grid-template-columns: 1fr; gap: 36px; padding: 60px 6vw 48px; }
+    .overview-grid, .location-grid, .invest-grid, .eoi-grid { grid-template-columns: 1fr; gap: 32px; }
+    .aurum-box { grid-column: span 1; }
+    .layout-panel.active { grid-template-columns: 1fr; }
+    .facilities-grid { grid-template-columns: repeat(2, 1fr); }
+    .carousel-slide { flex: 0 0 calc(85% - 8px); }
+    footer { flex-direction: column; text-align: center; }
+    .sticky-cta { flex-direction: column; text-align: center; padding: 14px 5vw; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-caption" id="lightboxCap"></div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-back" href="index.html">
+    <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+    Kembali ke Utama
+  </a>
+  <div></div>
+  <div class="nav-cta">
+    <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20Calia%20Residence%20Danga%20Bay.%20Boleh%20info?" class="btn-wa-sm" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Saya Berminat
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-img-layer">
+    <img src="images/calia_residences.png" alt="Calia Residence — Showroom Unit">
+  </div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-tag">New Launch · Danga Bay · JB City Centre</div>
+      <h1 class="hero-title">Calia<br><em>Residence</em></h1>
+      <div class="hero-sub">By PGB · Freehold · Danga Bay, Johor Bahru</div>
+      <div class="hero-pills">
+        <span class="pill pill-gold">Freehold</span>
+        <span class="pill">36 Tingkat · Twin Tower</span>
+        <span class="pill">GreenRE Gold</span>
+        <span class="pill">Shuttle ke CIQ & RTS</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#eoi" class="btn-gold">Saya Berminat →</a>
+        <a href="#layouts" class="btn-outline-white">Lihat Unit Types</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Maklumat Projek</div>
+      <div class="fact-row">
+        <span class="fact-label">Harga Dari</span>
+        <span class="fact-value gold">RM 340,xxx.00</span>
+      </div>
+      <div class="fact-row">
+        <span class="fact-label">Saiz Unit</span>
+        <span class="fact-value">453 – 984 sq.ft</span>
+      </div>
+      <div class="fact-row">
+        <span class="fact-label">Tenure</span>
+        <span class="fact-value">Freehold</span>
+      </div>
+      <div class="fact-row">
+        <span class="fact-label">Jenis</span>
+        <span class="fact-value">Serviced Apartment (HDA)</span>
+      </div>
+      <div class="fact-row">
+        <span class="fact-label">Pemaju</span>
+        <span class="fact-value">PGB (Paragon Globe Berhad)</span>
+      </div>
+      <div class="fact-row">
+        <span class="fact-label">Jumlah Unit</span>
+        <span class="fact-value">1,274 unit · 2 Tower</span>
+      </div>
+      <div class="fact-row">
+        <span class="fact-label">Siap dijangka</span>
+        <span class="fact-value">Q3 2029</span>
+      </div>
+      <div class="hero-badge-new">
+        <div class="badge-dot"></div>
+        <div class="badge-new-text"><strong>Tower A Kini Dibuka!</strong> Foreigners eligible dari RM400k SPA.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="section">
+  <div class="section-label">Tentang Projek · Overview</div>
+  <h2 class="section-title fade-in">Kehidupan Pesisir Pantai.<br>Di Jantung Bandar Raya JB.</h2>
+  <p class="section-desc fade-in">Calia Residence adalah freehold serviced apartment 36 tingkat oleh PGB di Danga Bay — menggabungkan kehidupan coastal yang tenang, 27 kemudahan premium, dan akses terus ke CIQ serta RTS Bukit Chagar untuk commuter Singapura.</p>
+  <div class="overview-grid">
+    <table class="spec-table fade-in">
+      <tr><td>Pemaju</td><td>PGB (Paragon Globe Berhad)</td></tr>
+      <tr><td>Lokasi</td><td>Danga Bay, Johor Bahru City Centre</td></tr>
+      <tr><td>Tenure</td><td>Freehold · Commercial (HDA)</td></tr>
+      <tr><td>Jumlah Unit</td><td>1,274 unit (2 Tower)</td></tr>
+      <tr><td>Tingkat</td><td>36 tingkat setiap tower</td></tr>
+      <tr><td>Pensijilan Hijau</td><td>GreenRE Gold (Targeted)</td></tr>
+      <tr><td>Keselamatan</td><td>Digital lock + multi-tier security</td></tr>
+      <tr><td>Pengecasan EV</td><td>EV charging bays disediakan</td></tr>
+      <tr><td>Shuttle Service</td><td>Ke CIQ & RTS Bukit Chagar</td></tr>
+      <tr><td>Kemudahan</td><td>27 facilities</td></tr>
+      <tr><td>Kelayakan Asing</td><td>Foreigners eligible dari RM400k</td></tr>
+      <tr><td>Siap dijangka</td><td>Q3 2029</td></tr>
+    </table>
+    <ul class="highlights-list fade-in">
+      <li>
+        <div class="hl-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+        <div class="hl-text"><strong>Lokasi Premium Danga Bay</strong>Terus atas Skudai Highway, beberapa minit ke CIQ Johor Bahru dan RTS Bukit Chagar.</div>
+      </li>
+      <li>
+        <div class="hl-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
+        <div class="hl-text"><strong>27 Kemudahan Premium + Coastal Living</strong>Lap pool, pickleball court, co-working space, yoga deck, kids zone — eksklusif untuk penghuni.</div>
+      </li>
+      <li>
+        <div class="hl-icon"><svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21H5.71c.51-1.2 1.06-2.35 1.66-3.42C8.64 19.07 10.68 20 13 20c4.42 0 8-3.58 8-8 0-1.77-.57-3.41-1.53-4.74L17 8z"/></svg></div>
+        <div class="hl-text"><strong>GreenRE Gold — Eco-Certified</strong>Jimat bil utiliti, EV charging bays, dan pensijilan hijau meningkatkan nilai hartanah jangka panjang.</div>
+      </li>
+      <li>
+        <div class="hl-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg></div>
+        <div class="hl-text"><strong>Aurum Stay — Rental Management Built-In</strong>Platform hospitality dalam bangunan untuk maximize rental yield tanpa urus sendiri.</div>
+      </li>
+      <li>
+        <div class="hl-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></div>
+        <div class="hl-text"><strong>Foreigners Eligible — RM400k SPA</strong>Commercial HDA title terbuka kepada pembeli asing termasuk Singapore PR dan warga antarabangsa.</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="carousel-section">
+  <div class="carousel-header">
+    <div class="section-label">Galeri · Gallery</div>
+    <h2 class="section-title fade-in">Lihat Lebih Dekat.</h2>
+    <p class="section-desc fade-in">Gambar showroom unit sebenar Calia Residence. Scroll untuk lihat lebih. Klik untuk zoom.</p>
+  </div>
+  <div class="carousel-track-wrap">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="carousel-slide" onclick="openCarouselLightbox(0)">
+        <img src="images/ruang_tamu_4.jpg" alt="Ruang Tamu — Full View">
+        <div class="carousel-overlay"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
+        <div class="carousel-label">Ruang Tamu — Full View</div>
+      </div>
+      <div class="carousel-slide" onclick="openCarouselLightbox(1)">
+        <img src="images/dining_area_1.jpg" alt="Dining Area">
+        <div class="carousel-overlay"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
+        <div class="carousel-label">Dining Area</div>
+      </div>
+      <div class="carousel-slide" onclick="openCarouselLightbox(2)">
+        <img src="images/ruang_tamu_3.jpg" alt="Ruang Tamu">
+        <div class="carousel-overlay"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
+        <div class="carousel-label">Ruang Tamu</div>
+      </div>
+      <div class="carousel-slide" onclick="openCarouselLightbox(3)">
+        <img src="images/master_bedroom.jpg" alt="Master Bedroom">
+        <div class="carousel-overlay"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
+        <div class="carousel-label">Master Bedroom</div>
+      </div>
+      <div class="carousel-slide" onclick="openCarouselLightbox(4)">
+        <img src="images/kitchen_area.jpg" alt="Kitchen Area">
+        <div class="carousel-overlay"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
+        <div class="carousel-label">Kitchen Area</div>
+      </div>
+      <div class="carousel-slide" onclick="openCarouselLightbox(5)">
+        <img src="images/bathroom_2.jpg" alt="Bilik Air">
+        <div class="carousel-overlay"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
+        <div class="carousel-label">Fasad & Pintu Masuk</div>
+      </div>
+
+      <div class="carousel-slide" onclick="openCarouselLightbox(6)">
+        <img src="images/ruang_tamu_1.jpg" alt="TV Feature Wall">
+        <div class="carousel-overlay"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
+        <div class="carousel-label">TV & Feature Wall</div>
+      </div>
+      <div class="carousel-slide" onclick="openCarouselLightbox(7)">
+        <img src="images/dining_area_3.jpg" alt="Dining Area Detail">
+        <div class="carousel-overlay"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
+        <div class="carousel-label">Dining Area — Detail</div>
+      </div>
+      <div class="carousel-slide" onclick="openCarouselLightbox(8)">
+        <img src="images/master_bedroom_1.jpg" alt="Master Bedroom Dressing">
+        <div class="carousel-overlay"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
+        <div class="carousel-label">Master Bedroom — Dressing Area</div>
+      </div>
+      <div class="carousel-slide" onclick="openCarouselLightbox(9)">
+        <img src="images/2_bedroom.jpg" alt="Bilik Tidur 2">
+        <div class="carousel-overlay"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
+        <div class="carousel-label">Bilik Tidur 2</div>
+      </div>
+      <div class="carousel-slide" onclick="openCarouselLightbox(10)">
+        <img src="images/3_bedroom_4.jpg" alt="Bilik Tidur 3">
+        <div class="carousel-overlay"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
+        <div class="carousel-label">Bilik Tidur 3</div>
+      </div>
+      <div class="carousel-slide" onclick="openCarouselLightbox(11)">
+        <img src="images/bathroom_3.jpg" alt="Bilik Air 2">
+        <div class="carousel-overlay"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
+        <div class="carousel-label">Bilik Air</div>
+      </div>
+      <div class="carousel-slide" onclick="openCarouselLightbox(12)">
+        <img src="images/padlock.jpg" alt="Digital Lock">
+        <div class="carousel-overlay"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
+        <div class="carousel-label">Digital Lock — Keselamatan Smart</div>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-controls">
+    <div class="carousel-dots" id="carouselDots"></div>
+    <div class="carousel-btns">
+      <button class="carousel-btn" onclick="carouselPrev()" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg></button>
+      <button class="carousel-btn" onclick="carouselNext()" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- LAYOUTS -->
+<section class="section layouts-section" id="layouts">
+  <div class="section-label">Pilihan Layout · Unit Types</div>
+  <h2 class="section-title fade-in">Pilih Layout<br>Yang Sesuai Untuk Anda</h2>
+  <p class="section-desc fade-in">Dari 1 bilik untuk pelabur hingga 3 bilik dual-key untuk keluarga besar — ada pilihan untuk setiap keperluan dan bajet.</p>
+
+  <div class="layout-tabs">
+    <button class="tab-btn active" onclick="showLayout('A')">Type A · 1BR</button>
+    <button class="tab-btn" onclick="showLayout('B')">Type B · 1+1BR</button>
+    <button class="tab-btn" onclick="showLayout('C')">Type C · 2BR</button>
+    <button class="tab-btn" onclick="showLayout('D')">Type D · 3BR Dual Key</button>
+  </div>
+
+  <div class="layout-panel active" id="panel-A">
+    <div class="layout-img-box">
+      <img src="images/type_a.jpg" alt="Floor Plan Type A — 453 sqft">
+      <div class="layout-type-badge">Type A</div>
+    </div>
+    <div class="layout-details">
+      <div class="layout-name">Type A</div>
+      <div class="layout-tagline">1 Bilik Tidur · Compact Coastal Living — Sesuai untuk pelabur & profesional muda</div>
+      <div class="layout-specs">
+        <div class="spec-box"><div class="spec-box-val">453</div><div class="spec-box-label">sq.ft</div></div>
+        <div class="spec-box"><div class="spec-box-val">1R1B</div><div class="spec-box-label">Layout</div></div>
+        <div class="spec-box"><div class="spec-box-val">RM1,600+</div><div class="spec-box-label">Est. Sewa/bln</div></div>
+      </div>
+      <div class="layout-price">
+        <div><div class="price-label">Harga</div><div class="price-val">Hubungi Razi</div></div>
+        <div style="font-size:0.72rem;color:rgba(255,255,255,0.4);text-align:right;">Semak harga<br>& rebate terkini</div>
+      </div>
+      <ul class="layout-features">
+        <li>1 Bilik Tidur · 1 Bilik Mandi</li>
+        <li>453 sq.ft — layout cekap dan fungsional</li>
+        <li>Freehold — hak milik kekal</li>
+        <li>Sesuai untuk sewaan jangka pendek (Airbnb) via Aurum Stay</li>
+        <li>Dekat CIQ — permintaan commuter SG tinggi</li>
+      </ul>
+      <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20Type%20A%20(453sqft)%20Calia%20Residence.%20Boleh%20info%20harga%3F" class="btn-inquire-layout" target="_blank">Tanya Razi Pasal Type A →</a>
+    </div>
+  </div>
+
+  <div class="layout-panel" id="panel-B">
+    <div class="layout-img-box">
+      <img src="images/type_b.jpg" alt="Floor Plan Type B — 656 sqft">
+      <div class="layout-type-badge">Type B</div>
+    </div>
+    <div class="layout-details">
+      <div class="layout-name">Type B</div>
+      <div class="layout-tagline">1+1 Bilik Tidur · Home Office + Bedroom — Ideal untuk remote worker & pasangan muda</div>
+      <div class="layout-specs">
+        <div class="spec-box"><div class="spec-box-val">656</div><div class="spec-box-label">sq.ft</div></div>
+        <div class="spec-box"><div class="spec-box-val">1+1R1B</div><div class="spec-box-label">Layout</div></div>
+        <div class="spec-box"><div class="spec-box-val">RM2,200+</div><div class="spec-box-label">Est. Sewa/bln</div></div>
+      </div>
+      <div class="layout-price">
+        <div><div class="price-label">Harga</div><div class="price-val">Hubungi Razi</div></div>
+        <div style="font-size:0.72rem;color:rgba(255,255,255,0.4);text-align:right;">Semak harga<br>& rebate terkini</div>
+      </div>
+      <ul class="layout-features">
+        <li>1 Bilik Tidur + 1 Bilik Tambahan (boleh jadi home office)</li>
+        <li>1 Bilik Mandi</li>
+        <li>656 sq.ft — ruang yang lebih fleksibel</li>
+        <li>Freehold</li>
+        <li>Sesuai untuk pasangan yang bekerja dari rumah</li>
+      </ul>
+      <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20Type%20B%20(656sqft)%20Calia%20Residence.%20Boleh%20info%20harga%3F" class="btn-inquire-layout" target="_blank">Tanya Razi Pasal Type B →</a>
+    </div>
+  </div>
+
+  <div class="layout-panel" id="panel-C">
+    <div class="layout-img-box">
+      <img src="images/type_c.jpg" alt="Floor Plan Type C — 771 sqft">
+      <div class="layout-type-badge">Type C</div>
+    </div>
+    <div class="layout-details">
+      <div class="layout-name">Type C</div>
+      <div class="layout-tagline">2 Bilik Tidur · Spacious Family Unit — Sesuai untuk keluarga kecil</div>
+      <div class="layout-specs">
+        <div class="spec-box"><div class="spec-box-val">771</div><div class="spec-box-label">sq.ft</div></div>
+        <div class="spec-box"><div class="spec-box-val">2R2B</div><div class="spec-box-label">Layout</div></div>
+        <div class="spec-box"><div class="spec-box-val">RM2,500+</div><div class="spec-box-label">Est. Sewa/bln</div></div>
+      </div>
+      <div class="layout-price">
+        <div><div class="price-label">Harga</div><div class="price-val">Hubungi Razi</div></div>
+        <div style="font-size:0.72rem;color:rgba(255,255,255,0.4);text-align:right;">Semak harga<br>& rebate terkini</div>
+      </div>
+      <ul class="layout-features">
+        <li>2 Bilik Tidur · 2 Bilik Mandi</li>
+        <li>771 sq.ft — ruang keluarga yang selesa</li>
+        <li>Freehold</li>
+        <li>Pandangan Danga Bay / bandar raya</li>
+        <li>Sesuai untuk keluarga muda atau pasangan dengan anak</li>
+      </ul>
+      <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20Type%20C%20(771sqft)%20Calia%20Residence.%20Boleh%20info%20harga%3F" class="btn-inquire-layout" target="_blank">Tanya Razi Pasal Type C →</a>
+    </div>
+  </div>
+
+  <div class="layout-panel" id="panel-D">
+    <div class="layout-img-box">
+      <img src="images/type_d.jpg" alt="Floor Plan Type D — 984 sqft Dual-Key">
+      <div class="layout-type-badge" style="background:var(--yellow);color:var(--blue);">Type D · Dual-Key</div>
+    </div>
+    <div class="layout-details">
+      <div class="layout-name">Type D</div>
+      <div class="layout-tagline">3 Bilik Tidur · Dual-Key — Dua unit dalam satu! Sesuai untuk pelabur & keluarga besar</div>
+      <div class="layout-specs">
+        <div class="spec-box"><div class="spec-box-val">984</div><div class="spec-box-label">sq.ft</div></div>
+        <div class="spec-box"><div class="spec-box-val">3R3B</div><div class="spec-box-label">Layout</div></div>
+        <div class="spec-box"><div class="spec-box-val">RM3,100+</div><div class="spec-box-label">Est. Sewa/bln</div></div>
+      </div>
+      <div class="layout-price">
+        <div><div class="price-label">Harga</div><div class="price-val">Hubungi Razi</div></div>
+        <div style="font-size:0.72rem;color:rgba(255,255,255,0.4);text-align:right;">Semak harga<br>& rebate terkini</div>
+      </div>
+      <ul class="layout-features">
+        <li>3 Bilik Tidur · 3 Bilik Mandi (Dual-Key)</li>
+        <li>984 sq.ft — layout terbesar dan paling fleksibel</li>
+        <li>Dua pintu masuk berasingan</li>
+        <li>Boleh duduk sendiri + sewakan bahagian lain</li>
+        <li>Paling sesuai untuk ROI & passive income tinggi</li>
+      </ul>
+      <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20Type%20D%20Dual-Key%20(984sqft)%20Calia%20Residence.%20Boleh%20info%20harga%3F" class="btn-inquire-layout" target="_blank">Tanya Razi Pasal Type D (Dual-Key) →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FACILITIES -->
+<section class="section">
+  <div class="section-label">Kemudahan · Facilities</div>
+  <h2 class="section-title fade-in">27 Facilities</h2>
+  <p class="section-desc fade-in">Dari lap pool ke pickleball court, co-working space ke yoga deck — semua eksklusif untuk penghuni Calia Residence.</p>
+  <div class="facilities-grid">
+    <div class="fac-card fade-in"><div class="fac-icon">🏊</div><div class="fac-name">Lap Pool</div><div class="fac-cat">Aquatic</div></div>
+    <div class="fac-card fade-in"><div class="fac-icon">🎾</div><div class="fac-name">Pickleball Court</div><div class="fac-cat">Sports</div></div>
+    <div class="fac-card fade-in"><div class="fac-icon">💻</div><div class="fac-name">Co-Working Space</div><div class="fac-cat">Work</div></div>
+    <div class="fac-card fade-in"><div class="fac-icon">🧘</div><div class="fac-name">Yoga & Wellness</div><div class="fac-cat">Wellness</div></div>
+    <div class="fac-card fade-in"><div class="fac-icon">👨‍👩‍👧</div><div class="fac-name">Family & Kids Zone</div><div class="fac-cat">Lifestyle</div></div>
+    <div class="fac-card fade-in"><div class="fac-icon">💪</div><div class="fac-name">Gymnasium</div><div class="fac-cat">Fitness</div></div>
+    <div class="fac-card fade-in"><div class="fac-icon">🔥</div><div class="fac-name">BBQ Deck</div><div class="fac-cat">Outdoor</div></div>
+    <div class="fac-card fade-in"><div class="fac-icon">⚡</div><div class="fac-name">EV Charging Bay</div><div class="fac-cat">Green</div></div>
+    <div class="fac-card fade-in"><div class="fac-icon">🚌</div><div class="fac-name">Shuttle ke CIQ/RTS</div><div class="fac-cat">Connectivity</div></div>
+    <div class="fac-card fade-in"><div class="fac-icon">🔒</div><div class="fac-name">Digital Lock</div><div class="fac-cat">Security</div></div>
+    <div class="fac-card fade-in"><div class="fac-icon">🌿</div><div class="fac-name">GreenRE Gold</div><div class="fac-cat">Eco</div></div>
+    <div class="fac-card fade-in"><div class="fac-icon">🏨</div><div class="fac-name">Aurum Stay</div><div class="fac-cat">Hospitality</div></div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="section location-section">
+  <div class="section-label">Lokasi · Location</div>
+  <h2 class="section-title fade-in">Di Jantung Danga Bay —<br>Segalanya Dekat.</h2>
+  <p class="section-desc fade-in">Akses mudah ke Singapura via CIQ dan RTS Link, pusat bandar JB, pusat membeli-belah, dan highway utama dalam masa beberapa minit sahaja.</p>
+  <div class="location-grid">
+    <div class="fade-in visible" style="border-radius:8px;overflow:hidden;aspect-ratio:4/3;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1994.408!2d103.720029!3d1.483088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2smy!4v1" width="100%" height="100%" style="border:0;display:block;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <ul class="connectivity-list fade-in">
+      <li class="connectivity-item">
+        <div class="conn-time">~8 min</div>
+        <div class="conn-label"><strong>CIQ Johor Bahru</strong>Checkpoint utama ke Singapura</div>
+      </li>
+      <li class="connectivity-item">
+        <div class="conn-time">~10 min</div>
+        <div class="conn-label"><strong>RTS Bukit Chagar</strong>Rail Transit System (under development)</div>
+      </li>
+      <li class="connectivity-item">
+        <div class="conn-time">Terus</div>
+        <div class="conn-label"><strong>Skudai Highway</strong>Akses terus atas highway utama</div>
+      </li>
+      <li class="connectivity-item">
+        <div class="conn-time">~10 min</div>
+        <div class="conn-label"><strong>KSL City & Mid Valley Southkey</strong>Shopping, dining & entertainment</div>
+      </li>
+      <li class="connectivity-item">
+        <div class="conn-time">~12 min</div>
+        <div class="conn-label"><strong>Pantai Hospital & KPJ Puteri</strong>Healthcare facilities</div>
+      </li>
+      <li class="connectivity-item">
+        <div class="conn-time">Dekat</div>
+        <div class="conn-label"><strong>Lebuhraya Tebrau & EDL</strong>Akses ke seluruh kawasan Iskandar</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- INVESTMENT -->
+<section class="section invest-section">
+  <div class="section-label">Pelaburan · Investment</div>
+  <h2 class="section-title fade-in">Kenapa Calia<br>Smart Investment?</h2>
+  <p class="section-desc fade-in">Gabungan lokasi Danga Bay, freehold tenure, permintaan commuter SG, dan Aurum Stay menjadikan Calia salah satu projek dengan potensi rental yield terbaik di JB sekarang.</p>
+  <div class="invest-grid">
+    <div class="invest-card fade-in">
+      <div class="invest-card-num">RM400k</div>
+      <h4>Foreigners Eligible dari RM400k</h4>
+      <p>Commercial HDA title — foreigners (SG PR, warga asing) layak beli dari RM400k SPA. Terbuka kepada pasaran antarabangsa.</p>
+    </div>
+    <div class="invest-card fade-in">
+      <div class="invest-card-num">2029</div>
+      <h4>Beli Awal = Harga Terbaik</h4>
+      <p>Completion Q4 2029. Nilai dijangka naik apabila RTS Link mula beroperasi sepenuhnya — window pelaburan terbaik sekarang.</p>
+    </div>
+    <div class="invest-card fade-in">
+      <div class="invest-card-num">RM3,100+</div>
+      <h4>Est. Rental — Type D Dual-Key</h4>
+      <p>Dual-key layout boleh sewakan dua bahagian serentak untuk maximize rental yield dalam satu unit freehold.</p>
+    </div>
+    <div class="invest-card fade-in">
+      <div class="invest-card-num">27</div>
+      <h4>Facilities = Premium Rental Rate</h4>
+      <p>Lebih banyak kemudahan membolehkan charge rental premium berbanding projek biasa di kawasan sama.</p>
+    </div>
+    <div class="aurum-box fade-in">
+      <div class="aurum-title">✨ Aurum Stay — Rental Management Built-In</div>
+      <p>Aurum Stay adalah platform hospitality yang diintegrasikan terus dalam Calia Residence. Mereka cover semuanya — interior design, renovation, housekeeping, 24-jam front desk & concierge, listing di Airbnb dan platform sewaan utama. Anda collect rental income, mereka urus operasi harian. Ditambah: owner stay complimentary nights setiap tahun.</p>
+      <div class="aurum-features">
+        <span class="aurum-pill">Interior Design</span>
+        <span class="aurum-pill">Housekeeping</span>
+        <span class="aurum-pill">24hr Concierge</span>
+        <span class="aurum-pill">Airbnb Listed</span>
+        <span class="aurum-pill">Revenue Sharing</span>
+        <span class="aurum-pill">Owner Stay Nights</span>
+        <span class="aurum-pill">Shuttle ke CIQ/RTS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EOI FORM -->
+<section class="section eoi-section" id="eoi">
+  <div class="eoi-grid">
+    <div class="eoi-left">
+      <div class="section-label">Saya Berminat · Hubungi Razi</div>
+      <h2 class="section-title fade-in">Jangan Lepaskan<br>Peluang Ini!</h2>
+      <p class="section-desc fade-in">Unit pilihan dan floor tinggi paling cepat habis. Daftar sekarang untuk dapatkan info harga terkini, floor plan, dan rebate eksklusif terus dari Razi.</p>
+      <ul class="eoi-selling-points fade-in">
+        <li>Freehold — pelaburan jangka panjang yang selamat</li>
+        <li>Shuttle percuma ke CIQ & RTS untuk ke Singapura</li>
+        <li>27 kemudahan premium eksklusif penghuni</li>
+        <li>GreenRE Gold — jimat bil utiliti</li>
+        <li>Aurum Stay — rental management tanpa kerumitan</li>
+        <li>Foreigners eligible — terbuka kepada pembeli SG & asing</li>
+      </ul>
+    </div>
+    <div>
+      <div class="eoi-form">
+        <div class="eoi-form-title">Saya Berminat</div>
+        <div class="eoi-form-sub">Isi borang ini — Razi akan reply dalam masa 24 jam.</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nama Penuh</label>
+            <input type="text" id="eoi-name" placeholder="Nama anda">
+          </div>
+          <div class="form-group">
+            <label>No. WhatsApp</label>
+            <input type="tel" id="eoi-phone" placeholder="01X-XXXXXXXX">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Layout Diminati</label>
+          <select id="eoi-layout">
+            <option value="">-- Pilih Layout --</option>
+            <option>Type A — 1BR (453 sqft)</option>
+            <option>Type B — 1+1BR (656 sqft)</option>
+            <option>Type C — 2BR (771 sqft)</option>
+            <option>Type D — 3BR Dual Key (984 sqft)</option>
+            <option>Belum pasti lagi — nak tanya dulu</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Tujuan Pembelian</label>
+          <select id="eoi-purpose">
+            <option value="">-- Pilih --</option>
+            <option>Untuk Duduki Sendiri</option>
+            <option>Untuk Pelaburan / Sewaan</option>
+            <option>Dua-dua (Duduk + Sewakan)</option>
+            <option>Pelabur Asing (Foreigner)</option>
+            <option>Belum pasti</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Mesej (Optional)</label>
+          <textarea id="eoi-msg" rows="3" placeholder="Ada soalan atau keperluan khas?"></textarea>
+        </div>
+        <button class="btn-eoi-submit" onclick="submitEOI()">Saya Berminat — WhatsApp Razi →</button>
+        <div class="success-msg" id="eoi-success">✓ Terima kasih! Razi akan hubungi anda dalam masa 24 jam.</div>
+        <div class="eoi-note">Atau terus WhatsApp: <a href="https://wa.me/601154065243" style="color:var(--blue);">+601154065243</a><br>Tiada sebarang komitmen — daftar sahaja untuk dapatkan maklumat lanjut.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <div class="footer-brand">Razi Property JB</div>
+    <div class="footer-agency">OD Legacy Realty Sdn Bhd · E(1)2004 · REN Berdaftar · Johor Bahru</div>
+    <div class="footer-project">📍 Calia Residence — Danga Bay, Johor Bahru</div>
+  </div>
+  <div class="footer-copy">© <span id="yr"></span> Razi Property JB. Semua hak terpelihara.</div>
+</footer>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-text">
+    <strong>Calia Residence — Danga Bay, JB</strong>
+    Freehold · 453–984 sqft · Foreigners eligible dari RM400k
+  </div>
+  <div class="sticky-btns">
+    <a href="#eoi" class="btn-outline-white" style="font-size:0.78rem;padding:10px 16px;">Saya Berminat</a>
+    <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20Calia%20Residence%20Danga%20Bay.%20Boleh%20info?" class="btn-gold" style="font-size:0.78rem;padding:10px 16px;" target="_blank">WhatsApp Razi</a>
+  </div>
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  function showLayout(type) {
+    document.querySelectorAll('.layout-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('panel-' + type).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  const sticky = document.getElementById('stickyCta');
+  window.addEventListener('scroll', () => {
+    sticky.classList.toggle('show', window.scrollY > 500);
+  });
+
+  const slides = document.querySelectorAll('.carousel-slide');
+  const track = document.getElementById('carouselTrack');
+  const dotsWrap = document.getElementById('carouselDots');
+  let currentSlide = 0;
+  const total = slides.length;
+  slides.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'c-dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => goSlide(i);
+    dotsWrap.appendChild(d);
+  });
+  function goSlide(n) {
+    currentSlide = ((n % total) + total) % total;
+    const slideW = slides[0].offsetWidth + 12;
+    track.style.transform = `translateX(${-currentSlide * slideW}px)`;
+    document.querySelectorAll('.c-dot').forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+  }
+  function carouselNext() { goSlide(currentSlide + 1); }
+  function carouselPrev() { goSlide(currentSlide - 1); }
+  let tsX = 0;
+  track.addEventListener('touchstart', e => { tsX = e.touches[0].clientX; }, {passive:true});
+  track.addEventListener('touchend', e => {
+    const dx = tsX - e.changedTouches[0].clientX;
+    if (Math.abs(dx) > 40) dx > 0 ? carouselNext() : carouselPrev();
+  });
+
+  function openCarouselLightbox(i) {
+    const slide = slides[i];
+    const img = slide.querySelector('img');
+    if (!img) return;
+    document.getElementById('lightboxImg').src = img.src;
+    document.getElementById('lightboxCap').textContent = slide.querySelector('.carousel-label')?.textContent || '';
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+  function submitEOI() {
+    const name = document.getElementById('eoi-name').value.trim();
+    const phone = document.getElementById('eoi-phone').value.trim();
+    const layout = document.getElementById('eoi-layout').value;
+    const purpose = document.getElementById('eoi-purpose').value;
+    const msg = document.getElementById('eoi-msg').value.trim();
+    if (!name || !phone || !layout) {
+      alert('Sila isi nama, no. WhatsApp dan layout yang diminati.');
+      return;
+    }
+    const waMsg = encodeURIComponent(
+      `Hi Razi! Saya mendaftar minat untuk Calia Residence Danga Bay.\n\n` +
+      `Nama: ${name}\n` +
+      `No. WhatsApp: ${phone}\n` +
+      `Layout Diminati: ${layout}\n` +
+      `Tujuan: ${purpose || '-'}\n` +
+      `Mesej: ${msg || '-'}`
+    );
+    document.getElementById('eoi-success').style.display = 'block';
+    setTimeout(() => {
+      window.open(`https://wa.me/601154065243?text=${waMsg}`, '_blank');
+    }, 800);
+  }
+</script>
+</body>
+</html>

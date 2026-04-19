@@ -8,7 +8,7 @@ alamat: Jalan Tempua, Taman Scientex, 81700 Pasir Gudang, Johor
 harga: 480000
 saiz_sqft: 1237
 bilik_tidur: 4
-bilik_air: 0
+bilik_air: 3
 tenure: Freehold
 bumilot: Non-Bumilot
 keadaan: Partial Furnished

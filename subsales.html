@@ -464,6 +464,13 @@ function filterKawasan() {
   searchTerm = '';
   applySort();
 }
+function filterSearch() {
+  // 1. Ambil nilai yang ditaip oleh user dalam kotak carian
+  searchTerm = $('main-search').value;
+  
+  // 2. Jalankan fungsi susunan & paparan semula
+  applySort(); 
+}
 
 function fmtRM(n)     { return 'RM ' + Number(n).toLocaleString('ms-MY'); }
 function calcPsf(h,s) { return s > 0 ? 'RM ' + Math.round(h/s) + ' psf' : ''; }
@@ -532,14 +539,14 @@ function getFiltered() {
     if (l.status !== 'aktif') return false;
     if (activeFilter !== 'all' && l.kawasan !== activeFilter) return false;
     if (searchTerm) {
-      const q = searchTerm.toLowerCase();
-      return (l.title||'').toLowerCase().includes(q)
-          || (l.kawasan||'').toLowerCase().includes(q)
-          || (l.kawasan_label||'').toLowerCase().includes(q)
-          || (l.jenis||'').toLowerCase().includes(q)
-          || (l.nama_taman||'').toLowerCase().includes(q)
-          || (l.alamat||'').toLowerCase().includes(q);
-    }
+    const q = searchTerm.toLowerCase();
+    return (l.title||'').toLowerCase().includes(q)
+      || (l.kawasan||'').toLowerCase().includes(q)
+      || (l.kawasan_label||'').toLowerCase().includes(q)
+      || (l.jenis||'').toLowerCase().includes(q)
+      || (l.nama_taman||'').toLowerCase().includes(q)
+      || (l.alamat||'').toLowerCase().includes(q);
+}
     return true;
   });
 }

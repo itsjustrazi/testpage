@@ -1,0 +1,1899 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M Grand Minori | Taman Pelangi, JB | Razi Property JB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1A3A5C;
+      --gold: #D4A843;
+      --gold-light: #e8c96e;
+      --ivory: #F8F5EF;
+      --white: #ffffff;
+      --charcoal: #2C2C2C;
+      --muted: #7a7570;
+      --zen-sand: #f0ece3;
+      --zen-ink: #1a1a1a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--ivory);
+      color: var(--charcoal);
+      overflow-x: hidden;
+    }
+
+    /* ── TOPBAR ── */
+    .topbar {
+      background: var(--navy);
+      color: var(--ivory);
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      font-weight: 500;
+    }
+    .topbar a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248,245,239,0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(212,168,67,0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 5%;
+    }
+    .nav-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--navy);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-brand span {
+      color: var(--gold);
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold);
+      color: var(--navy) !important;
+      padding: 9px 20px;
+      border-radius: 2px;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-img-bg {
+      position: absolute;
+      inset: 0;
+      background: url('_MGM_Apartment.jpg') center/cover no-repeat;
+      opacity: 0.18;
+      z-index: 0;
+    }
+    .hero-bg-pattern {
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(90deg, rgba(212,168,67,0.04) 0px, rgba(212,168,67,0.04) 1px, transparent 1px, transparent 60px),
+        repeating-linear-gradient(0deg, rgba(212,168,67,0.04) 0px, rgba(212,168,67,0.04) 1px, transparent 1px, transparent 60px);
+    }
+    .hero-glow {
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(212,168,67,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 5% 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(48px, 5vw, 72px);
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 300;
+      color: rgba(248,245,239,0.7);
+      font-style: italic;
+      margin-bottom: 28px;
+    }
+    .hero-desc {
+      color: rgba(248,245,239,0.75);
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 36px;
+      font-weight: 300;
+    }
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+    .pill {
+      background: rgba(212,168,67,0.12);
+      border: 1px solid rgba(212,168,67,0.3);
+      color: var(--gold);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 14px 28px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.2s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--ivory);
+      padding: 14px 28px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      border-radius: 2px;
+      border: 1px solid rgba(248,245,239,0.35);
+      transition: border-color 0.2s, background 0.2s;
+      display: inline-block;
+    }
+    .btn-secondary:hover { border-color: var(--gold); background: rgba(212,168,67,0.08); }
+
+    /* Hero Right — Stats Card */
+    .hero-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(212,168,67,0.2);
+      border-radius: 4px;
+      padding: 36px 32px;
+      backdrop-filter: blur(10px);
+    }
+    .hero-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--gold);
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+    .stat-item {
+      border-left: 2px solid rgba(212,168,67,0.3);
+      padding-left: 14px;
+    }
+    .stat-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      font-size: 11px;
+      color: rgba(248,245,239,0.55);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .card-divider { border: none; border-top: 1px solid rgba(212,168,67,0.15); margin: 20px 0; }
+    .card-disclaimer {
+      font-size: 11px;
+      color: rgba(248,245,239,0.45);
+      line-height: 1.6;
+    }
+    .card-price-tag {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+    .price-from { font-size: 11px; color: rgba(248,245,239,0.55); text-transform: uppercase; letter-spacing: 1px; }
+    .price-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--gold);
+    }
+    .price-psf { font-size: 12px; color: rgba(248,245,239,0.55); }
+
+    /* ── SECTIONS ── */
+    section { padding: 80px 5%; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-eyebrow {
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 300;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .section-title em { font-style: italic; color: var(--gold); }
+    .section-body {
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--muted);
+      max-width: 640px;
+      font-weight: 300;
+    }
+
+    /* ── OVERVIEW ── */
+    .overview { background: var(--ivory); }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .overview-specs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: rgba(26,58,92,0.08);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 36px;
+    }
+    .spec-item {
+      background: var(--white);
+      padding: 22px 20px;
+    }
+    .spec-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .spec-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .overview-visual {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2540 100%);
+      border-radius: 4px;
+      padding: 48px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .ov-bg {
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(45deg, rgba(212,168,67,0.05) 0px, rgba(212,168,67,0.05) 1px, transparent 1px, transparent 30px);
+    }
+    .ov-content { position: relative; z-index: 2; }
+    .ov-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .ov-title em { font-style: italic; color: var(--gold); }
+    .ov-body { color: rgba(248,245,239,0.75); font-size: 14px; line-height: 1.8; font-weight: 300; margin-bottom: 28px; }
+    .ov-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .ov-tag {
+      background: rgba(212,168,67,0.12);
+      border: 1px solid rgba(212,168,67,0.25);
+      color: var(--gold);
+      font-size: 11px;
+      padding: 5px 12px;
+      border-radius: 2px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── UNIT TYPES ── */
+    .units { background: var(--white); }
+    .units-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: end;
+      margin-bottom: 48px;
+    }
+    .units-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .unit-card {
+      border: 1px solid rgba(26,58,92,0.1);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .unit-card:hover { border-color: var(--gold); box-shadow: 0 8px 30px rgba(212,168,67,0.12); }
+    .unit-header {
+      background: var(--navy);
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .unit-type {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--gold);
+    }
+    .unit-size {
+      font-size: 12px;
+      color: rgba(248,245,239,0.65);
+    }
+    .unit-body { padding: 20px; }
+    .unit-desc {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .unit-note {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .unit-price {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(26,58,92,0.07);
+    }
+    .unit-price-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+    .unit-price-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--gold);
+    }
+
+    /* ── FACILITIES ── */
+    .facilities { background: var(--navy); }
+    .facilities .section-title { color: var(--white); }
+    .facilities .section-body { color: rgba(248,245,239,0.65); }
+    .fac-count {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 80px;
+      font-weight: 300;
+      color: rgba(212,168,67,0.15);
+      line-height: 1;
+      margin-bottom: -10px;
+    }
+    .fac-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .fac-cat {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(212,168,67,0.15);
+      border-radius: 4px;
+      padding: 24px 20px;
+    }
+    .fac-cat-title {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+    .fac-list { list-style: none; }
+    .fac-list li {
+      font-size: 13px;
+      color: rgba(248,245,239,0.7);
+      padding: 4px 0;
+      padding-left: 12px;
+      position: relative;
+      font-weight: 300;
+    }
+    .fac-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 4px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .fac-partial {
+      margin-top: 40px;
+      background: rgba(212,168,67,0.08);
+      border: 1px solid rgba(212,168,67,0.2);
+      border-radius: 4px;
+      padding: 24px 28px;
+    }
+    .fac-partial-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .fac-partial-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .fac-partial-tag {
+      background: rgba(212,168,67,0.12);
+      border: 1px solid rgba(212,168,67,0.2);
+      color: rgba(248,245,239,0.8);
+      font-size: 12px;
+      padding: 6px 14px;
+      border-radius: 2px;
+    }
+
+    /* ── LOCATION ── */
+    .location { background: var(--ivory); }
+    .loc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 40px;
+    }
+    .loc-cats { display: flex; flex-direction: column; gap: 20px; }
+    .loc-cat { }
+    .loc-cat-name {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    .loc-items { display: flex; flex-direction: column; gap: 8px; }
+    .loc-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 14px;
+      background: var(--white);
+      border-radius: 2px;
+      border-left: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .loc-item:hover { border-left-color: var(--gold); }
+    .loc-name { font-size: 13px; color: var(--charcoal); font-weight: 400; }
+    .loc-dist { font-size: 12px; color: var(--gold); font-weight: 600; }
+    .rts-card {
+      background: var(--navy);
+      border-radius: 4px;
+      padding: 36px 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .rts-bg {
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        rgba(212,168,67,0.03) 0px, rgba(212,168,67,0.03) 1px,
+        transparent 1px, transparent 20px
+      );
+    }
+    .rts-content { position: relative; z-index: 2; }
+    .rts-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 5px 12px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+    .rts-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .rts-title em { font-style: italic; color: var(--gold); }
+    .rts-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .rts-stat {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(212,168,67,0.15);
+      border-radius: 2px;
+      padding: 14px 16px;
+    }
+    .rts-stat-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 2px;
+    }
+    .rts-stat-label { font-size: 11px; color: rgba(248,245,239,0.5); }
+
+    /* ── WHY RAZI ── */
+    .why-razi { background: var(--zen-sand); }
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .agent-card {
+      background: var(--navy);
+      border-radius: 4px;
+      padding: 40px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .agent-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at bottom right, rgba(212,168,67,0.1) 0%, transparent 60%);
+    }
+    .agent-content { position: relative; z-index: 2; }
+    .agent-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--navy);
+      overflow: hidden;
+      border: 3px solid var(--gold);
+    }
+    .agent-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 50%;
+    }
+    .agent-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .agent-title { font-size: 12px; color: var(--gold); letter-spacing: 1px; margin-bottom: 16px; }
+    .agent-ren {
+      font-size: 11px;
+      color: rgba(248,245,239,0.5);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .agent-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25D366;
+      color: var(--white);
+      padding: 12px 24px;
+      border-radius: 2px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+    .agent-wa:hover { opacity: 0.9; }
+    .why-points { display: flex; flex-direction: column; gap: 20px; }
+    .why-point {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 20px;
+      background: var(--white);
+      border-radius: 4px;
+      border-left: 3px solid var(--gold);
+    }
+    .why-icon {
+      font-size: 24px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .why-text h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .why-text p { font-size: 13px; color: var(--muted); line-height: 1.6; font-weight: 300; }
+
+    /* ── LEGAL FOOTER ── */
+    .legal-strip {
+      background: rgba(26,58,92,0.06);
+      border-top: 1px solid rgba(26,58,92,0.1);
+      padding: 20px 5%;
+    }
+    .legal-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      font-size: 10.5px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      background: var(--navy);
+      padding: 80px 5%;
+      text-align: center;
+    }
+    .cta-inner { max-width: 700px; margin: 0 auto; }
+    .cta-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+    .cta-title em { font-style: italic; color: var(--gold); }
+    .cta-subtitle { color: rgba(248,245,239,0.65); font-size: 15px; margin-bottom: 36px; font-weight: 300; line-height: 1.7; }
+    .cta-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-width: 460px;
+      margin: 0 auto 28px;
+    }
+    .cta-form input, .cta-form select {
+      padding: 14px 18px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(212,168,67,0.25);
+      border-radius: 2px;
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .cta-form input:focus, .cta-form select:focus { border-color: var(--gold); }
+    .cta-form input::placeholder { color: rgba(248,245,239,0.4); }
+    .cta-form select option { background: var(--navy); color: var(--white); }
+    .cta-submit {
+      background: var(--gold);
+      color: var(--navy);
+      border: none;
+      padding: 15px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .cta-submit:hover { background: var(--gold-light); }
+    .cta-note { font-size: 11px; color: rgba(248,245,239,0.4); }
+    .cta-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: var(--white);
+      padding: 14px 32px;
+      border-radius: 2px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: opacity 0.2s;
+    }
+    .cta-wa:hover { opacity: 0.9; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0d1f33;
+      padding: 40px 5%;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--white);
+    }
+    .footer-brand span { color: var(--gold); }
+    .footer-tagline { font-size: 12px; color: rgba(248,245,239,0.4); margin-top: 4px; }
+    .footer-ren {
+      font-size: 11px;
+      color: rgba(248,245,239,0.35);
+      text-align: right;
+      line-height: 1.7;
+    }
+
+    /* ── STICKY WA ── */
+    .sticky-wa {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 200;
+      background: #25D366;
+      color: var(--white);
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      font-size: 26px;
+    }
+    .sticky-wa:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
+
+    /* ── HAMBURGER ── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+      z-index: 201;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--navy);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* ── MOBILE MENU ── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 52px;
+      left: 0; right: 0; bottom: 0;
+      background: var(--white);
+      z-index: 199;
+      flex-direction: column;
+      padding: 20px 5%;
+      gap: 4px;
+      overflow-y: auto;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-size: 1rem;
+      color: var(--navy);
+      text-decoration: none;
+      padding: 14px 16px;
+      border-radius: 4px;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(26,58,92,0.07);
+      transition: background 0.2s;
+    }
+    .mobile-menu a:hover { background: rgba(212,168,67,0.08); color: var(--gold); }
+    .mobile-menu .m-cta {
+      margin-top: 14px;
+      background: var(--gold);
+      color: var(--navy) !important;
+      font-weight: 700;
+      text-align: center;
+      border-radius: 4px;
+      border-bottom: none;
+      padding: 16px;
+    }
+    .mobile-menu .m-wa {
+      background: #25D366;
+      color: #fff !important;
+      font-weight: 700;
+      text-align: center;
+      border-radius: 4px;
+      border-bottom: none;
+      padding: 16px;
+      margin-top: 8px;
+    }
+
+    /* ── GALLERY ── */
+    .gallery { background: #1a1a1a; padding: 80px 0; }
+    .gallery-header { padding: 0 5%; margin-bottom: 32px; }
+    .gallery-header .section-eyebrow { color: var(--gold); }
+    .gallery-header .section-title { color: var(--white); }
+    .gallery-track-wrap { overflow: hidden; }
+    .gallery-track {
+      display: flex;
+      gap: 12px;
+      padding: 0 5%;
+      transition: transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .gallery-slide {
+      flex: 0 0 calc(60vw - 40px);
+      max-width: 780px;
+      aspect-ratio: 16/9;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      background: rgba(255,255,255,0.04);
+    }
+    .gallery-slide img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+    .gallery-slide:hover img { transform: scale(1.03); }
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(10,25,45,0.35);
+      opacity: 0;
+      transition: opacity 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .gallery-slide:hover .gallery-overlay { opacity: 1; }
+    .gallery-overlay-icon { font-size: 32px; }
+    .gallery-cap {
+      position: absolute;
+      bottom: 12px;
+      left: 14px;
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      background: rgba(0,0,0,0.5);
+      padding: 4px 10px;
+      border-radius: 2px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .gallery-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 5% 0;
+    }
+    .gallery-dots { display: flex; gap: 6px; align-items: center; }
+    .g-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.2); cursor: pointer; transition: all 0.2s; }
+    .g-dot.active { background: var(--gold); width: 18px; border-radius: 3px; }
+    .gallery-btns { display: flex; gap: 8px; }
+    .gallery-btn {
+      width: 40px; height: 40px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.6);
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s;
+      font-size: 18px;
+    }
+    .gallery-btn:hover { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+
+    /* ── FLOOR PLAN TABS ── */
+    .fp-tabs {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+      margin: 40px 0 32px;
+      background: rgba(26,58,92,0.06);
+      padding: 4px;
+      border-radius: 4px;
+      width: fit-content;
+    }
+    .fp-tab {
+      padding: 10px 20px;
+      border-radius: 3px;
+      border: none;
+      background: transparent;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .fp-tab.active { background: var(--navy); color: var(--white); }
+    .fp-tab:hover:not(.active) { color: var(--navy); background: rgba(26,58,92,0.1); }
+    .fp-panel { display: none; }
+    .fp-panel.active { display: grid; grid-template-columns: 380px 1fr; gap: 40px; align-items: start; }
+    .fp-img-box {
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+      background: #f0ece3;
+      border: 1px solid rgba(26,58,92,0.12);
+      aspect-ratio: 3/4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      max-width: 380px;
+      width: 100%;
+    }
+    .fp-img-box img { width: 100%; height: 100%; object-fit: contain; padding: 12px; transition: transform 0.3s; }
+    .fp-img-box:hover img { transform: scale(1.03); }
+    .fp-zoom {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 18px;
+      width: 36px;
+      height: 36px;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .fp-img-box:hover .fp-zoom { opacity: 1; }
+    .fp-type-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 5px 11px;
+      border-radius: 2px;
+      letter-spacing: 1px;
+    }
+    .fp-details {}
+    .fp-type-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-weight: 300;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .fp-type-name em { font-style: italic; color: var(--gold); }
+    .fp-tagline { font-size: 14px; color: var(--muted); margin-bottom: 24px; font-weight: 300; }
+    .fp-specs { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-bottom: 20px; }
+    .fp-spec-box { background: var(--ivory); border-radius: 3px; padding: 14px 12px; text-align: center; border: 1px solid rgba(26,58,92,0.08); }
+    .fp-spec-val { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--navy); line-height: 1; margin-bottom: 4px; }
+    .fp-spec-label { font-size: 10px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
+    .fp-price-bar { background: var(--navy); color: var(--white); border-radius: 3px; padding: 16px 18px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .fp-price-label { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 1px; text-transform: uppercase; }
+    .fp-price-val { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--gold); }
+    .fp-features { list-style: none; margin-bottom: 20px; }
+    .fp-features li { font-size: 13px; color: var(--muted); padding: 8px 0; border-bottom: 1px solid rgba(26,58,92,0.06); display: flex; gap: 10px; font-weight: 300; }
+    .fp-features li::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+    .btn-fp-inquire { width: 100%; padding: 13px; background: var(--gold); color: var(--navy); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; border: none; border-radius: 2px; cursor: pointer; letter-spacing: 0.5px; transition: all 0.2s; text-decoration: none; display: block; text-align: center; }
+    .btn-fp-inquire:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    /* ── MAP EMBED ── */
+    .map-embed { border-radius: 4px; overflow: hidden; border: 1px solid rgba(26,58,92,0.12); aspect-ratio: 4/3; margin-bottom: 24px; }
+    .map-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+    /* ── LIGHTBOX ── */
+    .lightbox { position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.95); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.25s; }
+    .lightbox.open { opacity: 1; pointer-events: all; }
+    .lightbox-img { max-width: 92vw; max-height: 90vh; object-fit: contain; border-radius: 3px; }
+    .lightbox-close { position: absolute; top: 20px; right: 24px; font-size: 2rem; color: rgba(255,255,255,0.5); cursor: pointer; background: none; border: none; font-family: 'DM Sans', sans-serif; line-height: 1; transition: color 0.2s; }
+    .lightbox-close:hover { color: var(--white); }
+    .lightbox-cap { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); font-size: 12px; color: rgba(255,255,255,0.4); letter-spacing: 1px; text-align: center; white-space: nowrap; }
+    .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.6); width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; font-size: 20px; border: none; }
+    .lightbox-nav:hover { background: var(--gold); color: var(--navy); }
+    .lightbox-prev { left: 20px; }
+    .lightbox-next { right: 20px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-content, .overview-grid, .units-intro, .why-grid, .loc-grid { grid-template-columns: 1fr; }
+      .fac-grid { grid-template-columns: 1fr 1fr; }
+      .units-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .rts-stats { grid-template-columns: 1fr 1fr; }
+      .hero-card { margin-top: 0; }
+      .fp-panel.active { grid-template-columns: 220px 1fr; }
+      .fp-img-box { max-width: 220px; }
+      .gallery-slide { flex: 0 0 82vw; }
+    }
+    @media (max-width: 600px) {
+      .units-grid { grid-template-columns: 1fr; }
+      .fac-grid { grid-template-columns: 1fr; }
+      section { padding: 56px 5%; }
+      .fp-tabs { overflow-x: auto; max-width: 100%; }
+      .fp-panel.active { grid-template-columns: 1fr; }
+      .fp-img-box { max-width: 180px; margin: 0 auto; }
+      .gallery-slide { flex: 0 0 90vw; }
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-content { animation: fadeUp 0.7s ease both; }
+  </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+  🏙️ Mah Sing Group · Taman Pelangi, Johor Bahru &nbsp;·&nbsp; Freehold · 61 Tingkat · 843 Unit &nbsp;|&nbsp; <a href="tel:+601154065243">📱 011-5406 5243</a>
+</div>
+
+<!-- Nav -->
+<nav>
+  <a href="index.html" class="nav-brand">Razi Property <span>JB</span></a>
+  <ul class="nav-links">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#gallery">Galeri</a></li>
+    <li><a href="#units">Unit</a></li>
+    <li><a href="#facilities">Fasiliti</a></li>
+    <li><a href="#location">Lokasi</a></li>
+    <li><a href="#register" class="nav-cta">Saya Berminat</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#overview" onclick="closeMobileMenu()">📋 Overview</a>
+  <a href="#gallery" onclick="closeMobileMenu()">📸 Galeri</a>
+  <a href="#units" onclick="closeMobileMenu()">🏠 Unit &amp; Floor Plan</a>
+  <a href="#facilities" onclick="closeMobileMenu()">🏊 Fasiliti</a>
+  <a href="#location" onclick="closeMobileMenu()">📍 Lokasi &amp; RTS</a>
+  <a href="#register" class="m-cta" onclick="closeMobileMenu()">Saya Berminat →</a>
+  <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20dengan%20M%20Grand%20Minori!" target="_blank" class="m-wa">💬 WhatsApp Razi — 011-5406 5243</a>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-img-bg"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Mah Sing Group · Taman Pelangi · JB</p>
+      <h1 class="hero-title">M Grand<br><em>Minori</em></h1>
+      <p class="hero-subtitle">Freehold Serviced Apartment · JB City Centre</p>
+      <p class="hero-desc">Serviced apartment premium di jantung Taman Pelangi, Johor Bahru. 2 Tower, 843 unit, reka bentuk moden premium dengan 41 fasiliti. Hanya 3km dari stesen RTS Bukit Chagar.</p>
+      <div class="hero-pills">
+        <span class="pill">Freehold</span>
+        <span class="pill">2 Tower</span>
+        <span class="pill">3km RTS</span>
+        <span class="pill">Partially Furnished</span>
+        <span class="pill">GreenRE Certified</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#register" class="btn-primary">Saya Berminat →</a>
+        <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20dengan%20M%20Grand%20Minori.%20Boleh%20share%20info%3F" target="_blank" class="btn-secondary">WhatsApp Razi</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card">
+        <p class="hero-card-title">Project Overview</p>
+        <div class="card-price-tag">
+          <span class="price-from">Hubungi Razi</span>
+        </div>
+        <p style="font-size:11px; color:rgba(248,245,239,0.4); margin-bottom:24px;">untuk harga & pakej terbaik</p>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value">61</div>
+            <div class="stat-label">Tingkat</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">843</div>
+            <div class="stat-label">Jumlah Unit</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">2</div>
+            <div class="stat-label">Tower</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">41</div>
+            <div class="stat-label">Fasiliti</div>
+          </div>
+        </div>
+        <hr class="card-divider" />
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value">Jul 2030</div>
+            <div class="stat-label">Siap</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">3km</div>
+            <div class="stat-label">Dari RTS</div>
+          </div>
+        </div>
+        <hr class="card-divider" />
+        <p class="card-disclaimer">Hubungi Razi untuk semak kelayakan loan, harga unit terkini & rebat eksklusif.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery" style="background:#1a1a1a;padding:80px 0;">
+  <div style="padding:0 5%;margin-bottom:32px;">
+    <p class="section-eyebrow" style="color:var(--gold);">Galeri · Gallery</p>
+    <h2 class="section-title" style="color:var(--white);">Lihat Lebih Dekat.</h2>
+    <p class="section-body" style="color:rgba(248,245,239,0.5);">Scroll untuk lihat lebih banyak gambar projek. Klik untuk zoom.</p>
+  </div>
+  <div style="overflow:hidden;">
+    <div class="gallery-track" id="galleryTrack">
+      <div class="gallery-slide" onclick="openGalleryLb(0)">
+        <img src="_MGM_Apartment.jpg" alt="M Grand Minori — Bangunan">
+        <div class="gallery-overlay"><span class="gallery-overlay-icon">🔍</span></div>
+        <div class="gallery-cap">Luaran Bangunan</div>
+      </div>
+      <div class="gallery-slide" onclick="openGalleryLb(1)">
+        <img src="Entrance_MGM.jpg" alt="M Grand Minori — Grand Entrance">
+        <div class="gallery-overlay"><span class="gallery-overlay-icon">🔍</span></div>
+        <div class="gallery-cap">Grand Entrance</div>
+      </div>
+      <div class="gallery-slide" onclick="openGalleryLb(2)">
+        <img src="MGM_Fasilities_1.jpg" alt="M Grand Minori — Kawasan Santai">
+        <div class="gallery-overlay"><span class="gallery-overlay-icon">🔍</span></div>
+        <div class="gallery-cap">Kawasan Santai</div>
+      </div>
+      <div class="gallery-slide" onclick="openGalleryLb(3)">
+        <img src="MGM_Fasilities.jpg" alt="M Grand Minori — Outdoor Fitness">
+        <div class="gallery-overlay"><span class="gallery-overlay-icon">🔍</span></div>
+        <div class="gallery-cap">Outdoor Fitness</div>
+      </div>
+      <div class="gallery-slide" onclick="openGalleryLb(4)" style="aspect-ratio:16/9;flex:0 0 calc(60vw - 40px);">
+        <img src="M_Grand_Minori_Fasilities_Layout.jpg" alt="M Grand Minori — Level 12 Facilities Layout" style="object-fit:contain;background:#fff;padding:8px;">
+        <div class="gallery-overlay"><span class="gallery-overlay-icon">🔍</span></div>
+        <div class="gallery-cap">Level 12 Facilities Layout</div>
+      </div>
+    </div>
+  </div>
+  <div class="gallery-controls">
+    <div class="gallery-dots" id="galleryDots"></div>
+    <div class="gallery-btns">
+      <button class="gallery-btn" onclick="galleryPrev()">‹</button>
+      <button class="gallery-btn" onclick="galleryNext()">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- Overview -->
+<section class="overview" id="overview">
+  <div class="section-inner">
+    <div class="overview-grid">
+      <div>
+        <p class="section-eyebrow">Project Details</p>
+        <h2 class="section-title">Hidup Premium<br><em>di JB City Centre</em></h2>
+        <p class="section-body">M Grand Minori adalah pembangunan serviced apartment freehold terbaru oleh Mah Sing Group di Taman Pelangi, Johor Bahru. 2 tower, 843 unit, reka bentuk moden premium dengan 41 fasiliti eksklusif — sesuai untuk penghuni sendiri, pelabur, dan pembeli cross-border.</p>
+        <div class="overview-specs">
+          <div class="spec-item">
+            <div class="spec-label">Jenis Hartanah</div>
+            <div class="spec-value">Serviced Apartment</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Pegangan</div>
+            <div class="spec-value">Freehold</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Pemaju</div>
+            <div class="spec-value">Mah Sing Group</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Fasa</div>
+            <div class="spec-value">Tower A &amp; B</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Jumlah Unit</div>
+            <div class="spec-value">843 Unit</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Tingkat</div>
+            <div class="spec-value">61 Tingkat</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Siap</div>
+            <div class="spec-value">Julai 2030</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Lokasi</div>
+            <div class="spec-value">Taman Pelangi</div>
+          </div>
+        </div>
+      </div>
+      <div class="overview-visual">
+        <div class="ov-bg"></div>
+        <div class="ov-content">
+          <h3 class="ov-title">Eksklusif<br><em>Untuk Siapa?</em></h3>
+          <p class="ov-body">M Grand Minori direka untuk pelbagai golongan pembeli — dari first-time buyer yang nak hidup selesa di tengah bandar, upgrader yang dah ready, right up to cross-border commuter dan investor yang nampak nilai RTS Link.</p>
+          <div class="ov-tags">
+            <span class="ov-tag">First-Time Buyer</span>
+            <span class="ov-tag">Upgrader</span>
+            <span class="ov-tag">JB-SG Commuter</span>
+            <span class="ov-tag">Pelabur Hartanah</span>
+            <span class="ov-tag">Dual Key</span>
+            <span class="ov-tag">Pasif Income</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Units -->
+<section class="units" id="units">
+  <div class="section-inner">
+    <div class="units-intro">
+      <div>
+        <p class="section-eyebrow">Floor Plans</p>
+        <h2 class="section-title">6 Pilihan<br><em>Layout</em></h2>
+      </div>
+      <p class="section-body">Dari studio kompak hingga 3-bilik yang luas — M Grand Minori menawarkan fleksibiliti untuk sesuai dengan keperluan anda, sama ada untuk tinggal sendiri atau sewa keluar.</p>
+    </div>
+
+    <!-- Tab Buttons -->
+    <div class="fp-tabs">
+      <button class="fp-tab active" onclick="showFP('A',event)">Type A</button>
+      <button class="fp-tab" onclick="showFP('B',event)">Type B</button>
+      <button class="fp-tab" onclick="showFP('C',event)">Type C</button>
+      <button class="fp-tab" onclick="showFP('D',event)">Type D</button>
+      <button class="fp-tab" onclick="showFP('D1',event)">Type D1</button>
+      <button class="fp-tab" onclick="showFP('E',event)">Type E</button>
+    </div>
+
+    <!-- Type A -->
+    <div class="fp-panel active" id="fp-A">
+      <div class="fp-img-box" onclick="openFP(this)" data-src="Type_A.jpg" data-cap="Floor Plan Type A — 403 sq.ft (Studio)">
+        <img src="Type_A.jpg" alt="Type A Floor Plan">
+        <div class="fp-type-badge">TYPE A</div>
+        <div class="fp-zoom">🔍</div>
+      </div>
+      <div class="fp-details">
+        <div class="fp-type-name">Type <em>A</em></div>
+        <p class="fp-tagline">Studio Unit — Sesuai untuk pelabur &amp; penyewa tunggal.</p>
+        <div class="fp-specs">
+          <div class="fp-spec-box"><div class="fp-spec-val">403</div><div class="fp-spec-label">sq.ft</div></div>
+          <div class="fp-spec-box"><div class="fp-spec-val">Studio</div><div class="fp-spec-label">Layout</div></div>
+          <div class="fp-spec-box"><div class="fp-spec-val">1</div><div class="fp-spec-label">Bilik Air</div></div>
+        </div>
+        <div class="fp-price-bar"><span class="fp-price-label">Harga</span><span class="fp-price-val">Hubungi Razi</span></div>
+        <ul class="fp-features">
+          <li>Studio yang efficient — maximise setiap sq.ft</li>
+          <li>Tingkap luas — banyak cahaya semula jadi masuk</li>
+          <li>Sesuai untuk unit sewa — rental yield tinggi</li>
+          <li>Partially furnished — 5 item termasuk</li>
+        </ul>
+        <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20Type%20A%20M%20Grand%20Minori%20(403sqft).%20Boleh%20info%20harga?" target="_blank" class="btn-fp-inquire">Tanya Harga Type A →</a>
+      </div>
+    </div>
+
+    <!-- Type B -->
+    <div class="fp-panel" id="fp-B">
+      <div class="fp-img-box" onclick="openFP(this)" data-src="Type_B.jpg" data-cap="Floor Plan Type B — 496 sq.ft (1 Bilik 1 Bilik Air)">
+        <img src="Type_B.jpg" alt="Type B Floor Plan">
+        <div class="fp-type-badge">TYPE B</div>
+        <div class="fp-zoom">🔍</div>
+      </div>
+      <div class="fp-details">
+        <div class="fp-type-name">Type <em>B</em></div>
+        <p class="fp-tagline">1 Bilik · 1 Bilik Air — Untuk pasangan muda atau JB-SG commuter.</p>
+        <div class="fp-specs">
+          <div class="fp-spec-box"><div class="fp-spec-val">496</div><div class="fp-spec-label">sq.ft</div></div>
+          <div class="fp-spec-box"><div class="fp-spec-val">1</div><div class="fp-spec-label">Bilik Tidur</div></div>
+          <div class="fp-spec-box"><div class="fp-spec-val">1</div><div class="fp-spec-label">Bilik Air</div></div>
+        </div>
+        <div class="fp-price-bar"><span class="fp-price-label">Harga</span><span class="fp-price-val">Hubungi Razi</span></div>
+        <ul class="fp-features">
+          <li>Bilik tidur selesa dengan ruang simpanan yang cukup</li>
+          <li>Ada Yard &amp; AC Ledge — layout praktikal</li>
+          <li>Ruang tamu &amp; dining tersusun rapi</li>
+          <li>Partially furnished — ready untuk move-in</li>
+        </ul>
+        <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20Type%20B%20M%20Grand%20Minori%20(496sqft).%20Boleh%20info%20harga?" target="_blank" class="btn-fp-inquire">Tanya Harga Type B →</a>
+      </div>
+    </div>
+
+    <!-- Type C -->
+    <div class="fp-panel" id="fp-C">
+      <div class="fp-img-box" onclick="openFP(this)" data-src="Type_C.jpg" data-cap="Floor Plan Type C — 624 sq.ft (1 Bilik 1 Bilik Air + Powder Room)">
+        <img src="Type_C.jpg" alt="Type C Floor Plan">
+        <div class="fp-type-badge">TYPE C</div>
+        <div class="fp-zoom">🔍</div>
+      </div>
+      <div class="fp-details">
+        <div class="fp-type-name">Type <em>C</em></div>
+        <p class="fp-tagline">1 Bilik · 1 Bilik Air · Powder Room — Lebih ruang, lebih selesa.</p>
+        <div class="fp-specs">
+          <div class="fp-spec-box"><div class="fp-spec-val">624</div><div class="fp-spec-label">sq.ft</div></div>
+          <div class="fp-spec-box"><div class="fp-spec-val">1</div><div class="fp-spec-label">Bilik Tidur</div></div>
+          <div class="fp-spec-box"><div class="fp-spec-val">1+PR</div><div class="fp-spec-label">Bilik Air</div></div>
+        </div>
+        <div class="fp-price-bar"><span class="fp-price-label">Harga</span><span class="fp-price-val">Hubungi Razi</span></div>
+        <ul class="fp-features">
+          <li>Powder room untuk tetamu — lebih privacy</li>
+          <li>Ruang tamu luas dengan natural light maksimum</li>
+          <li>Bilik tidur yang spacious</li>
+          <li>Partially furnished — 5 item termasuk</li>
+        </ul>
+        <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20Type%20C%20M%20Grand%20Minori%20(624sqft).%20Boleh%20info%20harga?" target="_blank" class="btn-fp-inquire">Tanya Harga Type C →</a>
+      </div>
+    </div>
+
+    <!-- Type D -->
+    <div class="fp-panel" id="fp-D">
+      <div class="fp-img-box" onclick="openFP(this)" data-src="Type_D.jpg" data-cap="Floor Plan Type D — 630 sq.ft (1 Bilik 1 Bilik Air + WIC)">
+        <img src="Type_D.jpg" alt="Type D Floor Plan">
+        <div class="fp-type-badge">TYPE D</div>
+        <div class="fp-zoom">🔍</div>
+      </div>
+      <div class="fp-details">
+        <div class="fp-type-name">Type <em>D</em></div>
+        <p class="fp-tagline">1 Bilik · 1 Bilik Air · Walk-in Closet — Living yang lebih lapang.</p>
+        <div class="fp-specs">
+          <div class="fp-spec-box"><div class="fp-spec-val">630</div><div class="fp-spec-label">sq.ft</div></div>
+          <div class="fp-spec-box"><div class="fp-spec-val">1</div><div class="fp-spec-label">Bilik Tidur</div></div>
+          <div class="fp-spec-box"><div class="fp-spec-val">WIC</div><div class="fp-spec-label">Walk-in Closet</div></div>
+        </div>
+        <div class="fp-price-bar"><span class="fp-price-label">Harga</span><span class="fp-price-val">Hubungi Razi</span></div>
+        <ul class="fp-features">
+          <li>Walk-in closet — extra storage yang berguna</li>
+          <li>Living &amp; dining yang terbuka dan lapang</li>
+          <li>Dapur dengan ruang yang cukup</li>
+          <li>Partially furnished — 5 item termasuk</li>
+        </ul>
+        <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20Type%20D%20M%20Grand%20Minori%20(630sqft).%20Boleh%20info%20harga?" target="_blank" class="btn-fp-inquire">Tanya Harga Type D →</a>
+      </div>
+    </div>
+
+    <!-- Type D1 -->
+    <div class="fp-panel" id="fp-D1">
+      <div class="fp-img-box" onclick="openFP(this)" data-src="Type_D1.jpg" data-cap="Floor Plan Type D1 — 630 sq.ft (1 Bilik 1 Bilik Air + WIC)">
+        <img src="Type_D1.jpg" alt="Type D1 Floor Plan">
+        <div class="fp-type-badge">TYPE D1</div>
+        <div class="fp-zoom">🔍</div>
+      </div>
+      <div class="fp-details">
+        <div class="fp-type-name">Type <em>D1</em></div>
+        <p class="fp-tagline">1 Bilik · 1 Bilik Air — Variasi layout D, orientasi berbeza.</p>
+        <div class="fp-specs">
+          <div class="fp-spec-box"><div class="fp-spec-val">630</div><div class="fp-spec-label">sq.ft</div></div>
+          <div class="fp-spec-box"><div class="fp-spec-val">1</div><div class="fp-spec-label">Bilik Tidur</div></div>
+          <div class="fp-spec-box"><div class="fp-spec-val">WIC</div><div class="fp-spec-label">Walk-in Closet</div></div>
+        </div>
+        <div class="fp-price-bar"><span class="fp-price-label">Harga</span><span class="fp-price-val">Hubungi Razi</span></div>
+        <ul class="fp-features">
+          <li>Walk-in closet — extra storage space</li>
+          <li>Orientasi berbeza dari Type D</li>
+          <li>View unit yang berbeza — tanya Razi untuk comparison</li>
+          <li>Partially furnished — 5 item termasuk</li>
+        </ul>
+        <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20Type%20D1%20M%20Grand%20Minori%20(630sqft).%20Boleh%20info%20harga?" target="_blank" class="btn-fp-inquire">Tanya Harga Type D1 →</a>
+      </div>
+    </div>
+
+    <!-- Type E -->
+    <div class="fp-panel" id="fp-E">
+      <div class="fp-img-box" onclick="openFP(this)" data-src="Type_E.jpg" data-cap="Floor Plan Type E — 835 sq.ft (3 Bilik 2 Bilik Air)">
+        <img src="Type_E.jpg" alt="Type E Floor Plan">
+        <div class="fp-type-badge">TYPE E</div>
+        <div class="fp-zoom">🔍</div>
+      </div>
+      <div class="fp-details">
+        <div class="fp-type-name">Type <em>E</em></div>
+        <p class="fp-tagline">3 Bilik · 2 Bilik Air — Unit terbesar, sesuai untuk keluarga &amp; dual-key.</p>
+        <div class="fp-specs">
+          <div class="fp-spec-box"><div class="fp-spec-val">835</div><div class="fp-spec-label">sq.ft</div></div>
+          <div class="fp-spec-box"><div class="fp-spec-val">3</div><div class="fp-spec-label">Bilik Tidur</div></div>
+          <div class="fp-spec-box"><div class="fp-spec-val">2</div><div class="fp-spec-label">Bilik Air</div></div>
+        </div>
+        <div class="fp-price-bar"><span class="fp-price-label">Harga</span><span class="fp-price-val">Hubungi Razi</span></div>
+        <ul class="fp-features">
+          <li>3 bilik tidur — sesuai untuk keluarga atau multigenerational</li>
+          <li>2 bilik air termasuk ensuite di master bedroom</li>
+          <li>Dual-key potential — jana income sewa sambil tinggal</li>
+          <li>Unit terbesar — nilai jangka panjang tinggi</li>
+        </ul>
+        <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20Type%20E%20M%20Grand%20Minori%20(835sqft%2C%203bilik).%20Boleh%20info%20harga?" target="_blank" class="btn-fp-inquire">Tanya Harga Type E →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Facilities -->
+<section class="facilities" id="facilities">
+  <div class="section-inner">
+    <p class="section-eyebrow">Lifestyle Facilities</p>
+    <div class="fac-count">41</div>
+    <h2 class="section-title">Fasiliti <em>Lifestyle Premium</em></h2>
+    <p class="section-body">41 fasiliti tersebar di Dek Fasiliti Level 12 — dari kolam renang 35m hingga padang pickleball, Zen garden, sauna dan banyak lagi.</p>
+
+    <!-- Facilities Layout Map -->
+    <div style="margin-bottom:32px;">
+      <div onclick="openFacLb()" style="width:100%;border-radius:4px;overflow:hidden;cursor:pointer;position:relative;background:var(--white);border:1px solid rgba(26,58,92,0.1);box-shadow:0 4px 20px rgba(26,58,92,0.08);">
+        <img src="M_Grand_Minori_Fasilities_Layout.jpg" alt="M Grand Minori Level 12 Facilities Layout" style="width:100%;display:block;transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
+        <div style="position:absolute;bottom:10px;right:10px;background:rgba(26,58,92,0.85);color:var(--gold);font-size:11px;padding:5px 12px;border-radius:2px;letter-spacing:1px;font-weight:600;">🔍 Klik untuk Zoom</div>
+      </div>
+    </div>
+    <div class="fac-grid">
+      <div class="fac-cat">
+        <div class="fac-cat-title">💧 Water Amenities</div>
+        <ul class="fac-list">
+          <li>35m Lap Pool</li>
+          <li>Jacuzzi</li>
+          <li>Wading Pool</li>
+          <li>Kid's Aqua Play</li>
+          <li>Floating Pool Cabana</li>
+        </ul>
+      </div>
+      <div class="fac-cat">
+        <div class="fac-cat-title">🌿 Gardens & Nature</div>
+        <ul class="fac-list">
+          <li>Zen Garden</li>
+          <li>Linear Garden</li>
+          <li>Edible Garden</li>
+          <li>Rock Garden</li>
+          <li>Serene Garden</li>
+        </ul>
+      </div>
+      <div class="fac-cat">
+        <div class="fac-cat-title">🏸 Sports & Fitness</div>
+        <ul class="fac-list">
+          <li>Gymnasium</li>
+          <li>Badminton Court</li>
+          <li>Pickleball Court</li>
+          <li>Half Basketball Court</li>
+          <li>Yoga & Dance Studio</li>
+          <li>Outdoor Fitness Station</li>
+        </ul>
+      </div>
+      <div class="fac-cat">
+        <div class="fac-cat-title">🎭 Lifestyle & Social</div>
+        <ul class="fac-list">
+          <li>Karaoke / Movie Room</li>
+          <li>Games Room</li>
+          <li>BBQ Terrace</li>
+          <li>Sauna</li>
+          <li>Library / Co-working</li>
+          <li>Indoor Lounge / Gourmet Kitchen</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fac-partial">
+      <div class="fac-partial-title">✨ Partially Furnished — Termasuk:</div>
+      <div class="fac-partial-items">
+        <span class="fac-partial-tag">🍳 Kitchen Cabinet</span>
+        <span class="fac-partial-tag">❄️ Air-Cond</span>
+        <span class="fac-partial-tag">🔐 Digital Lock</span>
+        <span class="fac-partial-tag">🚿 Water Heater</span>
+        <span class="fac-partial-tag">🌀 Washer-Dryer</span>
+        <span class="fac-partial-tag">🚗 EV Charging</span>
+        <span class="fac-partial-tag">🛎️ Concierge Service</span>
+        <span class="fac-partial-tag">🚌 Shuttle Service</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Location -->
+<section class="location" id="location">
+  <div class="section-inner">
+    <p class="section-eyebrow">Strategic Location</p>
+    <h2 class="section-title">Taman Pelangi,<br><em>JB City Centre</em></h2>
+    <p class="section-body">Jalan Kuning, 80400 Johor Bahru — kawasan matang dengan pelbagai kemudahan dan aksesibiliti tinggi ke CIQ dan RTS Link.</p>
+    <div class="loc-grid">
+      <div class="loc-cats">
+        <div style="margin-bottom:24px;">
+          <div class="map-embed">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.068!2d103.77286!3d1.47832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da6d0dd5e99ded%3A0xe0f32dc530f41aa6!2sM%20Grand%20Minori!5e0!3m2!1sen!2smy!4v1713000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="M Grand Minori Location"></iframe>
+          </div>
+        </div>
+        <div class="loc-cat">
+          <div class="loc-cat-name">🚂 Public Transport</div>
+          <div class="loc-items">
+            <div class="loc-item"><span class="loc-name">RTS Bukit Chagar Station</span><span class="loc-dist">3.0 km</span></div>
+            <div class="loc-item"><span class="loc-name">Larkin Sentral Bus Terminal</span><span class="loc-dist">7.4 km</span></div>
+          </div>
+        </div>
+        <div class="loc-cat">
+          <div class="loc-cat-name">🛂 Immigration</div>
+          <div class="loc-items">
+            <div class="loc-item"><span class="loc-name">CIQ Johor Bahru</span><span class="loc-dist">4.7 km</span></div>
+            <div class="loc-item"><span class="loc-name">Second Link (ICQS)</span><span class="loc-dist">40.9 km</span></div>
+          </div>
+        </div>
+        <div class="loc-cat">
+          <div class="loc-cat-name">🛍️ Shopping</div>
+          <div class="loc-items">
+            <div class="loc-item"><span class="loc-name">Plaza Pelangi</span><span class="loc-dist">1.5 km</span></div>
+            <div class="loc-item"><span class="loc-name">KSL City Mall</span><span class="loc-dist">2.1 km</span></div>
+            <div class="loc-item"><span class="loc-name">Mid Valley Southkey</span><span class="loc-dist">5.7 km</span></div>
+            <div class="loc-item"><span class="loc-name">JB City Square</span><span class="loc-dist">4.4 km</span></div>
+          </div>
+        </div>
+        <div class="loc-cat">
+          <div class="loc-cat-name">🏥 Hospital</div>
+          <div class="loc-items">
+            <div class="loc-item"><span class="loc-name">Columbia Asia Hospital</span><span class="loc-dist">4.5 km</span></div>
+            <div class="loc-item"><span class="loc-name">KPJ Johor Specialist</span><span class="loc-dist">5.5 km</span></div>
+            <div class="loc-item"><span class="loc-name">Hospital Sultanah Aminah</span><span class="loc-dist">5.7 km</span></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="rts-card">
+          <div class="rts-bg"></div>
+          <div class="rts-content">
+            <div class="rts-badge">RTS LINK BOOST</div>
+            <h3 class="rts-title">Hanya <em>3km</em><br>dari RTS Bukit Chagar</h3>
+            <p style="font-size:13px; color:rgba(248,245,239,0.65); margin-bottom:24px; font-weight:300; line-height:1.7;">RTS Link akan menghubungkan Johor Bahru dengan Woodlands North, Singapore secara terus. Ini nilai tambah besar untuk M Grand Minori.</p>
+            <div class="rts-stats">
+              <div class="rts-stat">
+                <div class="rts-stat-val">10,000</div>
+                <div class="rts-stat-label">Penumpang / jam</div>
+              </div>
+              <div class="rts-stat">
+                <div class="rts-stat-val">3.6 min</div>
+                <div class="rts-stat-label">Frekuensi puncak</div>
+              </div>
+              <div class="rts-stat">
+                <div class="rts-stat-val">31 Dec 2026</div>
+                <div class="rts-stat-label">Tarikh siap RTS</div>
+              </div>
+              <div class="rts-stat">
+                <div class="rts-stat-val">6am – 12am</div>
+                <div class="rts-stat-label">Waktu operasi</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Razi -->
+<section class="why-razi">
+  <div class="section-inner">
+    <div class="why-grid">
+      <div class="agent-card">
+        <div class="agent-bg"></div>
+        <div class="agent-content">
+          <div class="agent-avatar">
+            <img src="razi-profile.jpg" alt="Razi — Razi Property JB" onerror="this.style.display='none';this.parentNode.innerHTML='R';">
+          </div>
+          <div class="agent-name">Razi</div>
+          <div class="agent-title">The Fast & Easy JB Property Guy</div>
+          <div class="agent-ren">
+            REN · OD Legacy Realty Sdn Bhd<br>
+            Lesen E(1)2004 · Johor Bahru<br>
+            📱 011-5406 5243
+          </div>
+          <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20dengan%20M%20Grand%20Minori!%20Boleh%20share%20info%20lanjut%3F" target="_blank" class="agent-wa">
+            <span>💬</span> WhatsApp Razi
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="section-eyebrow">Kenapa Beli Dengan Razi?</p>
+        <h2 class="section-title">Fast &amp; <em>Easy Process</em></h2>
+        <div class="why-points">
+          <div class="why-point">
+            <span class="why-icon">🏆</span>
+            <div class="why-text">
+              <h4>Agen Berpengalaman di JB</h4>
+              <p>Razi fokus kat JB — dari Permas Jaya, Taman Pelangi, sampai Iskandar Puteri. Dia tahu market ni dalam-dalam.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <span class="why-icon">💰</span>
+            <div class="why-text">
+              <h4>Pakej Rebat Eksklusif</h4>
+              <p>Ada rebat & pakej khas yang Razi boleh negotiate untuk pembeli serius. WhatsApp untuk details — tak available online.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <span class="why-icon">📋</span>
+            <div class="why-text">
+              <h4>Loan Advisory Percuma</h4>
+              <p>Razi bantu semak kelayakan loan anda, compare bank rates, dan pastikan proses SPA smooth dari A sampai Z.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <span class="why-icon">⚡</span>
+            <div class="why-text">
+              <h4>Response Cepat, Proses Mudah</h4>
+              <p>Tak perlu tunggu lama — WhatsApp sekarang dan Razi akan guide anda step by step tanpa pressure.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Register -->
+<section class="cta-section" id="register">
+  <div class="cta-inner">
+    <p class="section-eyebrow" style="color:var(--gold);">Daftar Minat</p>
+    <h2 class="cta-title">Saya <em>Berminat</em></h2>
+    <p class="cta-subtitle">Tinggalkan nombor anda dan Razi akan hubungi anda dengan info terkini, harga unit, dan pakej rebat eksklusif.</p>
+    <div class="cta-form">
+      <input type="text" placeholder="Nama Penuh" id="reg-name" />
+      <input type="tel" placeholder="No. WhatsApp (cth: 011-1234 5678)" id="reg-phone" />
+      <select id="reg-type">
+        <option value="">Tujuan Pembelian</option>
+        <option>Own Stay</option>
+        <option>Pelaburan / Investment</option>
+        <option>Dual Purpose</option>
+        <option>Belum Pasti</option>
+      </select>
+      <button class="cta-submit" onclick="submitInterest()">Hantar Minat Saya →</button>
+    </div>
+    <p class="cta-note">Atau WhatsApp terus 👇</p>
+    <a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20dengan%20M%20Grand%20Minori%20di%20Taman%20Pelangi.%20Boleh%20share%20info%20lanjut%3F" target="_blank" class="cta-wa">
+      <span>💬</span> WhatsApp Razi — 011-5406 5243
+    </a>
+  </div>
+</section>
+
+<!-- Legal Strip -->
+<div class="legal-strip">
+  <div class="legal-inner">
+    <strong>Maklumat Pembangunan:</strong> Dsara Sentral Sdn. Bhd. (200401006399 (644903-D)) • Jalan Kuning, Taman Pelangi, 80400 Johor Bahru, Johor • Lesen Pemaju: 9600/09-2026/0761 (A) • Serviced Apartment • Fasa 1, Tower A (61 Tingkat) • Permit Iklan: 9600-6/08-2028/0716(A)-(S) • Tempoh Sah: 29/08/2025–28/08/2028 • Pihak Berkuasa Meluluskan: Majlis Bandaraya Johor Bahru • No. Kelulusan Pelan Bangunan: MBJB/U/2025/14/BGN/105/KOM • Pegangan Tanah: Freehold • Bebanan Tanah: Maybank Islamic Berhad • Tarikh Siap Dijangka: Julai 2030 • Jumlah Unit: 843<br>
+    IKLAN INI TELAH DILULUSKAN OLEH JABATAN PERUMAHAN NEGARA. MAKLUMAT PEMBANGUNAN DAN KELULUSAN IKLAN BOLEH DISEMAK DI PORTAL TEDUH.KPKT.GOV.MY<br>
+    <span style="opacity:0.7;">Laman ini dikendalikan oleh <strong>Razi</strong>, Ejen Hartanah Berlesen · REN · OD Legacy Realty Sdn Bhd · Lesen E(1)2004 · Bukan laman rasmi pemaju. Harga, ketersediaan unit dan maklumat tertakluk kepada perubahan. Harga sebenar — hubungi Razi untuk maklumat terkini.</span>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Razi Property <span>JB</span></div>
+      <div class="footer-tagline">The Fast & Easy JB Property Guy</div>
+    </div>
+    <div class="footer-ren">
+      REN · OD Legacy Realty Sdn Bhd<br>
+      Lesen E(1)2004 · Johor Bahru<br>
+      📱 <a href="tel:+601154065243" style="color:var(--gold); text-decoration:none;">011-5406 5243</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky WhatsApp -->
+<a href="https://wa.me/601154065243?text=Hi%20Razi%2C%20saya%20berminat%20dengan%20M%20Grand%20Minori!" target="_blank" class="sticky-wa" title="WhatsApp Razi">💬</a>
+
+<script>
+// ── MOBILE MENU ──
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  const open = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ── GALLERY CAROUSEL ──
+const gSlides = document.querySelectorAll('.gallery-slide');
+const gTrack = document.getElementById('galleryTrack');
+const gDotsWrap = document.getElementById('galleryDots');
+let gCurrent = 0;
+const gTotal = gSlides.length;
+gSlides.forEach((_, i) => {
+  const d = document.createElement('div');
+  d.className = 'g-dot' + (i === 0 ? ' active' : '');
+  d.onclick = () => goGallery(i);
+  gDotsWrap.appendChild(d);
+});
+function goGallery(n) {
+  gCurrent = ((n % gTotal) + gTotal) % gTotal;
+  const w = gSlides[0].offsetWidth + 12;
+  gTrack.style.transform = `translateX(${-gCurrent * w}px)`;
+  document.querySelectorAll('.g-dot').forEach((d, i) => d.classList.toggle('active', i === gCurrent));
+}
+function galleryNext() { goGallery(gCurrent + 1); }
+function galleryPrev() { goGallery(gCurrent - 1); }
+let gtX = 0;
+gTrack.addEventListener('touchstart', e => { gtX = e.touches[0].clientX; }, {passive:true});
+gTrack.addEventListener('touchend', e => {
+  const dx = gtX - e.changedTouches[0].clientX;
+  if (Math.abs(dx) > 40) dx > 0 ? galleryNext() : galleryPrev();
+});
+
+// ── FLOOR PLAN TABS ──
+function showFP(type, e) {
+  document.querySelectorAll('.fp-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.fp-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('fp-' + type).classList.add('active');
+  e.target.classList.add('active');
+}
+
+// ── LIGHTBOX ──
+let lbMode = 'gallery';
+let lbGalleryIdx = 0;
+const gallerySrcs = ['_MGM_Apartment.jpg','Entrance_MGM.jpg','MGM_Fasilities_1.jpg','MGM_Fasilities.jpg','M_Grand_Minori_Fasilities_Layout.jpg'];
+const galleryCaps = ['Luaran Bangunan','Grand Entrance','Kawasan Santai','Outdoor Fitness','Level 12 Facilities Layout'];
+const fpSrcs = ['Type_A.jpg','Type_B.jpg','Type_C.jpg','Type_D.jpg','Type_D1.jpg','Type_E.jpg'];
+const fpCaps = ['Type A — 403 sq.ft (Studio)','Type B — 496 sq.ft (1 Bilik)','Type C — 624 sq.ft (1 Bilik + Powder)','Type D — 630 sq.ft (1 Bilik + WIC)','Type D1 — 630 sq.ft (1 Bilik + WIC)','Type E — 835 sq.ft (3 Bilik)'];
+
+function openGalleryLb(i) {
+  lbMode = 'gallery'; lbGalleryIdx = i;
+  document.getElementById('lbImg').src = gallerySrcs[i];
+  document.getElementById('lbCap').textContent = galleryCaps[i];
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function openFacLb() {
+  lbMode = 'fac';
+  document.getElementById('lbImg').src = 'M_Grand_Minori_Fasilities_Layout.jpg';
+  document.getElementById('lbCap').textContent = 'Level 12 Facilities Layout — M Grand Minori';
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function openFP(el) {
+  lbMode = 'fp';
+  document.getElementById('lbImg').src = el.getAttribute('data-src');
+  document.getElementById('lbCap').textContent = el.getAttribute('data-cap') || '';
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function lbNav(dir) {
+  const img = document.getElementById('lbImg');
+  if (lbMode === 'gallery') {
+    lbGalleryIdx = ((lbGalleryIdx + dir) + gallerySrcs.length) % gallerySrcs.length;
+    img.src = gallerySrcs[lbGalleryIdx];
+    document.getElementById('lbCap').textContent = galleryCaps[lbGalleryIdx];
+  } else if (lbMode === 'fp') {
+    const cur = fpSrcs.findIndex(f => img.src.endsWith(f));
+    const next = ((cur + dir) + fpSrcs.length) % fpSrcs.length;
+    img.src = fpSrcs[next];
+    document.getElementById('lbCap').textContent = fpCaps[next];
+  }
+}
+function closeLb() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeLb();
+  if (e.key === 'ArrowLeft') lbNav(-1);
+  if (e.key === 'ArrowRight') lbNav(1);
+});
+
+// ── EOI ──
+function submitInterest() {
+  const name = document.getElementById('reg-name').value.trim();
+  const phone = document.getElementById('reg-phone').value.trim();
+  const type = document.getElementById('reg-type').value;
+  if (!name || !phone) { alert('Sila isi nama dan nombor WhatsApp anda.'); return; }
+  const msg = `Hi Razi! Saya berminat dengan M Grand Minori.%0A%0ANama: ${encodeURIComponent(name)}%0ANo. WA: ${encodeURIComponent(phone)}%0ATujuan: ${encodeURIComponent(type || 'Belum pasti')}%0A%0ABoleh share info lanjut?`;
+  window.open(`https://wa.me/601154065243?text=${msg}`, '_blank');
+}
+</script>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLb()">✕</button>
+  <button class="lightbox-nav lightbox-prev" onclick="lbNav(-1)">‹</button>
+  <img class="lightbox-img" id="lbImg" src="" alt="">
+  <button class="lightbox-nav lightbox-next" onclick="lbNav(1)">›</button>
+  <div class="lightbox-cap" id="lbCap"></div>
+</div>
+
+</body>
+</html>
